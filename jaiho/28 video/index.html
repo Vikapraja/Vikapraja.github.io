@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twenty eight</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            height: 300px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+            border: 2px solid black;
+        }
+
+        .box1{
+            /* position absolute */
+            background-color: aqua;
+            /* position: absolute; */
+            position: sticky;
+            top: 0px;
+            left: 144px;            
+
+        }
+
+        .box2{
+            background-color: azure;
+            /* position: relative;
+            top: 20px;
+            left: 20px;
+            z-index: 1; */
+        }
+
+        .box3{
+            background-color: aquamarine;
+            /* position: relative;
+            top: 20px;
+            left: 30px;
+            z-index: 56px; */
+        }
+        
+        .box4{
+            background-color: purple;
+            /* position: static;
+            top: 20px;
+            left: 30px; */
+            /* static is default properties  */
+            /* top,buttom,left,z-index not work in static possition  */
+        
+        }
+
+        /* fixed position */
+        .box5{
+            background-color: green;
+            width: 50px;
+            height: 50px;
+            bottom: 0px;
+            left: 30vw;
+            position: fixed;
+
+        }
+
+        .box6{
+            background-color: yellow;
+            /* padding: 0;
+            margin: 0;
+            top: 0;
+            position: sticky;
+            /* width: 50px; */
+            /* height: 50px; */
+            /* bottom: 0px;
+            left: 30vw; */
+        }
+        .parent{
+            padding: 34px;
+            margin: 32px;
+            position: absolute;
+            border: 2px solid red;
+
+            /* exception : transform , filter, or perspective properties can also make an element as position  */
+
+            transform: translate(0);
+            /* filter: invert(0); */
+            perspective: 0em;
+        }
+    </style>
+</head>
+<body>
+    <h6>28</h6>
+    <hr>
+    <h1>Css Properties Position</h1>
+    <hr>
+    <div class="parent">parent bx
+    <div class="box box1">sticky</div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5">fixed</div>
+    <div class="box box6"></div>
+    </div>
+    <hr>
+    <div>
+        <h3>Css Position</h3>
+        <ol>
+            <li>Static</li>
+            <li>Relative</li>
+            <li>absolute</li>
+            <li>Fixed</li>
+        </ol>
+    </div>
+</body>
+</html>

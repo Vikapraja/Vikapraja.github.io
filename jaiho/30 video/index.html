@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thirty</title>
+    <style>
+
+        /* for css variables :root is nessesry */
+        /* in root all variable are globle */
+        /* css variables hold css properties and values, url, string */
+        :root{
+            --color: rgb(221, 178, 58);
+            --seccolor: rgb(148, 148, 196);
+            --defpad:23px;
+            --defop:0.2;
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .nav{
+            background-color: var(--color);
+        }
+
+        ul{
+            display: flex;
+        }
+
+        ul li{
+            opacity: var(--defop);
+            list-style: none;
+            padding: var(--defpad);
+            border: 2px solid var(--seccolor);
+        }
+
+        ul li:first-child{
+            /* local variable */
+            --color: rgb(231, 91, 189);
+            background-color: var(--color);
+        }
+
+        .container{
+            background-color: var(--seccolor);
+        }
+
+    </style>
+</head>
+<body>
+    <h6>30</h6>
+    <hr>
+    <h1>CSS variables</h1>
+    <hr>
+    <div class="nav">
+        <!-- navbar -->
+        <ul>
+            <li>Home</li>
+            <li>Gallery</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium error eveniet iste deserunt, optio, alias ut explicabo quae beatae perspiciatis similique illo fuga minus nam exercitationem nisi dolorum et incidunt? Laudantium suscipit et iste neque qui, cum id repellat, omnis architecto accusamus porro, maiores dolor.
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thirty one</title>
+
+    <style>
+        body{
+            background-color: red;
+
+        }
+
+        /* media querry syntax */
+        /* @media not|only mediatype and (Extensions)CSS-code; */
+        
+        @media screen and (orientation: landscape){
+            body{
+                border:2px solid purple;
+            }
+        }
+
+        @media only screen and (max-width:455px){
+            body{
+                background-color: rgb(94, 94, 194);
+            }
+       
+
+        .boxes{
+            flex-direction: column;
+        }
+        }
+
+        .boxes{
+            display: flex;
+        }
+
+        .box {
+            width: 344px;
+            height: 344px;
+            background-color: steelblue;
+            padding: 3px;
+            margin: 3px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h6>31</h6>
+    <hr>
+    <h1>Media Queries</h1>
+    <h3>to show website on multiple device with full responsive</h3>
+    <h3>if anyone access website on other devies then style will be change on basis of device (its a media rul=media queris)
+        <h2>framework are work as media querry</h2>
+    </h3>
+    <h3> Media queris Syntax-</h3>
+    <h3>@media not|only mediatype and (Extensions)CSS-code;</h3>
+    <hr>
+    <div>
+        hey i am a red body guy!
+    </div>
+    <hr>
+    <h3>landscape=when width is high from hieght</h3>
+    <h3>Potrate=when hieght is high from width</h3>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

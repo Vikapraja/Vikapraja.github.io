@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seventeen</title>
+    <style>
+        /* element selector */
+        div {
+            /* background-color: red; */
+        }
+
+        /* class selector */
+        .red {
+            background-color: red; 
+        }
+
+        /* Id selector */
+        #green{
+            background-color: green;
+        }
+
+        /* child selector */
+        div > p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* descendent selector */
+        div p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* universal selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Pseudo Selector */
+        a:visited{
+            color: yellow;
+        }
+
+        a:link{
+            color:green;
+        }
+
+        /* on click */
+        a:active{
+            background-color: red;
+        }
+
+        /* hovor on visit */
+        a:hover{
+            background-color: yellow;
+        }
+
+    </style>
+<body>
+    <h6>17</h6>
+    <hr>
+    <div class="red">I am a div
+        <article><p>
+            i am a para in div
+        </p></article>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, accusamus earum officia commodi culpa eum fugit deserunt quae quis quod.
+        </p>
+    </div>
+    
+    <div id="green">I another div
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, soluta labore? Neque ut dolorum, odio blanditiis dolorem necessitatibus quia architecto.
+        </p>
+    </div>
+    
+    <a href="http://www.google.com">Go to google</a>
+    <a href="http://www.facebook.com">Go to Facebook</a>
+
+    <main class="one">
+        <p>i am a one</p>
+        <p>i am a two</p>
+    </main>
+    <hr>
+    <h1>CSS selector</h1>
+    <hr>
+    <h3>
+    <ol>
+        <li>Element selector</li>
+        <li>class Selector(by .)</li>
+        <li>Id selector(by #)</li>
+        <li>Child Selector(direct child only  (>))</li>
+        <li>Descendent selector(Any child (>))</li>
+        <li>Universal Selector(by *)</li>
+        <li>Pseudo Selector(by :)</li>
+    </ol>
+    </h3>
+</body>
+</html>

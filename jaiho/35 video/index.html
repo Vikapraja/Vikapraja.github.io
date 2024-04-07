@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thirty Five</title>
+    <style>
+        /* .box:first-child{
+            background-color: red;
+        } */
+
+        /* .box::first-line{
+            color: yellow;
+        } */
+        
+        .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
+ /* grouping of selector */
+        p, a, .box,[data-color="primary"]{
+            /* margin-top: 45px; */
+            padding-top: 45px;
+        }
+
+        .box:nth-child(even){
+            background-color: yellow;
+        }
+
+        .box:nth-last-child(2){
+            background-color: red;
+        }
+
+        /* through css content are dynamically insert  */
+        .boxes::before{
+            content:" viveka is good";
+        }
+        
+        .boxes::after{
+            content:" viveka is good";
+            color: red;
+        }
+
+        ::selection{
+            color: aquamarine;
+            background-color: blueviolet;
+        }
+
+        .box::first-letter{
+            color: peru;
+            font-size: 18px;
+        }
+
+        input::placeholder{
+            color: rgb(148, 165, 216);
+            font-size: 28px;
+        }
+    </style>
+
+</head>
+<body>
+    <h6>35</h6>
+    <hr>
+    <h1>More on Css Selector</h1>
+    <hr>
+    <div class="boxes">
+        <div class="box">Hey i am a box
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sint saepe consectetur illo libero, accusantium aut et pariatur vel ea ullam. Veritatis, voluptatum.
+        </div>
+        <div data-color="primary" class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <input type="text" placeholder="type your name here">
+    </div>
+
+</body>
+</html>
