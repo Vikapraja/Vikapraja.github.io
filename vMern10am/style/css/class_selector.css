@@ -1,0 +1,36 @@
+h6{
+    text-align: center;
+}
+
+u{
+    color: b;
+}
+
+ul{
+    color: navy;
+}
+
+.class1{
+    color: green;
+    background-color: black;
+    margin-top: 50px;
+}
+
+.class2{
+    color: white;
+    background-color: burlywood;
+    padding: 70px;
+    margin:10px;
+    border: 10px;
+}
+
+.class3{
+    color: red;
+    background-color: darkturquoise;
+    margin-top: 40px;
+}
+
+.class4{
+    color: aqua;
+    background-color: orange;
+}

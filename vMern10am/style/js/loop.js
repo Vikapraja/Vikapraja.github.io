@@ -1,0 +1,1 @@
+console.log("loops\n ----\n1.for\n2.while\n3.do-while")

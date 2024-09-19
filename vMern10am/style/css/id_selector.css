@@ -1,0 +1,29 @@
+h6{
+    text-align: center;
+}
+
+ul{
+    color: navy;
+}
+
+#a1{
+    color: white;
+    background-color: brown;
+}
+
+#a2{
+    color: blue;
+    background-color: coral;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+#a3{
+    color: chartreuse;
+    background-color: chocolate;
+}
+
+#a4{
+    color: deeppink;
+    background-color: aqua;
+}

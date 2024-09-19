@@ -1,0 +1,41 @@
+h6 {
+    text-align: center;
+}
+* {
+    margin: 0;
+}
+h3 {
+    color: navy;
+    margin-left: 20px;
+}
+button {
+    margin-left: 800px;
+    color: white;
+    background-color: red;
+    border: 10;
+    border-radius: 15%;
+}
+p {
+    margin-top: 20px;
+    text-align: justify;
+}
+#a1 {
+    color: white;
+    background-color: black;
+}
+#a2 {
+    color: black;
+    background-color: yellow;
+}
+#a3 {
+    color: chartreuse;
+    background-color: black;
+}
+#a4{
+    color: white;
+    background-color: crimson;
+}
+#a5{
+    color: blue;
+    background-color: blanchedalmond;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+</head>
+<body>
+    <h1>Iframe</h1>
+    <hr>
+    <h2>
+        =>In iframe we can use audio/Video/pdf/websites/map etc.
+        <pre>
+            *#Attributes
+                1)src="..file-path.."
+                2)src="..file-path#toolbar=0&view=fith"
+                3)width="(int)px"
+                4)height="(int)px"
+                5)frameborder="(int)"
+
+            <hr>
+            *for map (In internet):
+            step1: Go on 'embedgooglemap.net'
+            step2: Search address in map
+            step3: Copy html code
+            Step4: Paste where you want to show map in html. 
+
+            
+        </pre>
+        #Example:
+        <hr>
+        1)audio in iframe
+        <iframe src="/media/audio/a1.mp3" width="" frameborder="0"></iframe>
+        <hr>
+        2)Video in iframe
+        <iframe src="/media/video/v2.mp4" frameborder="1px"></iframe>
+        <hr>
+        3)pdf in iframe
+        <iframe src="/media/pdf/pdf1.pdf" frameborder="10"></iframe>
+        <hr>
+        4)map in iframe
+        <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=ducatindia%20sec%2016%20Noida%20&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://123movies-i.net"></a><br>
+                    <style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style>
+                    <a href="https://www.embedgooglemap.net"></a>
+                    <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+            </div>
+        </div>
+
+        <hr>
+        7)Websites in iframe
+        <iframe src="https://ducatindia.com" width="1000px" height="800px" frameborder="0"></iframe>
+        
+        <hr>
+        6)with width & height <br>
+        <iframe src="/media/pdf/pdf1.pdf#toolbar=0&view=fit" width="1600px" height="500px" frameborder="5"></iframe>
+
+    </h2>
+
+    <hr>
+    <footer>
+        <a href="marquee_tag.html" target="_self"><button><<< Back</button></a>
+        <a href="index.html" target="_self"><button>Home</button></a>
+        <a href="table.html" target="_self"><button>Next >>></button></a>
+    </footer>
+</body>
+</html>

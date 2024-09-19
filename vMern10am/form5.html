@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form5</title>
+</head>
+<body>
+    <h6 style="text-align: center;">21/08/2024</h6>
+    <hr>
+    <h1>Form's Example :Form5(checkbox/select/combobox)</h1>
+    <hr>
+    <h4>#checkbox :</h4>
+    <form action="">
+        <div><label>Subject =</label>
+            <input type="checkbox" id="mern" name="mern" checked>
+            <label for="mern">Mern</label>
+
+            <input type="checkbox" id="mean" name="mean">
+            <label for="mean">Mean</label>
+
+            <input type="checkbox" id="python" name="python" checked>
+            <label for="python">Python</label>
+
+            <input type="checkbox" id="java" name="java">
+            <label for="java">Java</label>
+
+            <input type="checkbox" id="nodejs" name="nodejs" checked>
+            <label for="nodejs">NodeJs</label>
+
+        <!-- <button type="button">Button</button>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button> -->
+        
+        </div> 
+        <hr>
+        <h5 style="color: navy;">=> Button by input elements attribute value(value for show in input element).</h5>
+
+        <div>
+            <input type="reset" value="Reset">
+            <input type="button" value="Button">
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+
+    <hr>
+
+    <h4>#Select :</h4>
+    <h5 style="color: navy;">=>attribute "multiple" in select is for multiple selction.</h5>
+
+    <form action="">
+        <label>City :</label>
+        <select name="city">
+            <option value="">--select ur city--</option>
+            <option value="Noida">Noida</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Kanpur">Kanpur</option>
+            <option value="Gorakhpur">Gorakhpur</option>
+            <option value="Kota">Kota</option>
+
+        </select>
+        <button type="button">Button</button>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <hr> 
+    <h4>#Combobox :</h4>
+
+    <form action="">
+        <label>State :</label>
+        <input type="text" name="state" list="state_list" placeholder="Enter State Name">
+        <datalist id="state_list">
+            <option>Delhi</option>
+            <option>Jammu&Kashmir</option>
+            <option>Punjab</option>
+            <option>Gujarat</option>
+            <option>Rajsthan</option>
+            <option>Hariyana</option>
+            <option>Uttar Pradesh</option>
+            <option>Bihar</option>
+            <option>Madhya Pradesh</option>
+            <option>Goa</option>
+            <Option>Tamilanadu</Option>
+            <option>Chennai</option>
+            
+        </datalist>
+
+        <button type="button">Button</button>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+        
+    </form>
+
+<hr>
+<footer>
+    <a href="form4.html" target="_self"><button><<< Form3</button></a>
+    <a href="form.html" target="_self"><button>Form</button></a>
+    <a href="form6.html" target="_self"><button>Form6 >>></button></a>      
+</footer>
+    
+</body>
+</html>

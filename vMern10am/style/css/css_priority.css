@@ -1,0 +1,15 @@
+h6 {
+    text-align: center;
+}
+
+u {
+    color: green;
+    color: red !important;
+}
+
+button {
+    margin-left: 800px;
+    background-color: brown;
+    border-radius: 30%;
+    color: white;
+}

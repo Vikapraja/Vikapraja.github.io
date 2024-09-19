@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+</head>
+<body>
+    <h6 style="padding-left: 100vb;">13/08/2024</h6>
+    <h1>Form In Html</h1>
+    <h3 style="padding-left: 8vb;">=>If you want to take input in html, you need form tag.</h3>
+    <hr>
+    <h2>
+        <form name="" id="" class="" action="" method="" enctype="" >
+            <label for="name">Name</label>
+            <input type="text" name="name" id="" name="" class="sample" placeholder="Enter ur name" required>
+            <br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button">Button</button>
+
+            <hr>
+
+            #Examples=>
+            
+            <ul>
+                <a href="form1.html">
+                    <li>Form1</li>
+                </a>
+                <a href="form2.html">
+                    <li>Form2</li>
+                </a>
+                <a href="form3.html">
+                    <li>form3</li>
+                </a>
+                <a href="form4.html">
+                    <li>Form4</li>
+                </a>
+                <a href="form5.html">
+                    <li>form5 [checkbox/select(dropdown)/combbobox]</li>
+                </a>
+                <a href="form6.html">
+                    <li>form6 [input-type-file]</li>
+                </a>
+
+            </ul>
+
+            <h4>#Tag/Elements for Form:</h4>
+
+            <ol>
+                <li>Label</li>
+                <li>Input</li>
+                <li>Button</li>
+            </ol>
+        </form>
+        <hr>
+
+            #Tags: form/label/input/button etc.
+            <hr>
+                1)form <br>
+                
+                <ol>
+                    <li>name="..."</li>
+                    <li>id="..."</li>
+                    <li>class="..."</li>
+                    <li>action=""</li>
+                    <li>method="GET/POST"</li>
+                    <li>enctype="(application/x-www-form-urlencoded)or(multipart/form-data)or(multipart/form-data)"</li>
+                    <li>etc.</li>
+                </ol>
+
+                <hr>
+
+                *form's Attributes:
+                    <ul>
+                        <li>name="..."
+                        <p>
+                            <h4 style="color: navy;">
+                                =>In form name attribute is used to get value of input in backend programming
+                                languages like java,python,php etc.
+                                
+                                =>Name Attribute's value must be unique in each element. <br>
+
+                                =>name attribute can be used only in input related element like 'form',            
+                                'input-selector', 'textarea'. <br>
+
+                                =>This attribute will not use in non-input type elements like headings,
+                                paragraph,list,table etc.
+
+                            </h4>
+                        </p>
+                            </li>
+                        <li>id="..."
+                        <p>
+                            <h4 style="color: navy;">
+
+                                =>id="" attribute is used to select elements in css and js(javascdript)
+                                to apply stylesheets scripts respectvily. <br>
+                                
+                                =>This attribute's value must be unique in each elements. <br>
+
+                                =>We can use Id attribute in both input & non-input elements.
+
+                            </h4>
+                        </p>
+                        
+                        </li>
+                        <li>class="..."
+
+                        <p>
+                            <h4 style="color: navy;">
+
+                                =>class attribute is used to select multiple elements to apply css and stylesheet's scripts. <br>
+
+                                =>class attribute is used to apply common stylesheet and css scripts on multiple elements <br>
+
+                                =>we can use single class in multiple elements As well as we can use multiple class in a single elements. <br>
+                                
+
+                                </h4>
+                            </p>
+                                 
+                                </li>
+
+                        <li>action=""
+
+                            <p>
+                                
+                                <h4 style="color: navy;">
+                                    
+                                    =>It is for backend purpose. <br>
+
+                                    =>Action attribute is used to provide url of particular web-page/backend ApI
+                                    where we want submit form's data. <br>
+
+                                    =>Keep it blank to redirect same url in send data, on same-page.
+
+                                </h4>
+
+                            </p>
+                            
+                        </li>
+                        <li>method="GET/POST"
+
+                            <p>
+                                <h4 style="color: navy;">
+
+                                    =>method attribute has two value -> GET/POST. <br>
+
+                                    <u>GET: </u>> corresponds to the htttp by GET method . <br>
+                                    
+                                        =>form data are appende to the acction attribute's URL with a '?' as separator
+                                        ,and the resulting URL is select to server. <br>
+
+                                        =>use this method when the form has no side-effects contains only ASCII chars. <br>
+                                    
+                                        <u>POST:</u>> corresponds to the htttps POST method. <br>
+                                        
+                                        =>Form's data are included in the body of the form and send to server.
+
+                                   
+                                    
+                                    .dailog:> dailog is used when the form is inside a dailog element.
+                                    
+
+                                </h4>
+                                 </p>
+                                    </li>
+
+                        <li>enctype="(application/x-www-form-urlencoded)or(multipart/form-data)or(multipart/form-data)"
+                            
+                            <p>
+
+                                <h4 style="color: navy;">
+                                    =>When the value of the method attribute is POST, enctype is the MIME type of 
+                                    content that is used to submit the forms to the server. <br>
+                                    
+                                    =>'application/x-www-form-urlencoded' >The default  value if the attribute is not 
+                                    specified. <br>
+
+                                    =>'multipart/form-data' > the value used for an 'input' element with the
+                                    type attribute set to 'file'. <br>
+
+                                    =>"text/plain" > (html5) <br>
+
+                                    =>The value can be overriden by a formenctype attribute on a 'button' or 'input' 
+                                    element.
+                                </h4>
+                            </p>
+
+                        </li>
+                        <li>etc.</li>
+                    </ul>
+                    <hr>
+
+        
+
+
+                <hr>
+                2)label <br>
+                *label's Attributes
+                <ul>
+                    <li>for="..."</li>
+
+                    <p>
+                        <h4 style="color: navy;">
+                            =>Lebel elements : It is used as a display message before input elements. <br>
+                        
+                            =>for="..." attribute must be same as a 'id' attribute of 'input' element. <br>
+    
+                            =>for is used when controled otherwise not required.
+                        
+                        </h4>
+                    </p>
+                </ul>
+
+                <hr>
+                3)input <br>
+                *input's Attributes
+
+                <ul>
+                    <li>type="text/file/..etc"</li>
+                    <li>name="..."</li>
+                    <li>id=""</li>
+                    <li>class=""</li>
+                    <li>placeholder="..text.."</li>
+                    <li>value=""</li>
+                    <li>min="(int)px"</li>
+                    <li>max="(int)px"</li>
+
+                    <hr>
+
+                        <p>
+                            <h4 style="color: navy;">
+                                =>Attribute 'type' values = text/email/number/password/serch/url/
+                                tel/color/range/hidden/reset/submit/button/date/date-time/scal-time/
+                                week/month/radio/checkbox/file/image/url()/etc. <br>
+                                
+                                =>placeholder > It is used to provide a temporery message in input element.
+
+                                =>class/id/name attribute are hold same meaning of form elements attribute. <br>
+                                
+                                =>value Attribute provide default value of input types.
+
+                                =>min attribute specifies the minimum number value of number input <br>
+
+                                =>max attribute is for input element's maximum number value.
+                            </h4>
+                        </p>
+
+                </ul>
+
+                <hr>
+                4)button <br>
+                *button's Attributes
+                <ul>
+                    <li>type="submit/reset/button"</li>
+
+                    <hr>
+
+                    <p>
+                        <h4 style="color: navy;">
+                            =>button's attribute {type="" } values = submit/reset/button. <br>
+
+                            =><u>type's value submit </u>:>The button type 'submit' submit the form's data to server.
+                             This is the default if the attribute is not specified or if the attribute is dynamically change 
+                             to an empty or invailid value. <br>
+
+                            =><u>reset :</u>> Clicking a reset button will clear all input elements in the form
+                            to their orginal value.The button can contain text/images/icons/and other elements. <br>
+                            
+                            =><u>type's value button :</u>> It defines a clickable button only. Mostly used with a
+                            JavaScript to activate a script.
+
+                        </h4>
+                    </p>
+
+                </ul>
+
+    </h2>
+
+    <hr>
+    <footer>
+        <a href="table.html" target="_self"><button><<< Back</button></a>
+        <a href="index.html" target="_self"><button>Home</button></a>
+        <a href="css1.html" target="_self"><button>Next >>></button></a>
+    </footer>
+</body>
+</html>
