@@ -1,0 +1,29 @@
+h6{
+    text-align: center;
+}
+
+u{
+    color: red;
+}
+
+ul{
+    color: navy;
+}
+
+pre{
+    color: red;
+    background-color: lightgreen;
+    padding: 20px;
+}
+
+i{
+    color: navy;
+    background-color: sandybrown;
+}
+
+div>p{
+    color: brown;
+    padding: 10px;
+    text-align: center;
+    background-color: royalblue;
+}

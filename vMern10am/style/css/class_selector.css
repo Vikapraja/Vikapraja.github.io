@@ -10,6 +10,14 @@ ul{
     color: navy;
 }
 
+pre{
+    color: red;
+}
+i{
+    color: navy;
+    background-color: lightgreen;
+}
+
 .class1{
     color: green;
     background-color: black;
