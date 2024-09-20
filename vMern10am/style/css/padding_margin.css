@@ -12,7 +12,7 @@ ol{
 }
 
 div.a1{
-    padding: 50px;
+    padding: 50px 50px 50px 50px;
     border: 5px solid green;
     background-color: lightsalmon ;
 }
@@ -36,4 +36,51 @@ div.a3{
 }
 div.a3>h2{
     color: chartreuse;
+}
+
+div.a4{
+    color: blue;
+    padding-top: 200px;
+    border: 5px solid aqua;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+
+div.a5{
+    padding-right: 200px;
+    border: 5px solid aqua;
+    background-color: lightgreen;
+    text-align: center;
+}
+div.a5{
+    color:blue;
+}
+
+div.a6{
+    padding-bottom: 200px;
+    border: 5px solid aqua;
+    background-color: lightgreen;
+    text-align: center;
+}
+div.a6{
+    color:blue;
+}
+
+div.a7{
+    color:blue;
+    padding-left: 200px;
+    border: 5px solid aqua;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+div.a8
+{
+    padding: 200px;
+    border: 5px solid yellow;
+    background-color: blueviolet;
+    text-align: center;
+
+    margin: 50px;
 }

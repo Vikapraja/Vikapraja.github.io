@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+}
+
+ol>u{
+    color: red;
+    background-color: lightgreen;
+    /* margin-left: 5px; */
+}
+
+li>u{
+    color: green;
+}
+
+pre>u{
+    color: green;
+}
+
+u{
+    color: brown;
+}
+
+pre{
+    color: red;
+    background-color:beige;
+}
+
+ol>ul{
+    color: navy;
+}
+
+pre>ul>li{
+    color: orange;
+    margin-left: 400px;
+}
+
+pre>ol>li>u,pre>ul>li>u{
+    color: blueviolet;
+}
+
+button{
+    font-size: large;
+}
+
+footer
+{
+    text-align: center;
+    background-color: cadetblue;
+}

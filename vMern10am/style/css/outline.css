@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+}
+
+h6,footer,button{
+    text-align: center;
+    font-size: large;
+}
+
+ul>li{
+    color: navy;
+    margin-top:10px ;
+}
+
+li>u{
+    color: red;
+    background-color: lightgreen;
+}
