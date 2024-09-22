@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+}
+
+h6,footer{
+    text-align: center;
+    font-size: large;
+}
+
+ul>li{
+    color: navy;
+}

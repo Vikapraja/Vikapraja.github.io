@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+}
+
+h6,footer{
+    text-align: center;
+    font-size: large;
+}
+
+ul>li{
+    color: navy;
+
+}
+
+ul>li>u,u{
+    color: red;
+}
+
+ol>li,pre>u{
+    color: green;
+}
+
+pre>p{
+    margin-left: 275px;
+    color: blueviolet;
+}
+
+pre{
+    color: red;
+    background-color: lightgreen;
+}
+
+pre>ul>li{
+    margin-left: 400px;
+    margin-top: 0;   
+}

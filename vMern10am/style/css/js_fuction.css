@@ -40,10 +40,12 @@ pre>ol>li>u,pre>ul>li>u{
 
 button{
     font-size: large;
+    margin-left: 500px;
 }
 
 footer
 {
     text-align: center;
     background-color: cadetblue;
+    font-size: large;
 }

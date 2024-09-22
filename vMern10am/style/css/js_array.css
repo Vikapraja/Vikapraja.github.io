@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+}
+
+h6,footer{
+    text-align: center;
+    font-size: large;
+}
+
+ul>li{
+    color: navy;
+}
+
+ul>li>u{
+    color: brown;
+}
+
+li>ul>li{
+    color: green;
+}
+
+table>caption{
+    color: green;
+}
+
+th>u{
+    color: red;
+}
+
+li#a1{
+    text-align: center;
+    
+}

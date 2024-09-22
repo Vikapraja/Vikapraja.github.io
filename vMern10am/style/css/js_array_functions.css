@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+}
+
+h6,footer{
+    text-align: center;
+    font-size: large;
+}
+
+ul>li{
+    color: navy;
+}
+
+ol>li{
+    margin-top: 10px;
+    margin-left: 200px;
+}
