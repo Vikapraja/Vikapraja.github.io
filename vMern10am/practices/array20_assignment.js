@@ -54,7 +54,7 @@
 // 3. WAP to implement an Array by using febonacci Series Terms
 
 // var z=Array()
-// var n=prompt("Enter number for fibonacci-arrays :")
+// var n=prompt("Enter till number for  fibonacci-arrays :")
 
 // var a = 0
 // var b = 1
@@ -137,9 +137,7 @@
 //                 Sum of array's Prime Number Values=> ${sumOfPrime} <br>
 //                 Sum of array's Non-Prime Number Values=> ${sumOfNonPrime}
 //                 </h2>
-
 //             `)
-
 
 // ------------------------------------------------------------------------------------
 // 7. WAP to find smallest Element from Array
@@ -194,7 +192,6 @@
 //                 </h2> 
 //                 `)
 
-
 // ------------------------------------------------------------------------------------
 // 10. WAP to find first smallest,Second Smallest and third smallest
 //     Element from Array
@@ -213,7 +210,6 @@
 //     if(a[j]==Ssmall)
 //         a.splice(j,1)    
 // }
-
 // let Tsmall=Math.min(...a)
 // document.write(
 //     `<h2>base array= [${b}] <br>
@@ -224,14 +220,9 @@
 // )
 
 // -----------------------------------------or
-
 // var a=[24,40,11,50,60,70,80,35,90]
 // var b=[24,40,11,50,60,70,80,35,90]
-
-// var Fsmall
-// var Ssmall
-// var Tsmall
-
+// var Fsmall,Ssmall,Tsmall
 // for(let k=1;k<=3;k++){
 //     var c=Math.min(...a)
 //     if(k==1){
@@ -245,19 +236,15 @@
 //     }
 //     for(let m in a){
 //         if(a[m]==c)
-//             a.splice(m,1)
-            
+//             a.splice(m,1)   
 //     }
 // }
-
 // document.write(
 //     `<h2>base array= [${b}] <br>
 //         array's first small element ${Fsmall} <br>
 //         array's Second small element ${Ssmall} <br>
 //         array's Third small element ${Tsmall} <br>
-//     `
-// )
-
+//     `)
 
 // ------------------------------------------------------------------------------------
 // 11. WAP to find first greatest,Second greatest and third greatest
@@ -265,7 +252,6 @@
 
 // var a=[24,40,11,50,60,70,80,35,90]
 // var b=[24,40,11,50,60,70,80,35,90]
-
 // var Fgreatest=Math.max(...a)
 // for(let i in a){
 //     if(a[i]==Fgreatest)
@@ -277,14 +263,16 @@
 //     if(a[j]==Sgreatest)
 //         a.splice(j,1)    
 // }
-
 // var Tgreatest=Math.max(...a)
 
-// --------------------------------------or
+// document.write(`<h2>base array= [${b}] <br>
+//                  array's first greatest element ${Fgreatest} <br>
+//                  array's Second greatest element ${Sgreatest} <br>
+//                  array's Third greatest element ${Tgreatest} <br>
+//                 `)
 
-// var Fgreatest
-// var Sgreatest
-// var Tgreatest
+// --------------------------------------or
+// var Fgreatest,Sgreatest,Tgreatest
 
 // for(let k=1;k<=3;k++){
 //     var c=Math.max(...a)
@@ -300,24 +288,19 @@
 //     for(let m in a){
 //         if(a[m]==c)
 //             a.splice(m,1)
-            
 //     }
 // }
 
-// document.write(
-//     `<h2>base array= [${b}] <br>
-//         array's first greatest element ${Fgreatest} <br>
-//         array's Second greatest element ${Sgreatest} <br>
-//         array's Third greatest element ${Tgreatest} <br>
-
-
-//     `
-// )
+// document.write(`<h2>base array= [${b}] <br>
+//                  array's first greatest element ${Fgreatest} <br>
+//                  array's Second greatest element ${Sgreatest} <br>
+//                  array's Third greatest element ${Tgreatest} <br>
+                // `)
 
 // ------------------------------------------------------------------------------------
 // 12. WAP find nth smallest Elements from Array
 
-// var a=[9,4,8,5,7,6,2,1,3,10,11,12,13,14,89,67,90,99]
+// var a=[9,4,8,5,71,3,10]
 // var l=a.length  //after splice() array's length are being chinge
 // document.write(`<h2>base array= [${a}] <hr> Arrays nth smallest elements:</h2><br>`)
 // for(let i=1;i<=l;i++){
@@ -357,19 +340,19 @@
 // ------------------------------------------------------------------------------------
 // 15. WAP to Swap two Arrays
 
-// var a=[1,2,3,4,5]
-// var b=[6,7,8,9,10]
-// var c=[]
+var a=[1,2,3,4,5]
+var b=[6,7,8,9,10]
+var c=[]
 
-// document.write(`<h2>Before swap two arrays <br> a=[${a}] <br> b=[${b}]</h2>`)
+document.write(`<h2>Before swap two arrays <br> a=[${a}] <br> b=[${b}]</h2>`)
 
-// c.push(a)
-// a.splice(0,a.length)
-// delete b
-// // b.splice(0,b.length)
-// document.write(c)
+c.push(a)
+a.splice(0,a.length)
+delete b
+// b.splice(0,b.length)
+document.write(c)
 
-// document.write(`<h2>After swap two arrays <br> a=[${a}] <br> b=[${b}]</h2>`)
+document.write(`<h2>After swap two arrays <br> a=[${a}] <br> b=[${b}]</h2>`)
 
 // ------------------------------------------------------------------------------------
 // 16. WAP to concate two Arrays
