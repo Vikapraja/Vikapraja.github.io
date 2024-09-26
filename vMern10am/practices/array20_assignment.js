@@ -72,7 +72,7 @@
 // ------------------------------------------------------------------------------------
 // 4. WAP to Calculate sum of Elements of Array
 
-var a=[1,2,3,4,5]
+// var a=[1,2,3,4,5]
 // var sum=0
 // // for(let i in a){
 // //     sum=sum+a[i]
@@ -357,27 +357,93 @@ var a=[1,2,3,4,5]
 // ------------------------------------------------------------------------------------
 // 15. WAP to Swap two Arrays
 
-a=[1,2,3,4,5]
-b=[6,7,8,9,10]
+// var a=[1,2,3,4,5]
+// var b=[6,7,8,9,10]
+// var c=[]
 
+// document.write(`<h2>Before swap two arrays <br> a=[${a}] <br> b=[${b}]</h2>`)
 
+// c.push(a)
+// a.splice(0,a.length)
+// delete b
+// // b.splice(0,b.length)
+// document.write(c)
+
+// document.write(`<h2>After swap two arrays <br> a=[${a}] <br> b=[${b}]</h2>`)
 
 // ------------------------------------------------------------------------------------
 // 16. WAP to concate two Arrays
 
+// var a=[1,2,3,4,5]
+// var b=[6,7,8,9,10]
+// var c=a.concat(b)
+// document.write(`<h2>array <br> a=[${a}] <br> b=[${b}] <br> after concate=[${c}]`)
+
 // ------------------------------------------------------------------------------------
 // 17. WAP to insert an Element  at user's Specific Position
+
+// var a=[1,2,3,4,5]
+// document.write(`<h2>array a=[${a}] and array length=>${a.length} </h2>`)
+// var pos=Number(prompt("Enter position to insertion :"))
+// var ins=Number(prompt(`Enter element to insert on ${pos} position:`))
+// a.splice(pos,0,ins)   //splice(position_of_statrting,no_of_deleting_element,insetion_element )
+// document.write(`<h2><hr> after insertion on ${pos} position of ${ins} <br> a=>[${a}] <br> Updated array length=>${a.length}`)
 
 // ------------------------------------------------------------------------------------
 // 18. WAP to Delete an Element  from user's Specific Position
 
+// var a=[1,2,3,4,5]
+// document.write(`<h2>array a=[${a}] </h2>`)
+// a.splice(3,1)   //splice(position_of_statrting,no_of_deleting_element,insetion_element )
+// document.write(`<h2> after delete of 3rd position's 1 element <br> a=>[${a}]`)
+
 // ------------------------------------------------------------------------------------
 // 19. WAP to Delete any particular Element from all indexes from Array
+
+// var a=[1,2,3,4,5]
+// document.write(`<h2>array a=[${a}] and array length=>${a.length} </h2>`)
+// var pos=Number(prompt("Enter position to delete an element :"))
+// a.splice(pos,1)   //splice(position_of_statrting,no_of_deleting_element,insetion_element )
+// document.write(`<h2><hr> after delete on ${pos} position <br> a=>[${a}] <br> Updated array length=>${a.length}`)
 
 // ------------------------------------------------------------------------------------
 // 20. WAP to Delete all -ve Elements from Array
 
+// var a=[1,2,3,4,5,-45,88,-36,78-4,82]
+// document.write(`<h2>array a=[${a}] and array length=>${a.length} </h2>`)
+// for(let i in a){
+//     if(a[i]<0)
+//         a.splice(i,1)
+// }
+// document.write(`<h2><hr> after delete -ve Number <br> a=>[${a}] <br> Updated array length=>${a.length}`)
+
 
 // ------------------------------------------------------------------------------------
+// 21. WAP to Delete all odd Elements from Array
+
+// ------------------------------------------------------------------------------------
+// 22. WAP to Delete all non prime Elements from Array
+
+// ------------------------------------------------------------------------------------
+// 23. WAP to Delete all repeated Elements from Array
+
+// ------------------------------------------------------------------------------------
+// 24. WAP to count occurrance of any particular Element from Array
+
+// ------------------------------------------------------------------------------------
+// 25. WAP to count occurrance of all Elements of Array
+
+// ------------------------------------------------------------------------------------
+// 26. WAP to find UNION of two Arrays
+
+// ------------------------------------------------------------------------------------
+// 27. WAP to find Intersection of two Arrays
+
+// ------------------------------------------------------------------------------------
+// 28. WAP to find HCF of Array Elements
+
+// ------------------------------------------------------------------------------------
+// 29. WAP to find LCM of Array Elements
+
 // ------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------
