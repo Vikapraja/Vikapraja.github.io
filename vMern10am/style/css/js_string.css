@@ -9,6 +9,7 @@ h6,footer{
 
 ul>li,ol>li>p{
     color: navy;
+    margin-top: 10px;
 }
 
 

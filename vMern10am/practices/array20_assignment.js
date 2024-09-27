@@ -340,19 +340,19 @@
 // ------------------------------------------------------------------------------------
 // 15. WAP to Swap two Arrays
 
-var a=[1,2,3,4,5]
-var b=[6,7,8,9,10]
-var c=[]
+// var a=[1,2,3,4,5]
+// var b=[6,7,8,9,10]
+// var c=[]
 
-document.write(`<h2>Before swap two arrays <br> a=[${a}] <br> b=[${b}]</h2>`)
+// document.write(`<h2>Before swap two arrays <br> a=[${a}] <br> b=[${b}]</h2>`)
 
-c.push(a)
-a.splice(0,a.length)
-delete b
-// b.splice(0,b.length)
-document.write(c)
+// c.push(a)
+// a.splice(0,a.length)
+// delete b
+// // b.splice(0,b.length)
+// document.write(c)
 
-document.write(`<h2>After swap two arrays <br> a=[${a}] <br> b=[${b}]</h2>`)
+// document.write(`<h2>After swap two arrays <br> a=[${a}] <br> b=[${b}]</h2>`)
 
 // ------------------------------------------------------------------------------------
 // 16. WAP to concate two Arrays
@@ -404,16 +404,52 @@ document.write(`<h2>After swap two arrays <br> a=[${a}] <br> b=[${b}]</h2>`)
 // ------------------------------------------------------------------------------------
 // 21. WAP to Delete all odd Elements from Array
 
+// a=[10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+
+// document.write(`<h2>Base Array=[${a}] <br> length=${a.length}</h2>`)
+// for(let i=0;i<=a.length+20;i++){
+//     if(a[i]%2 != 0){
+//         a.splice(i,1)
+//     }
+// }
+// document.write(`<h2>After Deleting odd elements of array <br> new array =[${a}] <br> length=${a.length}`)
+
 // ------------------------------------------------------------------------------------
 // 22. WAP to Delete all non prime Elements from Array
+
+// a=[1,2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,20]
+
+// function prime(n) {
+//     var flag = false
+//     for (let i = 2; i <= n ** 0.5; i++) {
+//         if (n % i == 0) {
+//             flag = true
+//             break
+//         }
+//     }
+//     return flag
+// }
+
+// document.write(`<h2>Base Array=[${a}] <br> length=${a.length}</h2>`)
+// for(let i=0;i<=a.length+10;i++){
+//     if(prime(a[i]) == false){
+//         a.splice(i,1)
+//     }
+// }
+// document.write(`<h2>After Deleting non prime elements of array <br> new array=[${a}] <br> length=${a.length}`)
 
 // ------------------------------------------------------------------------------------
 // 23. WAP to Delete all repeated Elements from Array
 
+a=[1,2,3,3,4,5,3,4,5]
+b=a
+a.splice(0,5)
+console.log(a,'\n', b)
+
 // ------------------------------------------------------------------------------------
 // 24. WAP to count occurrance of any particular Element from Array
 
-// ------------------------------------------------------------------------------------
+// ---i---------------------------------------------------------------------------------
 // 25. WAP to count occurrance of all Elements of Array
 
 // ------------------------------------------------------------------------------------

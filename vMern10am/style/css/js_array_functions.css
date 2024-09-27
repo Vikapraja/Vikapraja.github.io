@@ -7,11 +7,16 @@ h6,footer{
     font-size: large;
 }
 
-ul>li{
+li{
     color: navy;
+    margin-top: 10px;
 }
 
 ol>li{
     margin-top: 10px;
-    margin-left: 200px;
+    margin-left: 25px;
+}
+
+li>u{
+    color: green;
 }

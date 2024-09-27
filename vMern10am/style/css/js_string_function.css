@@ -7,10 +7,40 @@ h6,footer{
     font-size: large;
 }
 
-ul>li{
+ul>li,ol>li{
     color: navy;
+    margin-top: 10px;
 }
 
 button{
     font-size: large;
+}
+
+li>u,pre>u{
+    color: green;
+}
+
+
+pre{
+    background-color: lightgreen;
+}
+
+pre{
+    color: red;
+}
+
+table{
+    margin-left: 300px;
+}
+
+thead{
+    color: green;
+}
+tbody{
+    color: navy;
+}
+
+sub{
+    background: skyblue;
+    color: white;
 }

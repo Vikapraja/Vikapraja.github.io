@@ -15,3 +15,7 @@ ul>li{
 button{
     font-size: large;
 }
+
+pre{
+    background-color: lightgreen;
+}
