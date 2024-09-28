@@ -16,3 +16,68 @@ li>u{
     color: red;
     background-color: lightgreen;
 }
+
+pre>u{
+    color: green;
+}
+
+pre{
+    margin-top: 25px;
+    background-color: lightgreen;
+    color:red;
+}
+
+
+p{
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+#p1{
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: black;
+}
+
+
+#p2{
+    outline-width: 5px;
+    outline-style: dotted;
+    outline-color: red;
+}
+
+#p3{
+    outline: 5px dashed yellow;
+}
+
+#p4{
+    outline: 10px double darkgreen;
+}
+
+#p5{
+    outline: 10px groove green;
+}
+
+#p6{
+    outline: 10px ridge pink;
+}
+
+#p7{
+    outline: 10px inset gold;
+}
+
+#p8{
+    outline: 10px outset violet;
+}
+
+#p9{
+    outline: 50px none orangered;
+}
+
+#p10{
+    outline: 50px hidden navy;
+}
+
+#p11{
+    outline: 10px outset lightblue;
+}

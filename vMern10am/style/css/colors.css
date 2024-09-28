@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+}
+
+h6,footer,button{
+    text-align: center;
+    font-size: large;
+}
+
+pre{
+    background-color: lightgreen;
+    color: red;
+}
+
+pre>u{
+    color: green;
+}
+
+ul>li,ol>li{
+    color: navy;
+    margin-top:10px ;
+}
+
+li>u{
+    color: red;
+    background-color: lightgreen;
+}
+
+table{
+    margin: 10px 0px 10px 200px;
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    padding: 20px;
+    font-size: 1.3rem;
+    color: white;
+}
+
+#p1{
+    background: navy;
+}
+
+#p2{
+    background: #2a3baa;
+}
+
+#p3{
+    background: rgb(50, 50, 50);
+}
+
+#p4{
+    background: hsl(1, 90%, 60%);
+}
+
+#p5{
+    background: hsl(25, 50%, 40%);
+}
+
+#p6{
+    background: hsla(50, 50%, 50%, 1);
+}
+
+p>u{
+    font-size: large;
+    color: red;
+    background: #ffff;
+}
+
+pre>ol{
+    margin-left: 100px;
+}

@@ -2,3 +2,63 @@ body{
     background-color: red;
     color: white;
 }
+
+#a21{
+    float: right;
+    /* height: 160px; */
+    width: 290px;
+    background: linear-gradient(orange, white, green);
+    text-align: center;
+    color: brown;
+    padding: 100px;
+    margin-top: 75px;
+    align-items: center;
+}
+
+#a{
+    flex-wrap:initial;
+    
+
+}
+#a1{
+    height: 290px;
+    width: 160px;
+    background: radial-gradient(pink,blue,yellow,green, navy);
+    text-align: center;
+    color: brown;
+    padding: 10px;
+}
+
+#a2{
+    height: 5ppx;
+    width: 160px;
+    background: green;
+    text-align: center;
+    color: brown;
+    padding: 10px;
+}
+
+#a3{
+    height: 5px;
+    width: 160px;
+    background: navy;
+    text-align: center;
+    color: brown;
+    padding: 10px;
+}
+#a4{
+    height: 5px;
+    width: 160px;
+    background: orange;
+    text-align: center;
+    color: brown;
+    padding: 10px;
+}
+#a5{
+    height: 5px;
+    width: 160px;
+    background: rgb(0, 204, 255);
+    text-align: center;
+    color: brown;
+    padding: 10px;
+}

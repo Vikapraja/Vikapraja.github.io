@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+}
+
+h6,footer{
+    text-align: center;
+    font-size: large;
+}
+
+ul>li{
+    color: navy;
+}
+
+
+button{
+    font-size: large;
+}
+
+pre{
+    background-color: lightgreen;
+    color: red;
+}
+
+pre>ol>li>u{
+    color: green;
+}
+
+pre>ol{
+    margin-left: 100px;
+}
+
+ol>li{
+    margin-top: 20px;
+}
+
+p{
+    text-align: justify;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: white;
+    margin-right: 20px;
+}
+p>u{
+    color: red;
+    background-color: yellow;
+}
+
+#p1{
+    background: navy;
+}
+
+#p2{
+    background: linear-gradient(orange, lightyellow, green);
+}
+
+#p3{
+    background: radial-gradient(red,blue,green,yellow,orange);
+    height:500px
+}
+
+#p4{
+    background:lightgreen;
+}

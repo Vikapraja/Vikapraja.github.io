@@ -295,7 +295,7 @@
 //                  array's first greatest element ${Fgreatest} <br>
 //                  array's Second greatest element ${Sgreatest} <br>
 //                  array's Third greatest element ${Tgreatest} <br>
-                // `)
+// `)
 
 // ------------------------------------------------------------------------------------
 // 12. WAP find nth smallest Elements from Array
@@ -441,16 +441,40 @@
 // ------------------------------------------------------------------------------------
 // 23. WAP to Delete all repeated Elements from Array
 
-a=[1,2,3,3,4,5,3,4,5]
-b=a
-a.splice(0,5)
-console.log(a,'\n', b)
+// a=[1,2,3,3,4,5,3,4,5]
 
 // ------------------------------------------------------------------------------------
 // 24. WAP to count occurrance of any particular Element from Array
 
+// a=[1,2,3,4,5,6,7,7,8,8,6,7,9,74,4,34,5,6]
+// document.write(`<h2>array=[${a}]</h2>`)
+// b=Number(prompt("Enter a number to count it's occurance  in array:"))
+// var occur=0
+// for(let i=0;i<=a.length+10;i++){
+//     if(a[i]==b){
+//         occur+=1
+//     }
+// }
+// document.write(`<h2>Occurance of ${b} in ayyar => ${occur}</h2>`)
+
 // ---i---------------------------------------------------------------------------------
 // 25. WAP to count occurrance of all Elements of Array
+
+a = [1, 2, 3, 4, 5, 6, 7, 7, 8, 8, 6, 7, 9, 74, 4, 34, 5, 6]
+document.write(`<h2>array=[${a}]</h2>`)
+for (let j = 0; j <= a.length+10; j++) {
+    var occur = 0
+    document.write(occur,a[j])
+    for (let i = 0; i <= a.length + 10; i++) {
+        if (a[i] = a[j]) {
+            occur = occur + 1
+        }
+    }
+    document.write(`<h2>Occurance of ${b} in ayyar => ${occur}</h2>`)
+    occur=0
+
+}
+
 
 // ------------------------------------------------------------------------------------
 // 26. WAP to find UNION of two Arrays
