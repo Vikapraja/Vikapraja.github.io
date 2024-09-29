@@ -21,11 +21,15 @@ pre{
     color: red;
 }
 
-pre>ol>li>u{
+pre>ol>li>u,u{
     color: green;
 }
 
 pre>ol{
+    margin-left: 100px;
+}
+
+li>ul{
     margin-left: 100px;
 }
 
@@ -61,3 +65,22 @@ p>u{
 #p4{
     background:lightgreen;
 }
+
+#p5{
+    height: 40vh;
+    width: 90vw;
+    background-image: url(../../media/images/p3.jpg) ;
+    background-repeat: no-repeat;
+}
+
+#p6{
+    height: 100vh;
+    width: 90vw;
+    background-image: url(../../media/images/p4.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: green;
+    background-blend-mode: multiply;
+}
+

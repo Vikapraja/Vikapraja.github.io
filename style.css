@@ -9,10 +9,17 @@ body{
     width: 290px;
     background: linear-gradient(orange, white, green);
     text-align: center;
-    color: brown;
+    color: lightblue;
     padding: 100px;
     margin-top: 75px;
     align-items: center;
+}
+
+#a21>span{
+    font-size: 6rem;
+    font-family: cursive;
+    font-weight: lighter;
+    text-shadow: 10px 10px 2px navy;
 }
 
 #a{
