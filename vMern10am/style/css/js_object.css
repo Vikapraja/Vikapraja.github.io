@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+}
+
+h6,footer,button{
+    text-align: center;
+    font-size: large;
+}
+
+ul>li{
+    color: navy;
+}
+
+li>u,pre>u{
+    color:green;
+}
+
+pre{
+    background-color: lightgreen;
+    color: red;
+}
