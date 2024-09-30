@@ -4,15 +4,14 @@ body{
 }
 
 #a21{
-    float: right;
-    /* height: 160px; */
-    width: 290px;
+    height: 308px;
+    width: 350px;
     background: linear-gradient(orange, white, green);
     text-align: center;
     color: lightblue;
-    padding: 100px;
-    margin-top: 75px;
-    align-items: center;
+    margin-left: 10px;
+    align-content: center;
+
 }
 
 #a21>span{
@@ -20,11 +19,11 @@ body{
     font-family: cursive;
     font-weight: lighter;
     text-shadow: 10px 10px 2px navy;
+    margin-top: 25px;
 }
 
 #a{
-    flex-wrap:initial;
-    
+    display: flex;
 
 }
 #a1{
@@ -34,38 +33,123 @@ body{
     text-align: center;
     color: brown;
     padding: 10px;
+    margin-left: 10px;
+
 }
 
 #a2{
-    height: 5ppx;
+    height: 290px;
     width: 160px;
-    background: green;
+    background: brown;
     text-align: center;
-    color: brown;
+    color: lightgreen;
     padding: 10px;
+    margin-left: 10px;
+
 }
 
 #a3{
-    height: 5px;
+    height: 290px;
     width: 160px;
     background: navy;
     text-align: center;
     color: brown;
     padding: 10px;
+    margin-left: 10px;
+
 }
 #a4{
-    height: 5px;
+    height: 290px;
     width: 160px;
     background: orange;
     text-align: center;
     color: brown;
     padding: 10px;
+    margin-left: 10px;
 }
 #a5{
-    height: 5px;
+    height: 290px;
     width: 160px;
     background: rgb(0, 204, 255);
     text-align: center;
     color: brown;
     padding: 10px;
+    font-size: large;
+    text-align: center;
+    color: white;
+    background: darkmagenta;
+    margin-left: 10px;
+}
+
+button{
+    font-size: large;
+    background: navy;
+}
+
+.ducat{
+    display: flex;
+}
+
+/* -----------------for sky-moon-sun------------------ */
+
+body{
+    margin: 0;
+}
+*{
+    animation: 10s linear infinite;
+}
+.sky{
+    width:50vw;
+    height:20vh;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: animate-sky;
+    position: relative;
+    overflow: hidden;
+    margin-left: 390px;
+}
+.sun,.moon{
+    position: absolute;
+    width: 10vmin;
+    height:10vmin;
+    border-radius: 50%;
+}
+
+.sun{
+    background-color: gold;
+    animation-name: animate-sun;
+}
+
+.moon{
+    background-color: slategray;
+    animation-name: animate-moon;
+}
+
+@keyframes animate-sky{
+    55% {
+        background-color: black;
+    }
+}
+
+@keyframes animate-sun {
+    50% {
+        box-shadow: 0 0 5em 1em white;
+    }
+}
+
+@keyframes animate-moon {
+    0% {
+        transform: translateX(-100vwin);
+        left: 10px;
+    }
+    50%{
+        background-color: black;
+        left: 300px;
+    }
+    100% {
+        transform: translateX( 100vwin);
+        left: 650px;
+    }
 }
