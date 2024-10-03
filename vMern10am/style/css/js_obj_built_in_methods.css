@@ -7,10 +7,13 @@ h6,footer{
     font-size: large;
 }
 
-ul>li{
+ul>li,u>u{
     color: navy;
 }
 
+ol>li,pre>u{
+    color: green;
+}
 
 button{
     font-size: large;
