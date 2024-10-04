@@ -7,8 +7,12 @@ h6,footer{
     font-size: large;
 }
 
-ul>li,u>u{
+ul>li,u>u,li>p{
     color: navy;
+}
+
+u{
+    color:red
 }
 
 ol>li,pre>u{

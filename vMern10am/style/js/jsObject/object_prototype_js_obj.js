@@ -60,3 +60,4 @@ emp2.display
 emp3.display
 emp4.display
 
+console.log(Object.getPrototypeOf(emp1))  // to show prototype of an obj
