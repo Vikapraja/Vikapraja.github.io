@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+}
+
+h6,footer{
+    text-align: center;
+    font-size: large;
+}
+
+ul>li,pre>ol>li>p{
+    color: navy;
+}
+
+li>ol>li{
+    color: orange;
+}
+
+button{
+    font-size: large;
+}
+
+pre{
+    background-color: lightgreen;
+    color: red;
+}
+
+u{
+    color: green;
+}
+
+u>u{
+    color: blue;
+}
