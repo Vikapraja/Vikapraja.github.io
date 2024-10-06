@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS display</title>
+    <link rel="stylesheet" href="./style/css/css_display.css">
+</head>
+<body>
+    <h6>29/08/2024</h6>
+    <hr>
+    <h1>#Css Display Property
+        <a href="./css1.html"><button style="color: white; background-color: brown; margin-left: 800px; font-size: large; border-radius: 30%;">EXIT/Go to Css Home</button></a>
+    </h1>
+    <hr>
+    <h2>
+        <ul>
+            <li>=>The display property determines how an element appears on an web page, including ita box type
+                 (block or inline) and the layout of its child elements</li>
+            <li>=> The display property secifies the display behavior(the type of rendering box) of an element.</li>
+            <li>=> display property default values is '<u>block</u>' or '<u>inline</u>'</li>
+            <li>=><u>Syntax :</u> display: <u>value</u>;</li>
+            <li>=><u>CSS display properties possible values</u>
+                <ol>
+                    <li><u>block </u>
+                        <p>[is used to adjust one element in one row. In that case we use height,width,padding
+                            and margin . Follwing elements having display block properties by default:
+                            <table>
+                                <tbody>
+                                <tr>                                    
+                                        <td>< table >,</td>
+                                        <td>< tr >,</td>
+                                        <td>< heading >,</td>
+                                        <td>< p ></td>
+                                        <td>etc.</td>
+                                    
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            ]</p>
+                    </li>
+                    <li><u>inline</u> 
+                        <p>[It is used to adjust display more than one element in a row. In that case we cann't 
+                            use height and width but padding and margin will be used. Following
+                            elements having display inline property by default: 
+                            <table>
+                                <tbody>
+                                <tr>                                    
+                                        <td>< a >,</td>
+                                        <td>< label >,</td>
+                                        <td>etc.</td>
+                                    
+                                </tr>
+                                </tbody>
+                            </table>
+                            
+
+                            ]</p>
+                    </li>
+                    <li><u>inline-block</u>
+                        <p>[It is used to adjust more than one element in a row . In that case we can use 
+                            height, width, padding & margin. Following elements having display inline-block 
+                            property by default : 
+                            <table>
+                                <tbody>
+                                <tr>                                    
+                                        <td>< button >,</td>
+                                        <td>< image >,</td>
+                                        <td>< Input ></td>
+                                        <td>etc.</td>
+                                    
+                                </tr>
+                                </tbody>
+                            </table>
+                            ]</p>
+                    </li>
+                    <li><u>None</u>
+                        <p>[is used to remove an element from normal flow of page of page. 
+                        In that case element are remove or hide from web-page. and other element will not fill 
+                        hidden element's gap.]</p>                    
+                    </li>
+                    <li>Etc.</li>
+
+                </ol>
+            </li>
+
+        </ul>
+        <hr>
+        <u>#Syntax :</u>
+        <pre>
+            display: <u>value</u>;
+        </pre>
+    </h2>
+    <hr>
+    <h3>
+        <u>#Example :</u>
+
+        <ol>
+            <li>1)display: inline; =>first abcde |2)display: block; => 2nd abcde  |3)display: inline-block; => 3rd abcde
+                | 4)display:none; => 4th abcde 
+            </li>
+            <li>
+                <div class="main">
+                    <div class="boxs1">
+                        <div id="box1">a</div>
+                        <div id="box2">b</div>
+                        <div id="box3">c</div>
+                        <div id="box4">d</div>
+                        <div id="box5">e</div>
+                    </div>
+                    <div class="boxs2">
+                        <div id="box1">a</div>
+                        <div id="box2">b</div>
+                        <div id="box3">c</div>
+                        <div id="box4">d</div>
+                        <div id="box5">e</div>
+                    </div>
+                    <div class="boxs3">
+                        <div id="box1">a</div>
+                        <div id="box2">b</div>
+                        <div id="box3">c</div>
+                        <div id="box4">d</div>
+                        <div id="box5">e</div>
+                    </div>
+                    <div class="boxs4">
+                        <div id="box1">a</div>
+                        <div id="box2">b</div>
+                        <div id="box3">c</div>
+                        <div id="box4">d</div>
+                        <div id="box5">e</div>
+                    </div>
+                    <div class="boxs5">
+                        <div id="box1">a</div>
+                        <div id="box2">b</div>
+                        <div id="box3">c</div>
+                        <div id="box4">d</div>
+                        <div id="box5">e</div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </h3>
+    <hr>
+    <footer>
+        <a href="css1.html" target="_self"><button> <<< CSS HOME</button></a>
+        <a href="css1.html" target="_self"><button>CSS HOME</button></a>
+        <a href="css_drop-down_menu.html" target="_self"><button>Drop-down Menu 2>>></button></a>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+}
+
+h6,footer{
+    text-align: center;
+    font-size: large;
+    margin-top: 300px; 
+}
+
+ul>li{
+    color: navy;
+}
+
+
+button{
+    font-size: large;
+}
+
+pre{
+    background-color: lightgreen;
+    color: red;
+}
+
+/* ---------------------for drop-down exapmle--------------- */
+
+.manu{
+    width: 30vw;
+}
+
+.menu h3{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin: 2px;
+}
+
+.icon{
+    /* float:right; */
+    cursor: pointer;
+}
+
+.items ul{
+    list-style: none;
+    margin-left: 40px 5px;
+    
+}
+
+.items li{
+    background-color: blue;
+    padding: 10px;
+    margin: 1px 0;
+    margin-right: 500px;
+
+}
+
+.items li:hover{
+    background-color: navy;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: Verdana;
+}
+ 
+.items{
+    display: none;
+} 
+
+.menu:hover .items{
+    display: block;
+}
+
+h3>ol{
+    display: flex;
+}
