@@ -2,6 +2,24 @@
     margin: 0;
 }
 
+span{
+    color: chocolate;
+}
+
+.concept{
+    padding: 50px;
+}
+
+div>p{
+    font-size:1.5em;
+    font-weight: bold;
+    color: navy;
+}
+
+div>p>u{
+    color: red;
+}
+
 h6,footer{
     text-align: center;
     font-size: large;
@@ -11,6 +29,23 @@ ul>li{
     color: navy;
 }
 
+ul>li>ol>li{
+    margin-left: 200px;
+    margin-top: 10px;
+    color: crimson;
+}
+
+ol>li{
+    margin-top: 15px;
+}
+
+pre>span{
+    color: purple;
+}
+
+li>u{
+    color:green;
+}
 
 button{
     font-size: large;
@@ -20,3 +55,4 @@ pre{
     background-color: lightgreen;
     color: red;
 }
+
