@@ -47,6 +47,17 @@ li>u{
     color:green;
 }
 
+ul>li>ul>li{
+    margin-top: 20px;
+}
+
+li>a>button{
+    background: pink;
+    color: red;
+    border: 5px orange;
+
+}
+
 button{
     font-size: large;
 }
@@ -54,5 +65,6 @@ button{
 pre{
     background-color: lightgreen;
     color: red;
+    font-weight: bold;
 }
 
