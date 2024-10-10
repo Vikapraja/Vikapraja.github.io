@@ -84,10 +84,15 @@ body{
 button{
     font-size: large;
     background: navy;
+    color: antiquewhite;
+    border-radius: 10px;
+
 }
 
 .ducat{
     display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 /* -----------------for sky-moon-sun------------------ */

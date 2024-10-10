@@ -36,7 +36,7 @@ ul>li>ol>li{
 }
 
 ol>li{
-    margin-top: 15px;
+    margin: 15px;
 }
 
 pre>span{
@@ -48,7 +48,7 @@ li>u{
 }
 
 ul>li>ul>li{
-    margin-top: 20px;
+    margin: 20px;
 }
 
 li>a>button{
@@ -66,5 +66,6 @@ pre{
     background-color: lightgreen;
     color: red;
     font-weight: bold;
+    margin: 20px;
 }
 
