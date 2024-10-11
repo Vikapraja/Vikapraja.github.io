@@ -9,11 +9,56 @@ h6,footer{
 
 ul>li{
     color: navy;
+    margin: 20px;
 }
 
+p{
+    margin: 10px;
+    padding: 10px;
+    color: darkred;
+}
+
+u{
+    color: green;
+}
+
+u>u{
+    color: chocolate;
+}
+
+li::marker{
+    color: red;
+} 
+
+
+li>ol>li{
+    color: crimson;
+}
+
+span{
+    color: deeppink;
+    background-color: lightgreen;
+    text-decoration: underline;
+}
+
+#oll>li,#oll1>li{
+    margin: 10px;
+    padding: 5px;
+}
+
+li>span{
+    color: blue;
+    text-decoration: none;
+}
 
 button{
     font-size: large;
+}
+
+li>ul>li{
+    color: blueviolet;
+    margin: 5px;
+    padding: 5px;
 }
 
 pre{

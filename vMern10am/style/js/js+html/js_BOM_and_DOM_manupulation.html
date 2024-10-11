@@ -11,21 +11,157 @@
     <hr>
     <h1>#BOM & DOM Manupulation in JavaScript
         <a href="./js_test.html"><button style="color: white; background-color: brown; margin-left: 800px; font-size: large; border-radius: 30%;">EXIT/Go to JS Home</button></a>
+        <ul>
+            <li><u>BOM=<u>Browser Object Model</u></u></li>
+            <li><u>DOM=<u>Document Object Model</u></u></li>
+        </ul>
+        <p>
+           ➡ BOM & DOM refers to structure related to JavaScript intract with the browser and web 
+            page content.
+        </p>
+
     </h1>
     <hr>
     <h2>
-        <ul>
-            <li>=></li>
-        </ul>
+        <ol type="A">
+            <li>BOM [Browser Object Model]
+                <ul>
+                    <li>=>Bom allow JavaScript to intract with the browser itself.</li>
+                    <li>=>It provide objects to intract with the browser window and control browser
+                        related properties.
+                    </li>
+                    <li><u>Key features of BOM :</u>
+                        <ol>
+                            <li>Window Object
+                                    <ul>
+                                        <li>It is the main Object of the BOM which represent the browser window. </li>
+                                        <li>All other BOM object like <u>Navigator, Screen, History, Loacation and Document</u> etc. 
+                                            are properties of window object.</li>
+                                    </ul>
+                            </li>
+                            <hr>
+                            <li>Navigator
+                                    <ul>
+                                        <li>This Object provide information about the <u>browser-name, virsion</u> etc. </li>
+                                    </ul>
+                            </li>
+                            <hr>
+                            <li>Screen Object
+                                    <ul>
+                                        <li>This Object contains information about the user's screen such as : 
+                                            <u>screen-width, screen-height</u> etc </li>
+                                    </ul>
+                            </li>
+                            <hr>
+                            <li>Location
+                                    <ul>
+                                        <li>It object provide details about current URL and allow us to redirect 
+                                            browser to another page. </li>
+                                    </ul>
+                            </li>
+                            <hr>
+                            <li>History
+                                    <ul>
+                                        <li>This object present session-history of the browser tab.</li>
+                                        <li>It allow us to navigate backword and farword between pages.</li>
+                                    </ul>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+            <hr>
+            <li>DOM [Document Object Model]
+                <ul>
+                    <li>=>DOM represent structure of <u> HTML and XML</u> document.</li>
+                    <li>=>It is an API for accessing and modifying the structure and contents 
+                        of web page.
+                    </li>
+                    <li><u> Key feature of DOM :</u>
+                        <ol>
+                            <li>Document Object
+                                <ul>
+                                    <li>It is root of the DOM with representing entire HTML document.</li>
+                                </ul>
+                            </li>
+                            <hr>
+                            <li>Node
+                                <ul>
+                                    <li>DOM representing HTML Element as a tree of Nodes. </li>
+                                    <li>JavaScript can intract with these Node to manupulate
+                                        the content and structure of the web-page.</li>
+                                </ul>
+                            </li>
+                            <hr>
+                            <li>Element Access
+                                <ul>
+                                    <li>We can select elements from DOM using methods like <u>getElementById(),
+                                         getElementByClassName(), getElementByTagName() and getByQuerrySelector() all. </u></li>
+                                </ul>
+                            </li>
+                            <hr>
+                            <li>Event Handling
+                                    <ul>
+                                        <li>DOM allow for handling user's event like <u>clicks, key_press,
+                                            form_submition etc.</u>through event listeners.</li>
+                                    </ul>
+                            </li>
+                            <hr>
+                            <li>Modifying Content
+                                    <ul>
+                                        <li>We can dynamically update and modify content<u> files, attributes and
+                                            structure </u>of web pages </li>
+                                    </ul>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+
+            </li>
+        </ol>
+
         <hr>
-        <u>#Syntax :</u>
-        <pre>
-            .......
+        <ol id="oll" type="a">
+            <span>#Key Differance between BOM & DOM : </span>
+            <li><u>Scope :</u>
+                [BOM dills with the browser window and its properties <span>while </span>DOM is
+                 consult with the web page content.]
+            </li>
+            <li><u>Object :</u>
+                [BOM Object include window <u>Navigator, Location, History</u> object <span>while </span>
+                DOM object include <u>html elements and document stucture</u>. ]
+            </li>
+            <li><u>Intraction :</u>
+                [BOM lets you control browser extends <span>while </span>DOM allows us to modify the web page.]
+            </li>
+        </ol>
+        
+        <hr>
+        
+        <ol id="oll1" type="I">
+            <span>##DOM oprations :</span>
+            <u>With help of DOM we can perform following operations :</u>
+            <li>We can change the html doocument using DOM</li>
+            <li>We can change html elements and attributes in the page. </li>
+            <li>We can change all CSS-style in the page.</li>
+            <li>We can create, update or delete html elements and attributes in the page. </li>
+            <li>We can react over existing html events in page.</li>
+            <li>we can create our own event and react on them in page.</li>
+            <li>We can perform time-based event in the web page.</li>
+        </ol>
+
+        <pre><u>Syntax :</u>In 'script' tag/element At the last of 'body' section of Html document/file/page :
+                       
+                                var var_name = document.<span>dom-methods(inCapilizeCase)</span>("<u>id_name/element-name/clas-name</u>")
+            <span>applying changes:</span>  var_name.style.<u>AttributesName(in capitalizeCase)</u>="<u>values</u>"
         </pre>
     </h2>
     <hr>
     <h3>
         <u>#Example :</u>
+        <ol>
+            <li><a href="../../js/DOM_operations/getElementById()_.html">getElementById</a></li>
+        </ol>
     </h3>
     <hr>
     <footer>
