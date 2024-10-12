@@ -9,16 +9,19 @@
 </head>
 
 <body>
-    <h1><u>#Example of :</u> getElementById(<u>"id_name"</u>)</h1>
+    <h1><u>#Example of :</u> getElementByClassName(<u>"class_name"</u>)</h1>
 
     <pre>
         <u>=>In 'script' tag/element, At last of body of this document/web-page/html-page :</u>
 
-            var a=document.getElementById("p1")
-            a.style.backgroundColor="navy"
-            a.style.color="white"
-            a.style.textAlign="justify"
-            a.style.padding="20px"
+        var items=document.getElementsByClassName("sample")
+        for(let a of items){
+                    a.style.backgroundColor="navy"
+                    a.style.color="white"
+                    a.style.textAlign="justify"
+                    a.style.padding="20px"
+                    
+                }
     </pre>
 
 
@@ -106,12 +109,16 @@
 
 
         <script>
-            var a=document.getElementById("p1")
+            var items=document.getElementsByClassName("sample")
             // console.log(p)
+            for(let a of items){
             a.style.backgroundColor="navy"
             a.style.color="white"
             a.style.textAlign="justify"
             a.style.padding="20px"
+
+            }
+            
         </script>
 </body>
 

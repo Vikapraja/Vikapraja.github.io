@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick Event of Button</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .center {
+            width: 80%;
+            height: 50%;
+            background-color: lightslategray;
+        }
+
+        .center p {
+            font-size: 1.5rem;
+            text-align: justify;
+            background-color: navy;
+            color: white;
+            padding: 20px;
+        }
+
+        .center button {
+            background-color: green;
+            color: white;
+            width: 100%;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button{
+            background-color: brown;
+            color: white;
+            font-size: 1.5rem;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Js Onclick Event of Button Example:
+         <a href="../js+html/js_BOM_and_DOM_manupulation.html"><button>BACK to BOM-DOM manupulation</button></a>
+            </h1>
+
+    <div class="main">
+        <div class="center">
+            <button id="btn" onclick="fun()">Full Name</button>
+
+            <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum quis, unde consectetur libero,
+                alias
+                provident reiciendis cumque et aperiam sed autem impedit neque laboriosam ullam, minus repudiandae ab
+                ipsa? Aliquid itaque minus est amet ad repellat provident modi? Sapiente, laborum ad amet voluptatem
+                pariatur fuga dolor ab officia tempora porro suscipit accusamus. Soluta reprehenderit, debitis numquam
+                odio ratione corporis optio repellat dicta assumenda animi molestiae quaerat magni, unde quos vero
+                suscipit repellendus accusantium natus commodi. Magnam quaerat qui quia nihil cum numquam libero
+                delectus sed fuga perferendis saepe necessitatibus impedit amet quod atque optio laboriosam nulla
+                expedita, quo a blanditiis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et tempora tenetur, deserunt fugiat voluptatum
+                accusantium maiores incidunt est consequatur inventore, harum sed expedita enim provident ullam, qui sit
+                illo recusandae.
+            </p>
+
+
+        </div>
+    </div>
+
+    <script>
+        var text1 = "Viveka"
+        var text2 = "Vivekanand Prajapati"
+        var btn = document.getElementById("btn")
+        var p = document.getElementById("para")
+
+        function fun() {
+            if (btn.innerHTML == "Full Name") {
+                p.innerHTML = text2
+                btn.innerHTML = "Short Name"
+            }
+            else {
+                p.innerHTML = text1
+                btn.innerHTML = "Full Name"
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

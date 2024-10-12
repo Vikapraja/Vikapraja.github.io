@@ -9,16 +9,28 @@
 </head>
 
 <body>
-    <h1><u>#Example of :</u> getElementById(<u>"id_name"</u>)</h1>
+    <h1><u>#Example of :</u> querrySelector(<u>"class/tag/id"</u>)</h1>
 
     <pre>
         <u>=>In 'script' tag/element, At last of body of this document/web-page/html-page :</u>
 
-            var a=document.getElementById("p1")
-            a.style.backgroundColor="navy"
-            a.style.color="white"
-            a.style.textAlign="justify"
-            a.style.padding="20px"
+        var a=document.querySelector("#p1")  //taget first paragraph by id
+        a.style.backgroundColor="aqua"
+        a.style.color="red"
+        a.style.textAlign="justify"
+        a.style.padding="20px"
+
+        var b=document.querySelector(".sample2")    //target paragraph with class-name ".sample2"
+        b.style.backgroundColor="lightgreen"
+        b.style.color="red"
+        b.style.textAlign="justify"
+        b.style.padding="20px"
+
+        var c=document.querySelector("span")    //target paragraph with tag "span"
+        c.style.backgroundColor="yellow"
+        c.style.color="red"
+        
+
     </pre>
 
 
@@ -27,7 +39,7 @@
     <hr>
 
     <a href="../js+html/js_BOM_and_DOM_manupulation.html"><button>Back</button></a>
-    <p id="p1" class="sample">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis amet at eos illum ad
+    <p id="p1" class="sample1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis amet at eos illum ad
         repudiandae quo aperiam dolor labore explicabo minima nostrum porro nesciunt, facilis numquam, tempore
         perferendis itaque minus architecto eius maiores placeat atque ratione! Placeat autem voluptates rem nobis
         voluptatum sint provident exercitationem laborum? Expedita sequi consequatur iusto fuga atque, perspiciatis
@@ -35,7 +47,7 @@
         facilis! Incidunt facere ab harum labore illum quas, beatae dolores sed illo et iure neque dignissimos maxime
         eum. Harum est consectetur cupiditate aut ea provident modi possimus rerum molestias vel? Et culpa illo
         obcaecati.</p>
-    <p id="p2" class="sample">Libero accusantium quam sapiente veniam iusto! Quaerat odio est quos minus pariatur rerum
+    <p id="p2" class="sample2">Libero accusantium quam sapiente veniam iusto! Quaerat odio est quos minus pariatur rerum
         minima. Et atque nesciunt aspernatur commodi magni. Minus ipsa aliquid harum eligendi. Enim fugit omnis
         quibusdam voluptates accusamus velit, est dolores natus itaque vel autem commodi nostrum delectus beatae
         distinctio explicabo magni reprehenderit aut earum doloribus tenetur voluptatum? Veniam ipsam aspernatur, velit
@@ -43,7 +55,7 @@
         perferendis ipsa consequatur animi, id excepturi dolorem amet vero necessitatibus. Aliquam, repellat repudiandae
         qui ullam labore quia nisi minus porro non quis repellendus ad fugiat tempora natus libero, quibusdam eveniet
         cupiditate molestias magnam?</p>
-    <p id="p3" class="sample">Fuga, obcaecati dolorem rem assumenda deserunt illum fugiat excepturi, nesciunt atque
+    <p id="p3" class="sample3">Fuga, obcaecati dolorem rem assumenda deserunt illum fugiat excepturi, nesciunt atque
         adipisci quo modi laboriosam magnam quis praesentium harum nostrum nobis blanditiis quibusdam quaerat! Veritatis
         aspernatur perspiciatis modi earum unde, nesciunt impedit? Odit minima possimus explicabo in voluptatem quisquam
         reprehenderit eligendi commodi ipsa omnis reiciendis, totam impedit. Optio saepe cumque quibusdam, adipisci
@@ -51,15 +63,15 @@
         architecto veniam mollitia dolores rem aliquid nisi modi itaque! Quod numquam dolore culpa, officia enim
         inventore vel magnam atque. Facilis dignissimos vitae, dolor delectus accusamus libero eaque voluptatem qui,
         placeat sint quis suscipit!</p>
-    <p id="p4" class="sample">Fugit repellat labore, itaque esse adipisci minima blanditiis quas rem dolorum iusto
+    <p id="p4" class="sample4">Fugit repellat labore, itaque esse adipisci minima blanditiis quas rem dolorum iusto
         magnam est, cum, sed excepturi iste aperiam dignissimos debitis veniam? Officia quia debitis aliquid soluta eum
-        suscipit maiores aspernatur dolores facilis, quas laudantium distinctio exercitationem omnis quasi perferendis
-        illum temporibus aliquam non excepturi magni nulla, maxime possimus accusamus vero. Esse laboriosam, ex
-        necessitatibus sequi quas sint architecto natus reprehenderit ullam, nobis vero dolor officiis quos minima velit
+        suscipit <span>maiores aspernatur dolores facilis, quas laudantium distinctio exercitationem omnis quasi perferendis
+            illum temporibus aliquam non excepturi magni nulla, maxime possimus accusamus vero. Esse laboriosam, ex
+            necessitatibus sequi quas sint architecto natus </span> reprehenderit ullam, nobis vero dolor officiis quos minima velit
         est delectus dolore enim tempora quod nostrum voluptatem! Neque, eveniet? Enim soluta obcaecati ad aspernatur
         rem fuga ipsam porro ullam quaerat, veritatis molestiae vero facere minima recusandae labore corrupti doloribus
         magnam.</p>
-    <p id="p5" class="sample">Provident quia, voluptatum dicta dolor optio laboriosam libero quibusdam a ducimus
+    <p id="p5" class="sample5">Provident quia, voluptatum dicta dolor optio laboriosam libero quibusdam a ducimus
         dignissimos voluptatibus ut repellat, est ab soluta rerum, fuga esse nulla natus eligendi nisi reiciendis!
         Consectetur blanditiis quo quisquam amet, totam fuga ducimus! Unde quasi voluptatem, eius culpa voluptatum
         perferendis, officia natus recusandae rem, numquam illum! Ullam sit neque debitis nemo commodi laudantium, dolor
@@ -67,28 +79,28 @@
         sapiente tenetur quam officia tempora velit ducimus quos aperiam amet quae vero odit magni dolorem vitae
         quisquam? Cum error vitae blanditiis, nihil ex, accusantium aperiam, sapiente eos officiis modi quisquam
         asperiores enim!</p>
-    <p id="p6" class="sample">Est ab placeat veniam corrupti omnis aperiam provident blanditiis rem magni quia dolore
+    <p id="p6" class="sample6">Est ab placeat veniam corrupti omnis aperiam provident blanditiis rem magni quia dolore
         voluptatem iste modi doloribus facere quam deserunt quisquam, sequi ad quaerat? Iusto totam natus repellendus
         accusantium incidunt sequi quia, quae sit odit vero, doloremque sint ratione qui et? Dignissimos quidem quaerat
         iste porro nisi tempora, illum alias omnis quae perspiciatis nulla dolore delectus maiores sapiente minima qui
         sunt numquam aliquid! Et voluptas officiis inventore fugiat facere rerum, molestias in illo facilis debitis ipsa
         sit fuga explicabo? Voluptatibus quas sit illum rerum deleniti corporis! Molestiae unde quis magni veritatis ab
         maxime, exercitationem deleniti fugiat. Dolore porro nemo accusantium.</p>
-    <p id="p7" class="sample">Voluptates neque nulla iusto, esse ipsam, impedit veritatis nisi nostrum molestias
+    <p id="p7" class="sample7">Voluptates neque nulla iusto, esse ipsam, impedit veritatis nisi nostrum molestias
         voluptate sapiente error maiores corporis aut? Illo expedita iste commodi modi maiores eius reprehenderit ex
         praesentium id magni libero necessitatibus mollitia, ad perspiciatis tempore unde optio nam ullam nisi omnis
         iure saepe? Odit deleniti eius sunt laborum ut dicta aperiam earum totam ipsam commodi doloribus mollitia
         voluptatem, optio sequi odio, distinctio ducimus? Hic eius, reprehenderit libero laboriosam ducimus, obcaecati
         et unde debitis quaerat nemo neque nulla provident quas inventore iste? Ullam ipsam, iure nisi veritatis officia
         dolore odio et adipisci. Atque modi nam exercitationem excepturi, ipsam labore veniam nostrum.</p>
-    <p id="p8" class="sample">Distinctio rerum delectus modi dignissimos cum magni architecto est quaerat quisquam
+    <p id="p8" class="sample8">Distinctio rerum delectus modi dignissimos cum magni architecto est quaerat quisquam
         quidem obcaecati, corporis vero. Eaque, incidunt quod laboriosam nostrum reprehenderit voluptatum neque id
         deserunt aperiam atque? Quaerat nulla, tenetur illum ipsum facilis, sit nam accusantium, neque qui fugiat
         mollitia iusto obcaecati quia voluptate quibusdam ratione cumque expedita sequi est molestias error. Ab hic
         totam explicabo odit sequi maxime aperiam corporis aut et dolore nam vel dicta ratione, magnam recusandae beatae
         ipsam tempore fugit id eaque! Ea consequuntur deserunt asperiores officia iste, dolores quam maxime. Veniam quas
         magni sit eligendi suscipit velit corporis aliquid, tenetur reprehenderit aut voluptas, saepe accusamus.</p>
-    <p id="p9" class="sample">Culpa pariatur tempore, beatae facere eligendi necessitatibus blanditiis voluptatibus
+    <p id="p9" class="sample9">Culpa pariatur tempore, beatae facere eligendi necessitatibus blanditiis voluptatibus
         harum tenetur vero maxime ducimus nulla illum ex, perferendis corrupti iure nobis ipsum id obcaecati dolorum eum
         reprehenderit voluptates hic. Tempore facilis id magni! Sed a est, nam magni nesciunt possimus optio inventore
         nostrum assumenda ea, harum fugiat soluta vitae dignissimos odio cum aspernatur asperiores labore ad? Facere
@@ -96,7 +108,7 @@
         voluptatem fuga minus nostrum sint modi distinctio doloremque laborum excepturi laudantium, molestiae, tenetur
         unde culpa quos id. Reiciendis, molestiae! Saepe praesentium dicta autem suscipit, cupiditate accusantium nobis
         culpa esse?</p>
-    <p id="p10" class="sample">Voluptatibus excepturi voluptate quod velit dignissimos sit, doloremque qui voluptatum
+    <p id="p10" class="sample10">Voluptatibus excepturi voluptate quod velit dignissimos sit, doloremque qui voluptatum
         perferendis quisquam cumque mollitia impedit molestias aut quasi hic, similique fugiat a maxime. Animi non
         dolore quo, unde asperiores debitis neque voluptatum molestias provident quos nobis! Est id ratione reiciendis
         similique odio quisquam rerum officia modi ipsa. Totam consequatur eius, asperiores facilis omnis ex rem. Velit
@@ -106,12 +118,22 @@
 
 
         <script>
-            var a=document.getElementById("p1")
-            // console.log(p)
-            a.style.backgroundColor="navy"
-            a.style.color="white"
+            var a=document.querySelector("#p1")  //taget first paragraph by id
+            a.style.backgroundColor="aqua"
+            a.style.color="red"
             a.style.textAlign="justify"
             a.style.padding="20px"
+
+            var b=document.querySelector(".sample2")    //target paragraph with class-name ".sample2"
+            b.style.backgroundColor="lightgreen"
+            b.style.color="red"
+            b.style.textAlign="justify"
+            b.style.padding="20px"
+
+            var c=document.querySelector("span")    //target paragraph with tag "span"
+            c.style.backgroundColor="yellow"
+            c.style.color="red"
+            
         </script>
 </body>
 

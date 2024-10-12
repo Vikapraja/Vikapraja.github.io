@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick Image Event</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-color: black;
+        }
+
+        button{
+            background-color: brown;
+            color: white;
+        }
+
+        h1{
+            color: white;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .center{
+            width: 80%;
+            height: 50%;
+            text-align: center;
+            display: grid;
+            place-items: center;
+        }
+        .center button{
+            font-size: 1.5rem;
+            background-color: lightsalmon;
+            color: navy;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Js Onclick Event On images by Button Example:
+        <a href="../js+html/js_BOM_and_DOM_manupulation.html"><button>BACK to BOM-DOM manupulation</button></a>
+    </h1>
+    <hr>
+
+    <div class="main">
+        <div class="center">
+            <img src="../../../media/images/off.png" id="img" alt="">
+            <button id="btn" title="click me plz" onclick="fun()">ON</button>
+        </div>
+    </div>
+
+    <script>
+        var img=document.getElementById("img")
+        var button=document.getElementById("btn")
+
+        var bg=document.getElementsByTagName("body")
+
+        function fun(){
+            if(btn.innerHTML=="ON"){
+                img.src="../../../media/images/on.png"
+                btn.innerHTML="OFF"
+                bg.style.backgroundColor="black"
+            }
+            else{
+                img.src="../../../media/images/off.png"
+                btn.innerHTML="ON"
+                bg.style.backgroundColor="white"
+            }
+        }
+
+    </script>
+</body>
+</html>
