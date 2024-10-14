@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard-Event</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            display: grid;
+            place-items: center;
+        }
+
+        .main{
+            width: 100vw;
+            height: 100vh;
+        }
+        .center{
+            width: 80%;
+            margin: auto;
+        }
+        .center h3{
+            background-color: navy;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 0.75rem;
+        }
+        .center input{
+            width: 99.5%;
+            padding: 10px 0;
+            margin-bottom: 5px;
+        }
+        .center button{
+            background-color: navy;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+        }
+
+        #heading-span{
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <h1>Keyboard-Event Example
+        <a href="../js+html/js_BOM_and_DOM_manupulation.html"><button style="background-color: brown; color: white; ">Back to BOM-DOM manupulation</button></a>
+        <hr>
+    </h1>
+
+    <div class="main">`
+        <div class="center">
+            <h3 id="hname">Name : </h3>
+            <h3 id="hemail">Email : </h3>
+            <h3 id="hphone">Phone : </h3>
+            <h3 id="hdesignation">Designation : </h3>
+            <h3 id="hsalary">Salary : </h3>
+            <h3 id="hcity">City : </h3>
+            <h3 id="hstate">State : </h3>
+            <input type="text" class="name" id="name" name="name" placeholder="Full Name" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
+            <input type="email" class="email" id="email" name="email" placeholder="Email Address" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
+            <input type="number" class="phone" id="phone" name="phone" placeholder="Phone Number" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3()">
+            <input type="text" class="designation" id="designation" name="designation" placeholder="Designation" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
+            <input type="number" class="salary" id="salary" name="salary" placeholder="Enter ur Salary" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
+            <input type="text" class="city" id="city" name="city" placeholder="Enter City" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
+            <input type="text" class="state" id="state" name="state" placeholder="Enter State" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
+            <button onclick="postData()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function fun1(e){
+            // console.log(e.key)
+            // console.log(e.target.name)
+            // console.log(e.target.id)
+            // console.log(e.target.value)
+            let item=document.getElementById(e.target.id)
+            item.style.backgroundColor="lightgray"
+            item.style.color="black"
+        }
+
+        function fun2(e){
+            let item=document.getElementById(e.target.id)
+            item.style.backgroundColor="lightgreen"
+            item.style.color="black"
+        }
+
+        function fun3(e){
+            let item=document.getElementById(e.target.id)
+            item.style.backgroundColor="gold"
+            item.style.color="black"
+
+            let heading = document.getElementById(`h${e.target.id}`)
+            heading.innerHTML = `<span id='heading-span'>${e.target.name}</span> : ${e.target.value}`
+        }
+
+        function postData(){
+            alert(`
+                    Name        :       ${document.getElementById("name").value}       
+                    Email       :       ${document.getElementById("email").value}       
+                    Phone       :       ${document.getElementById("phone").value}       
+                    Designation :       ${document.getElementById("designation").value}
+                    Salary      :       ${document.getElementById("salary").value}
+                    City        :       ${document.getElementById("city").value}
+                    State       :       ${document.getElementById("state").value}
+
+
+                    `)
+
+    var a = Object(`
+                    Name             :   ${document.getElementById("name").value}
+                    Email            :   ${document.getElementById("email").value}
+                    Phone            :   ${document.getElementById("phone").value}
+                    Designation      :   ${document.getElementById("designation").value}
+                    Salary           :   ${document.getElementById("salary").value}
+                    City             :   ${document.getElementById("city").value}
+                    State            :   ${document.getElementById("state").value}
+                    `
+                    )
+
+    console.log(a)    // for console
+        }
+    </script>
+</body>
+</html>
