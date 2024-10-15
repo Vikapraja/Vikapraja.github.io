@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keyboard-Event</title>
+    <title>DOM(Form-Event)</title>
     <style>
         *{
             margin: 0;
@@ -22,7 +22,7 @@
             margin: auto;
         }
         .center h3{
-            background-color: navy;
+            background-color: lightsalmon;
             color: white;
             padding: 10px;
             text-align: center;
@@ -55,7 +55,7 @@
     </style>
 </head>
 <body>
-    <h1>Keyboard-Event Example
+    <h1>Js-DOM(Form-Event Example)
         <a href="../js+html/js_BOM_and_DOM_manupulation.html"><button style="background-color: brown; color: white; ">Back to BOM-DOM manupulation</button></a>
         <hr>
     </h1>
@@ -69,27 +69,30 @@
             <h3 id="hsalary">Salary : </h3>
             <h3 id="hcity">City : </h3>
             <h3 id="hstate">State : </h3>
-            <input type="text" class="name" id="name" name="name" placeholder="Full Name" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
-            <input type="email" class="email" id="email" name="email" placeholder="Email Address" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
-            <input type="number" class="phone" id="phone" name="phone" placeholder="Phone Number" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3()">
-            <input type="text" class="designation" id="designation" name="designation" placeholder="Designation" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
-            <input type="number" class="salary" id="salary" name="salary" placeholder="Enter ur Salary" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
-            <input type="text" class="city" id="city" name="city" placeholder="Enter City" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
-            <input type="text" class="state" id="state" name="state" placeholder="Enter State" onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
-            <button onclick="postData()">Submit</button>
+            <!-- <form onsubmit="postData(event)"> -->
+            <form onsubmit="postData()">
+                <input type="text" class="name" id="name" name="name" required placeholder="Full Name" onfocus="fun1(event)" onblur="fun2(event)" onchange="fun3(event)">
+                <input type="email" class="email" id="email" name="email" required placeholder="Email Address" onfocus="fun1(event)" onblur="fun2(event)" onchange="fun3(event)">
+                <input type="number" class="phone" id="phone" name="phone" required placeholder="Phone Number" onfocus="fun1(event)" onblur="fun2(event)" onchange="fun3(event)">
+                <input type="text" class="designation" id="designation" name="designation" required placeholder="Designation" onfocus="fun1(event)" onblur="fun2(event)" onchange="fun3(event)">
+                <input type="number" class="salary" id="salary" name="salary" placeholder="Enter ur Salary" required onfocus="fun1(event)" onblur="fun2(event)" onchange="fun3(event)">
+                <input type="text" class="city" id="city" name="city" required placeholder="Enter City" onfocus="fun1(event)" onblur="fun2(event)" onchange="fun3(event)">
+                <input type="text" class="state" id="state" name="state" required placeholder="Enter State" onfocus="fun1(event)" onblur="fun2(event)" onchange="fun3(event)">
+                <button type="submit">Submit</button>
+                
+            </form>
         </div>
     </div>
-
-    
     <div id="note">
+
         <hr>
-        <h2>Keyboard-Events (attributes) in input-elements </h2>
-        <hr>
+        <h2>DOM-Form Events(attributes) on form-element</h2>
         <ol>
-            <li>onkeydown</li>
-            <li>onkeypress</li>
-            <li>onkeyup</li>
-            <li>onclick <u>[in Button element]</u></li>
+            <li>onsubmit</li>
+            <li>onfocus</li>
+            <li>onblur</li>
+            <li>onchange</li>
+            <li>required (attribute)</li>
         </ol>
     </div>
 
@@ -132,20 +135,7 @@
 
 
                     `)
-
-    var a = Object(`
-                    Name             :   ${document.getElementById("name").value}
-                    Email            :   ${document.getElementById("email").value}
-                    Phone            :   ${document.getElementById("phone").value}
-                    Designation      :   ${document.getElementById("designation").value}
-                    Salary           :   ${document.getElementById("salary").value}
-                    City             :   ${document.getElementById("city").value}
-                    State            :   ${document.getElementById("state").value}
-                    `
-                    )
-
-    console.log(a)    // for console
-        }
+    }
     </script>
 </body>
 </html>

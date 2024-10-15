@@ -10,7 +10,12 @@
             margin: 0;
         }
         body{
+            display: grid;
+            place-items: center;
             background-color: black;
+        }
+        hr{
+            color: gold;
         }
 
         button{
@@ -42,12 +47,12 @@
         }
     </style>
 </head>
-<body>
+<body id="bd">
     
-    <h1>Js Onclick Event On images by Button Example:
+    <h1>Js_DOM onclick Event(attribute) in Button to Images Example:
         <a href="../js+html/js_BOM_and_DOM_manupulation.html"><button>BACK to BOM-DOM manupulation</button></a>
-    </h1>
     <hr>
+    </h1>
 
     <div class="main">
         <div class="center">
@@ -60,7 +65,7 @@
         var img=document.getElementById("img")
         var button=document.getElementById("btn")
 
-        var bg=document.getElementsByTagName("body")
+        var bg=document.querySelector("#bd")
 
         function fun(){
             if(btn.innerHTML=="ON"){
@@ -71,7 +76,7 @@
             else{
                 img.src="../../../media/images/off.png"
                 btn.innerHTML="ON"
-                bg.style.backgroundColor="white"
+                bg.style.backgroundColor="black"
             }
         }
 

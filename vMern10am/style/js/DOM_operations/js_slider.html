@@ -11,6 +11,13 @@
         *{
             margin: 0;
         }
+
+        body{
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+        }
+
         .main{
             width: 100vw;
             height: 100vh;
@@ -50,11 +57,19 @@
             cursor: pointer;
             background-color: blue;
         }
+
+        /* for note */
+
+        #note{
+            width: 50vw;
+            height: 30vh;
+            background-color: lightgreen;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Event click Example - images-Slider
+    <h1>Js_DOM_Event click Example - images-Slider
         <a href="../js+html/js_BOM_and_DOM_manupulation.html"><button style="background-color: brown; color: white; ">Back to BOM-DOM manupulation</button></a>
 
     </h1>
@@ -81,6 +96,21 @@
             <button class="btn" id="btn1" onclick="previous()"><span class="material-symbols-outlined">arrow_back_ios</span></button>
             <button class="btn" id="btn2" onclick="next()"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
         </div>
+    </div>
+
+    <div id="note">
+        <h2>DOM_Mouse_Event (attribute in div)</h2>
+        <hr>
+        <ol>
+            <li>onmouseenter</li>
+            <li>onmouseleave</li>
+        </ol>
+
+        <hr>
+        <h2>DOM_onclick events (attributes on button)</h2>
+        <ol>
+            <li>onclick</li>
+        </ol>
     </div>
 
     <script>
