@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM create-delete element Example</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete" />
+    <style>
+        *{margin: 0;
+        }
+        
+        body{
+            display: grid;
+            place-items: center;
+        }
+
+        .main{
+            width: 100vw;
+            height: 60vh;
+        }
+
+        .center{
+            width: 80%;
+            height: 100%;
+            margin: auto;
+        }
+
+        .first button{
+            background-color: navy;
+            color: white;
+            padding: 8px;
+            width: 33%;
+
+        }
+
+        .second{
+            height: 70%;
+            overflow: auto;
+            border: 2px solid red;
+        }
+
+        .second::-webkit-scrollbar{
+            display: none;
+        }
+
+        .second p{
+            background-color: green;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .material-symbols-outlined{
+            float: right;
+            cursor: pointer;
+        }
+
+        /* for note */
+        .note{
+            font-size: 1.5rem;
+            background-color: lightgreen;
+            margin: 5%;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>JS DOM create-delete Element Example
+        <a href="../js+html/js_BOM_and_DOM_manupulation.html"><button style="background-color: brown; color: white; ">Back to BOM-DOM manupulation</button></a>
+    <hr>
+    </h1>
+    <hr>
+    <div class="main">
+        <div class="center">
+            <div class="first">
+                <button onclick="create()">Create Element</button>
+                <button onclick="deleteFirst()">Delete First Element</button>
+                <button onclick="deleteAll()">Delete All</button>
+            </div>
+            <div class="second">
+            </div>
+        </div>
+    </div>
+
+    <div class="note">
+        <ol>
+            <li>
+                <h2>js_DOM_event onclick(attributes in button) </h2>
+                <hr>
+                <ol>
+                    <li>onclick</li>
+                </ol>
+            </li>
+            
+            <li>
+                <h2>Js DOM methods</h2>
+                <hr>
+            <ol>
+                <li>document.createElement</li>
+                <li>.innerHTML</li>
+                <li>.appendChild(...)</li>
+                <li>.removeChild(...)</li>
+                <li>.childNodes</li>
+                <li>.classList.add(...)</li>
+            </ol>
+
+            </li>
+        </ol>
+
+        
+    </div>
+
+    <script>
+        var center = document.querySelector(".center")
+        var second = document.querySelector(".second")
+        var count=1
+        function create() {
+            var p = document.createElement("p")
+            p.innerHTML = `This is Paragraph p${count} <span class="material-symbols-outlined" onclick="deleteItem('p${count}')">delete</span>`
+            p.id = `p${count}`
+            count++
+
+            second.appendChild(p)
+        }
+
+        function deleteItem(id){
+            var p = document.getElementById(id)
+            second.removeChild(p)
+        }
+
+        function deleteFirst(){
+            if(second.childNodes.length>1)
+            second.removeChild(second.childNodes[0])
+
+        }
+
+        function deleteAll(){
+            center.removeChild(second)
+            second = document.createElement("div")
+            second.classList.add("second")
+            center.appendChild(second)
+
+        }
+    </script>
+</body>
+</html>
