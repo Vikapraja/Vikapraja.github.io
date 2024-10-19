@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js_BOM Syntax and Examples</title>
+    <link rel="stylesheet" href="../../css/js_BOM_syntax_and_example.css">
+</head>
+<body>
+    <h6>14/10/2024</h6>
+    <hr>
+    <h1>#Js BOM Syntax and Examples : 
+        <a href="../js+html/js_BOM_and_DOM_manupulation.html"><button style="color: white; background-color: brown; margin-left: 800px; font-size: large; border-radius: 30%;">EXIT/Go to Home</button></a>
+    </h1>
+    <hr>
+    <h2>
+        
+        <div class="object">
+            <span>=>Browser objects :</span>
+
+            <ol>
+                <li><u>window Screen :</u> it's Both properties Returns the size in pixels.
+                    <ul>
+                        <li>window.innerHeight :</li>
+                        <li>window.innerWidth</li>
+                        <!-- <li>window.open()</li>
+                        <li>window.close()</li> -->
+                    </ul>
+                </li>
+                <li><u>Window Screen:</u> The window screen object can be written without the 'window' prefix.
+                    <ul>
+                        <li>screen.width</li>
+                        <li>screen.height</li>
+                        <li>screen.availWidth</li>
+                        <li>screen.availHeight</li>
+                    </ul>
+
+                </li>
+                <li><u>Window Location</u>: [The window.location object can be used to get the current page address(URL)
+                                            and to redirect the browser to a new page. It also can be written without 'window' prefix.]
+                    <ul>
+                        <li>window.location.herf</li>
+                        <li>location.hostname</li>
+                        <li>location.hostname</li>
+                        <li>location.pathname</li>
+                        <li>location.protocol</li>
+                        <li>location.assign()</li>
+                    </ul>
+                    
+                </li>
+                <li><u>Window History :</u> The window History object can be written without the window prifix.  
+                        =>To protect the privacy of the users, there are limitation to know law.
+                        
+                    <ul>
+                        <li>window.backword()</li>
+                        <li>window.forword()</li>
+                    </ul>
+                    
+                </li>
+                <li><u>Window Navigator :</u> 
+                    <ul>
+                        <li>navigator.cookieEnableed</li>
+                        <li>navigator.appCodeName</li>
+                        <li>navigator.plateform</li>
+                    </ul>
+                
+                </li>
+                <li><u>POP-up Box :</u> There are 3 types POP-up boxes:
+                    <ul>
+                        <li>Confirm -> confirm() </li>
+                        <li>Alert -> alert() </li>
+                        <li>Promt -> prompt() </li>
+                    </ul>
+                </li>
+                <li><u>Time-Events :</u> 
+                    <ul>
+                        <li>setTimeout(functin,milliseconds)</li>
+                        <li>setInterval(functin,milliseconds)</li>
+                        <li>clearTimeout()</li>
+                        <li>clearInterval()</li>
+                    </ul>
+
+                </li>
+            </ol>
+
+
+            </div>
+
+        <ul>
+            <li><u>=>BOM Syntax :</u>
+                <pre>
+            <u>1) It also work on (browser>inspect>console) : </u> <br>
+            <u>2)Its syntax is same as DOM syntax :</u>
+            <hr>
+        </u>>In 'script' tag/element At the last of 'body' section of Html document/file/page :
+                       
+                    =>    var var_name = document.<span>dom-methods(inCapilizeCase)</span>("<u>id_name/element-name/clas-name</u>")
+    <span>applying changes:</span>  var_name.style.<u>AttributesName(in capitalizeCase)</u>="<u>values</u>"
+
+
+                </pre>
+            </li>
+        </ul>
+    
+    <hr>
+        <u>#Examples :</u>
+
+        <ol>
+            <li><u>document.anchors</u>: Returns all < a> elements that have a name attribute</li>
+            <li><u>document.applets</u>: Deprecated</li>
+            <li><u>document.baseURI</u>: Returns the absolute base URI of the document</li>
+            <li><u>document.body</u>: Returns the < body > element </li>
+            <li><u>document.cookie</u>: Returns the document's cookie</li>
+            <li><u>document.doctype</u>: Returns the document's doctype</li>
+            <li><u>document.documentElement</u>: Returns the < html> element</li>
+            <li><u>document.documentMode</u>: Returns the mode used by the browser</li>
+            <li><u>document.documentURI</u>: Returns the URI of the document</li>
+            <li><u>document.domain</u>: Returns the domain name of the document server</li>
+            <li><u>document.domConfig</u>: Obsolete</li>
+            <li><u>document.embeds</u>: Returns all < embed> elements</li>
+            <li><u>document.forms</u>: Returns all < form> elements</li>
+            <li><u>document.head</u>: Returns the < head> element</li>
+            <li><u>document.images</u>: Returns all < img > elements</li>
+            <li><u>document.implementation</u>: Returns the DOM implementation</li>
+            <li><u>document.inputEncoding</u>: Returns the document's encoding (character set)</li>
+            <li><u>document.lastModified</u>: Returns the date and time the document was updated</li>
+            <li><u>document.links</u>: Returns all < area> and < a> elements that have a href attribute</li>
+            <li><u>document.readyState</u>: Returns the (loading) status of the document</li>
+            <li><u>document.referrer</u>: Returns the URI of the referrer (the linking document)</li>
+            <li><u>document.scripts</u>: Returns all  < scripts > element </li>
+            <li><u>document.strictErrorChecking</u>: Returns if error checking is enforced</li>
+            <li><u>document.title</u>: Returns the < title > element</li>
+            <li><u>document.URL</u>: Returns the complete URL of the document</li>
+        </ol>
+            	
+
+
+    </h2>
+    <hr>
+    <footer>
+        <a href="../js+html/js_BOM_and_DOM_manupulation.html" target="_self"><button> <<< Js_BOM and DOM manupulation</button></a>
+        <a href="../js+html/js_test.html" target="_self"><button>JS Home</button></a>
+        <a href="" target="_self"><button>button 2>>></button></a>
+
+    </footer>
+</body>
+</html>

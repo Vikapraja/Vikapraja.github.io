@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+}
+
+h6,footer{
+    text-align: center;
+    font-size: large;
+}
+
+li>u{
+    color: green;
+    background-color: lightcyan;
+}
+
+.object{
+    margin: 10px;
+    padding: 5px;
+}
+
+.object>ol>li>ul>li{
+    color: chocolate;
+}
+
+ul>li{
+    color: navy;
+}
+
+button{
+    font-size: large;
+}
+
+pre{
+    background-color: lightgreen;
+    color: red;
+}
+
+pre>u{
+    color: blueviolet;
+}
+
+ol>li{
+    color: navy;
+    margin: 10px;
+    padding: 5px;
+}
+
+span{
+    color: fuchsia;
+}

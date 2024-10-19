@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM Dropdown</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+
+    <style>
+        *{
+            margin: 0;
+        }
+
+        body{
+            display: grid;
+            place-items: center;
+        }
+
+
+        .menu{
+            width: 40vw;
+            margin-top: 100px;
+
+        }
+
+        .menu h2{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+        }
+
+        .material-symbol-outline{
+            float: right;
+            cursor: pointer;
+        }
+
+        .items ul{
+            list-style-type: none;
+            margin-left:-40px;
+        }
+
+        .items li{
+            background-color: blue;
+            padding: 10px;
+            margin: 2px;            
+        }
+
+        .items li:hover{
+            background-color: navy;
+        }
+
+        .items a{
+            color: white;
+            text-decoration: none;
+            font-family: Verdana;
+        }
+
+        .hide{
+            display: none;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>DOM Example Dropdown
+        <a href="../js+html/js_BOM_and_DOM_manupulation.html"><button style="background-color: brown; color: white;">Back To BOM-DOM Manupulation</button></a>
+    <hr>
+    </h1>
+
+    <div class="menu">
+        <h2>Menu<span class="material-symbols-outlined" onclick="fun()">menu </span> <hr></h2>
+        <div class="items">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Garments</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var items = document.querySelector(".items")
+        function fun(){
+            items.classList.toggle("hide")
+        }
+    </script>
+
+</body>
+</html>
