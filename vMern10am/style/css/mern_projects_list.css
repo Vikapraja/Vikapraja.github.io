@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+}
+
+h6,footer{
+    text-align: center;
+    font-size: large;
+}
+
+ul>li{
+    color: navy;
+}
+
+
+button{
+    font-size: large;
+}
+
+pre{
+    background-color: lightgreen;
+    color: red;
+}
+
+ol>li{
+    margin: 20px;
+    padding: 5px;
+    border: 1px solid green;
+}
+
+ol>li>u{
+    text-decoration: none;
+    color: chocolate;
+}
+
+ol>li>a{
+    text-decoration: none;
+    margin-left: 100px;
+}
+
+h1{
+    background-color:lightgreen;
+}
+
+h1>P{
+    margin-left: 100px;
+}
