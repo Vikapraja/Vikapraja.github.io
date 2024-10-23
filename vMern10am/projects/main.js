@@ -27,7 +27,7 @@ function create(table,key,value){
 
     table.appendChild(tr)
 }
-function getAPIData(){
+async function getAPIData(){
     let name = "bharat"
     let search = document.getElementById("search")
     if(search.value!==""){
@@ -41,27 +41,32 @@ function getAPIData(){
     second = document.createElement("div")
     second.classList.add("second")
     center.appendChild(second)
-    request.addEventListener("load",()=>{
-        for(let country of JSON.parse(request.responseText)){
+
+    try {
+        let response = await fetch(`https://restcountries.com/v3.1/name/${name}`)
+        let data = await response.json()
+        for (let country of data) {
             var table = document.createElement("table")
 
-            create(table,"Official Name",country.name.official)
-            create(table,"Capital",country.capital)
-            create(table,"Flag",country.flags.svg)
-            create(table,"Population",country.population)
-            create(table,"Area",country.area)
-            create(table,"Region",country.region)
-            create(table,"Sub-Region",country.subregion)
-            create(table,"Continent",country.continents)
-            create(table,"Independent",country.independent)
-            create(table,"Un Member",country.unMember)
-            create(table,"Landlocked",country.landlocked)
-            create(table,"Borders",country.borders)
-            create(table,"TimeZones",country.timezones)
-            create(table,"Maps",country.maps.googleMaps)
+            create(table, "Official Name", country.name.official)
+            create(table, "Capital", country.capital)
+            create(table, "Flag", country.flags.svg)
+            create(table, "Population", country.population)
+            create(table, "Area", country.area)
+            create(table, "Region", country.region)
+            create(table, "Sub-Region", country.subregion)
+            create(table, "Continent", country.continents)
+            create(table, "Independent", country.independent)
+            create(table, "Un Member", country.unMember)
+            create(table, "Landlocked", country.landlocked)
+            create(table, "Borders", country.borders)
+            create(table, "TimeZones", country.timezones)
+            create(table, "Maps", country.maps.googleMaps)
 
             second.appendChild(table)
         }
-    })
+    } catch (error) {
+        alert("Invalid Country Name")
+    }
 }
 getAPIData()
