@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/js_rest_and_spread_operator.css">
+    <title>Rest and Spread Operator</title>
+</head>
+<body>
+    <h6>23/10/2024<hr></h6>
+    
+    <h1>[+] JS Rest and Spread Operator      <div>[ES6]</div>
+        <a href="./js_advance_versions_list.html"><button style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to Back</button></a>
+    <hr>
+    </h1>
+    
+<h2>
+    <pre>
+        
+    <u>#Rest Operator:</u><span>allows a function to accept an indefinite
+            number of arguments as an array</span> 
+    
+     function test(a,b,...x){
+         console.log(`a = ${a} b = ${b} and x = ${x}`)
+     }
+     test(10,20)
+     test(10,20,30)
+     test(10,20,30,40)
+     test(10,20,30,40,50)
+     test(10,20,30,40,50,60)
+     test(10,20,30,40,50,60,70)
+     test(10,20,30,40,50,60,70,80,)
+     test(10,20,30,40,50,60,70,80,90)
+     test(10,20,30,40,50,60,70,80,90,100)
+    
+    =============================================[Spread ]=============================================
+    <u>Spread operator:</u><span>Spread operator allows an iterable to expand
+            in places where 0+ arguments are expected. It is mostly used
+            in the variable array where there is more than 1 values are 
+            expected. It allows us the privilege to obtain a list of
+            parameters from an array. Syntax of Spread operator is same as 
+            Rest parameter but it works completely opposite of it.</span>
+    
+     function test(a,b,c,d,e){
+         console.log(`a = ${a} b = ${b} c = ${c} d = ${d} and e = ${e}`)
+     }
+     var arr = [10,20,30,40,50]
+     test(...arr)
+    
+    Shallow Copy && Deep Copy
+     var arr1 = [10,20,30,40,50]
+     var arr2 = arr1 //Shallow Copy
+     var arr2 = [...arr1] //Deep Copy
+     console.log(arr1,arr2)
+     arr2[3]=400
+     console.log(arr1,arr2)
+    
+    =============================================[ spread in objects ]=======================================
+    var obj1 = {
+        a: 10,
+        b: 20,
+        c: 30
+    }
+    var obj2 = obj1 //Shallow Copy
+    var obj2 = { ...obj1 } //Deep Copy
+    console.log(obj1, obj2)
+    obj2.a = 100
+    obj2.b = 200
+    obj2.c = 300
+    console.log(obj1, obj2)
+    
+        </pre>
+</h2>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/js_generator.css">
+    <title>Js Generators</title>
+</head>
+
+<body>
+    <h6>23/10/2024
+        <hr>
+    </h6>
+
+    <h1>[+] JS Generators  <div>[ES6]</div>
+        <a href="./js_advance_versions_list.html"><button
+                style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go
+                to Back</button></a>
+        <hr>
+    </h1>
+
+    <h2>
+        <pre>
+
+        <u>#Generators : What is a generator in JavaScript?</u>
+            <span>In ECMAScript 2015, generators were introduced to the JavaScript language. A generator 
+                is a process that can be paused and resumed and can yield multiple values. A generator
+                in JavaScript consists of a generator function, which returns an iterable Generator object
+            </span>
+        function* test(){
+            console.log("Hello World1")
+            yield
+            console.log("Hello World2")
+            yield
+            console.log("Hello World3")
+            yield
+            console.log("Hello World4")
+            yield
+            console.log("Hello World5")
+            yield
+        }
+        for(let i of test());
+
+        ==================================<u>[yeild = return]</u>=====================================
+        
+        function* test(){
+            console.log("Hello World1")
+            yield 1
+            console.log("Hello World2")
+            yield 2
+            console.log("Hello World3")
+            yield 3
+            console.log("Hello World4")
+            yield 4
+            console.log("Hello World5")
+            yield 5
+        }
+        for(let i of test()){
+            console.log(i)
+        }
+        
+    
+        </pre>
+    </h2>
+</body>
+
+</html>
