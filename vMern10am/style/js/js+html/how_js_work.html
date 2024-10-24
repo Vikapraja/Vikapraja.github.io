@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Js works</title>
+    <link rel="stylesheet" href="../../css/how_js_work.css">
+</head>
+<body>
+    <h6>14/10/24</h6>
+    <hr>
+    <h1>#How Js Works !
+        <a href="./js_test.html"><button
+            style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to JS Home</button></a>
+    </h1>
+    <hr>
+    <h2>
+        <div class="hoist">
+            <ol>
+                <li><u>Hoisting in JS =></u><span> during execution of a program we have two phase :-</span>
+                    <ol type="A">
+                        <li>creation  phase</li>
+                        <li>execution phase</li>
+                    </ol>
+                    <hr>
+                    <u>A) create phase:</u><span> this phase contains defination of all variables
+                          and functions prototype  of a program</span> <br>
+
+                    <u>B) execution phase: </u><span> this phase contains program statements.</span>
+            <p>=> So hoisting in js is a machanism where variables and function
+            declarations(creation phase) are moved to the top of their scope
+            before the execution phase</p>
+            
+<pre><u>Example</u>
+            <span>//code we write</span>
+            console.log(a)
+            var a = 10
+            console.log(a)
+            <hr>
+            <span>//code send for execution</span>
+            var a 
+            console.log(a)
+            a = 10
+            console.log(a)
+</pre>
+                </li>
+                <hr>
+                <li><u>In ES6 i.e ECMASCRIPT 2015 </u><span> hoisting is avoided by let or const
+     keyword by using the let or const keyword instead of var we can 
+     avoid hoisting</span>
+<pre>
+        console.log(a)
+        let a = 10
+        console.log(a)
+</pre>
+
+                </li>
+                <hr>
+                <li><u>#Use strict mode#</u> <br>
+                    <u>Scope Chain and lexical Scoping:</u>
+                    <ol type="A">
+                        <li><u>Scope Chain :</u>
+                            <span>The scope chain is used to resolve the value of variable in js
+                                scope chain in js is laxically defined which means that we can
+                                see what the scope chain will be only by looking at the code
+                                </span>
+                                <br>=>at the top we have global scope which is window object
+                                then local scope(function)
+                        </li>
+                        
+                        <li><u>Lexical Scoping</u>
+                            <span>So lexical scoping means  the inner function can access variables 
+                                defined in outer function and global scope but outer function can't
+                                access variables defined in inner function but can access variables
+                                define in global scope but global scope can't access variables
+                                defined inside any function.</span>
+<pre><u>Example:</u>
+    var a=10
+    function outer(){
+        var b=20
+        function inner(){
+            var c=30
+            console.log(`In inner function a=<u>${a}</u> , b=<u>${b}</u>, c=<u>${c}</u>`)
+        }
+        console.log(`In outer function a=<u>${a}</u> , b=<u>${b}</u>`)
+    }
+    outer()
+    console.log('In Main scop a=<u>${a}</u>')
+
+</pre>
+
+                        </li>
+                        <li><u>Closure :</u>
+                            <span>=>closure is a function object that remembers values
+                            in enclosing scope even if they are not present in memory</span><br>
+                            <span>=>It is a record that store a function together its environment</span><br>
+                            <span>=> A clousure unlike a plain function allows the function to 
+                                access those captured variables through the closure's copy
+                                of their values or reference,even when the function is
+                                invoked outside their scope</span>
+        
+        <pre><u>Example :</u>
+            <span>
+                var a=10
+                function outer(){
+                    var b=20
+                    function inner(){
+                        var c=30
+                        console.log(`In inner function a=<u>${a}</u> , b=<u>${b}</u> , c=<u>${c}</u>`)
+                    }
+                    return inner
+                }
+                var cl= outer()
+                cl()
+                cl()
+            </span>
+        
+        </pre>  
+                        </li>
+                    </ol>
+            </li> 
+            </ol>
+        </div>
+    </h2>
+</body>
+</html>

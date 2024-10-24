@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous and Asynchronous Programming</title>
+    <link rel="stylesheet" href="../../css/synchronous_and_asynchronous_programming_in_js.css">
+</head>
+<body>
+    <h6>14/10/2024</h6>
+    <hr>
+    <h1># Synchronous and Asynchronous (Multitasking) In Js
+        <a href="./js_test.html"><button
+            style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to JS Home</button></a>
+    </h1>
+    <hr>
+    <h2>
+
+                <ul>
+                    <li><u>Synchronous:</u>
+                        <span>One task has to wait to complete previous task
+                            i.e line by line execution</span>
+<pre><u>Synchronous Example :</u>
+    function fun1(){
+        console.log('Hello World 1')
+    }
+    function fun2(){
+        console.log('Hello World 2')
+    }
+    function fun3(){
+        console.log('Hello World 3')
+    }
+    function fun4(){
+        console.log('Hello World 4')
+    }
+    function fun5(){
+        console.log('Hello World 5')
+    }
+    fun1()
+    fun2()
+    fun3()
+    fun4()
+    fun5()
+
+</pre>
+                    </li>
+                    <li><u>Asynchronous:</u>
+                        <span> One task doesn't have to wait to complete
+                            previous task it is also callesd non blocking IO Model</span>
+<pre><u>Asynchronous Example :</u>
+<ol>
+    <li>
+        function fun1(){
+            setTimeout(()=>{console.log('Hello World 1')},4000)
+        }
+        function fun2(){
+            setTimeout(()=>{console.log('Hello World 2')},1000)
+        }
+        function fun3(){
+            setTimeout(()=>{console.log('Hello World 3')},5000)
+        }
+        function fun4(){
+            setTimeout(()=>{console.log('Hello World 4')},3000)
+        }
+        function fun5(){
+            setTimeout(()=>{console.log('Hello World 1')},2000)
+        }
+        fun1()
+        fun2()
+        fun3()
+        fun4()
+        fun5()
+    
+    </li>
+    <li>for(let i=1; i<=10; i++){
+        if(i%3===0){
+            setTimeout(()=>{console.log(`Hello World ${i} `)},2000)
+        }
+        else{
+            console.log(`Hello World ${i} `)
+        }
+    }
+
+    </li>
+</ol>
+</pre>
+
+                    </li>
+                </ul>
+    </h2>
+</body>
+</html>

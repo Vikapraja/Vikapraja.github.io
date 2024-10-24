@@ -1,0 +1,38 @@
+*{
+    margin: 0 auto;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 20px;
+}
+
+h6{
+    text-align: center;
+}
+
+ul>li{
+    color: navy;
+    margin: 15px;
+}
+
+li>u{
+    color: red;
+    margin: 10px;
+}
+
+li>span{
+    color: green;
+    margin: 10px;
+}
+
+
+pre>u{
+    color: red;
+    margin: 10px;
+}
+
+pre>span{
+    margin: 10px;
+    color: blueviolet;
+}

@@ -1,0 +1,46 @@
+*{
+    margin: 0 auto;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 20px;
+}
+
+h6{
+    text-align: center;
+}
+
+ol>li{
+    color: navy;
+    margin: 15px;
+}
+
+li>u{
+    color: red;
+    margin: 5px;
+}
+
+li>span{
+    color: green;
+    margin: 5px;
+
+}
+
+li>p{
+    color: blueviolet;
+    margin: 10px;
+    padding: 5px;
+}
+
+li>ol>li{
+    margin: 10px 15px;
+}
+
+pre>span{
+    color: darkmagenta;
+}
+
+pre>u{
+    color: red;
+}
