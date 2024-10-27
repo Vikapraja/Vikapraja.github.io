@@ -32,6 +32,24 @@
      test(10,20,30,40,50,60,70,80,)
      test(10,20,30,40,50,60,70,80,90)
      test(10,20,30,40,50,60,70,80,90,100)
+
+     <hr>
+     <u>#Object Rest Properties :</u> <div>in [ ECMA Script 2018 ]</div>
+     <span>It Concept provide facility to store multiple object's properties in rest argument/parameter.</span>
+     <u>Example :</u>
+
+         var emp = {
+             id:1001,
+             name:"Nitin Chauhan",
+             dsg:"Trainer",
+             salary:135000,
+             city:"Faridabad",
+             state:"Haryana"
+         }
+         var {id,name,...x} = emp
+         console.log(id)
+         console.log(name)
+         console.log(x)
     
     =============================================[Spread ]=============================================
     <u>Spread operator:</u><span>Spread operator allows an iterable to expand

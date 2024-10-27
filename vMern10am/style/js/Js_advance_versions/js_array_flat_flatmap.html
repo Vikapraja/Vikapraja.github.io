@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Array Flat and Flatmap</title>
+    <link rel="stylesheet" href="../../css/js_array_flat_flatmap.css">
+</head>
+<body>
+    <h6>24/10/2024</h6>
+    <hr>
+    <h1>[+] Js Array Flat and Flatmap           <div>[ECMA Script 2019]</div>
+        <a href="./js_advance_versions_list.html"><button style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to Back</button></a>
+    </h1>
+    <hr>
+    <h2>
+        <pre><u>Example :</u>
+            <span>Array Flat</span> 
+            var a = [[10,20,30],40,[50,60,70],[80,90,100]]
+            console.log(a.flat(1))
+            console.log(a.flat(1).map((x)=>x*5))
+
+            var a = [[[10,20,30],40,[50,60,70]],[[80,90,100]]]
+            console.log(a.flat(2))
+            console.log(a.flat(2).map((x)=>x*5))
+
+            var a = [[[[10,20,30],40,[50,60,70]],[[80,90,100]]]]
+            console.log(a.flat(3))
+            console.log(a.flat(3).map((x)=>x*5))
+
+
+            var a = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[10,20,30],40,[50,60,70]],[[80,90,100]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+            console.log(a.flat(Infinity))
+            console.log(a.flat(Infinity).map((x)=>x*5))
+
+            <span>flatMap()</span>
+            var a = [10,20,30,40,50,60,70,80,90,100]
+            console.log(a.map((item)=>[item*5]))
+            console.log(a.flatMap((item)=>[item*5]))
+
+            var a = [10,20,30,40,50,60,70,80,90,100]
+            console.log(a.map((item)=>[[item*5]]))
+            console.log(a.flatMap((item)=>[[item*5]]))
+
+        </pre>
+    </h2>
+</body>
+</html>

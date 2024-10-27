@@ -1,0 +1,21 @@
+*{
+    margin: 0 auto;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 10px;
+}
+
+div{
+    margin-left: 800px;
+}
+
+h6{
+    text-align: center;
+}
+
+
+pre>u,span{
+    color: red;
+}

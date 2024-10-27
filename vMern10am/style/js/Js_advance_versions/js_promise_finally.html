@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Promise Finally</title>
+    <link rel="stylesheet" href="../../css/js_promise_finally.css">
+</head>
+<body>
+    <h6>24/10/2024</h6>
+    <hr>
+    <h1>[+] Js Promise Finally      <div>[ECMA Script 2018]</div>
+        <a href="./js_advance_versions_list.html"><button style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to Back</button></a>
+        <br><u>Promise Finally </u><span> => It is Concept that runs over error and finally block runs in every status. </span>
+    </h1>
+    <hr>
+    <h2>
+        <pre><u>Example :</u>
+            
+            <span>#Promise finally</span>
+            var p = new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    //res("Promise is Resolved")
+                    rej("Promise is Rejected")
+                },1000)
+            })
+            p
+            .then((data)=>{
+                console.log(data)
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+            .finally(()=>{
+                console.log("Finally Called")
+            })
+
+            <hr>
+            <u>#Object Rest Properties :</u>
+            <span>It Concept provide facility to store multiple object's properties in rest argument/parameter.</span>
+            <u>Example :</u>
+
+                var emp = {
+                    id:1001,
+                    name:"Nitin Chauhan",
+                    dsg:"Trainer",
+                    salary:135000,
+                    city:"Faridabad",
+                    state:"Haryana"
+                }
+                var {id,name,...x} = emp
+                console.log(id)
+                console.log(name)
+                console.log(x)
+        </pre>
+    </h2>
+</body>
+</html>

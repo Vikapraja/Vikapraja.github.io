@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Asynchronous Iteration</title>
+    <link rel="stylesheet" href="../../css/js_asynchronous_iteration.css">
+</head>
+<body>
+    <h6>24/10/2024</h6>
+    <hr>
+    <h1>[+] Js Asynchronous Iteration           <div>[ECMA Script 2018]</div>
+        <a href="./js_advance_versions_list.html"><button style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to Back</button></a>
+        <br><u>yield = return (keyword)</u><span> => Function will be run again from previous yield  </span>
+    </h1>
+    <hr>
+    <h2>
+        <pre><u>Example :</u>
+            async function* test(){
+                setTimeout(()=>{
+                    console.log("Hello World1")
+                },1000)
+                yield 1
+                
+                setTimeout(()=>{
+                    console.log("Hello World2")
+                },2000)
+                yield 2
+                
+                setTimeout(()=>{
+                    console.log("Hello World3")
+                },3000)
+                yield 3
+                
+                setTimeout(()=>{
+                    console.log("Hello World4")
+                },4000)
+                yield 4
+                
+                setTimeout(()=>{
+                    console.log("Hello World5")
+                },5000)
+                yield 5
+            }
+                
+            async function sample(){
+                for await(let i of test()){
+                    console.log(i)
+                }
+            }
+            sample()
+        </pre>
+    </h2>
+</body>
+</html>
