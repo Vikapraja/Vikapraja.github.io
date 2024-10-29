@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Promise.allSettled</title>
+    <link rel="stylesheet" href="../../css/js_bigInt.css">
+</head>
+<body>
+    <h6>28/10/2024</h6>
+    <hr>
+    <h1>[+] Js Promise.allSettled           <div>[ECMA Script 2020]</div>
+        <a href="./js_advance_versions_list.html"><button style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to Back</button></a>
+    </h1>
+    <hr>
+    <h2>
+            =>Promise.allSettled  : it a promise chaining method to create a composite result of all promises,it execute when all promises are completed
+        <pre><u>Example :</u>
+            <span>bigInt [Using n] :</span>
+            
+
+            var p1 = new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    //res("Promise1 is Resolved")
+                    rej("Promise1 is Rejected")
+                },1000)
+            })
+            var p2 = new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    //res("Promise2 is Resolved")
+                    rej("Promise2 is Rejected")
+                },2000)
+            })
+            var p3 = new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    //res("Promise3 is Resolved")
+                    rej("Promise3 is Rejected")
+                },3000)
+            })
+            
+            Promise.allSettled([p1,p2,p3])
+            .then((data)=>{
+                console.log(data)
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+             </pre>
+    </h2>
+</body>
+</html>

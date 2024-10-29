@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Nullish Coalescing</title>
+    <link rel="stylesheet" href="../../css/js_nullish_Coalesing.css">
+</head>
+<body>
+    <h6>28/10/2024</h6>
+    <hr>
+    <h1>[+] Js Nullish Coalescing (??)      <div>[ECMA Script 2020]</div>
+        <a href="./js_advance_versions_list.html"><button style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to Back</button></a>
+    </h1>
+    <hr>
+    <h2>
+        Nullish Coalescing(??) :   
+        => this operator execute second statement only if first statement result is undefined or null else only first statement will execute
+        <hr>
+        <pre>
+            <u>Syntax :</u>
+            <span>
+                statement1??statemnet2
+            </span>
+            <hr>
+            
+            <u>Example :</u>
+
+            <span>Example [Using ??] :</span>
+            
+                console.log(10||20)             //10
+                console.log(0||20)              //20
+                console.log(false||20)          //20
+                console.log(""||20)             //20
+                console.log(undefined||20)      //20
+                console.log(null||20)           //20
+                console.log(false||"N/A")       //N/A
+            
+                console.log(10??20)             //10
+                console.log(0??20)              //0
+                console.log(false??20)          //false
+                console.log(""??20)             //""
+                console.log(undefined??20)      //20
+                console.log(null??20)           //20
+                console.log(false??"N/A")       //false
+            </pre>
+    </h2>
+</body>
+</html>
