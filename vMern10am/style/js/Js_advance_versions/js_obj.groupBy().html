@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Obbject.groupBy()</title>
+    <link rel="stylesheet" href="../../css/js_obj.groupBy().css">
+</head>
+<body>
+    <h6>29/10/2024</h6>
+    <hr>
+    <h1>[+] Js Obbject.groupBy()           <div>[ECMA Script 2024]</div>
+        <a href="./js_advance_versions_list.html"><button style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to Back</button></a>
+    </h1>
+    <hr>
+    <h2>
+        <pre><u>Example :</u>
+            <span> Object.groupBy() </span>
+            
+            
+                var emp = [
+                    {name:"Sumit",salary:67000},
+                    {name:"Amit",salary:33000},
+                    {name:"Rohan",salary:98000},
+                    {name:"Sohan",salary:67000},
+                    {name:"Mohan",salary:37000},
+                    {name:"Ravi",salary:24000},
+                    {name:"Ankit",salary:89000},
+                    {name:"Ankita",salary:17000},
+                ]
+                function check({salary}){
+                    return salary<50000?"Lower":"Higher"
+                }
+
+                var group = Object.groupBy(emp,check)
+                console.log(group)
+            
+        </pre>
+    </h2>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Private class field and method</title>
+    <link rel="stylesheet" href="../../css/js_private_class_field_and_method.css">
+</head>
+<body>
+    <h6>29/10/2024</h6>
+    <hr>
+    <h1>[+] Js Private class field and method           <div>[ECMA Script 2022]</div>
+        <a href="./js_advance_versions_list.html"><button style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to Back</button></a>
+    </h1>
+    <hr>
+    <h2>
+        <pre><u>Example :</u>
+            <span> Private Class field and Methods   :</span>
+                class Test{
+                    #a = 10
+                    #b = 20
+                    #dispaly(){
+                        console.log(`${this.#a} + ${this.#b} = ${this.#a+this.#b}`)
+                    }
+                    show(){
+                        this.#dispaly()
+                    }
+                }
+                var obj = new Test()
+                obj.show()
+
+        </pre>
+    </h2>
+</body>
+</html>
