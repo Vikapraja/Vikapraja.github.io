@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        header{
+            font-size: 26px;
+            color: navy;
+            margin: 20px;
+            padding: 10px;
+        }
+        .parent{
+            width: 100vw;
+            height: 100vh;
+            background-color: lightgray;
+            display: grid;
+            place-items: center;
+        }
+        .child1,.child2,.child3,.child4{
+            height: 70%;
+            width: 70%;
+            display: grid;
+            place-items: center;
+        }
+        .child1{
+            background-color: red;
+        }
+        .child2{
+            background-color: green;
+        }
+        .child3{
+            background-color: blue;
+        }
+        .child4{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <hr>
+    <header>
+        DOM_event Propagation Example : if you click last inner div then you clicks all div.
+        <a href="../Modern_js/js_event_propagation.html"><button style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to Back</button></a>
+
+    </header>
+    <hr>
+    <div class="parent">
+        <div class="child1">
+            <div class="child2">
+                <div class="child3">
+                    <div class="child4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var parent = document.querySelector(".parent")
+        var child1 = document.querySelector(".child1")
+        var child2 = document.querySelector(".child2")
+        var child3 = document.querySelector(".child3")
+        var child4 = document.querySelector(".child4")
+
+        parent.addEventListener("click",()=>alert("parent event is called"),true)
+        child1.addEventListener("click",()=>alert("child1 event is called"),true)
+        child2.addEventListener("click",()=>alert("child2 event is called"),true)
+        child3.addEventListener("click",()=>alert("child3 event is called"),true)
+        child4.addEventListener("click",()=>alert("child4 event is called"),true)
+    </script>
+</body>
+</html>

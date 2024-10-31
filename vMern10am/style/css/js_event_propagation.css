@@ -1,0 +1,39 @@
+*{
+    margin: o auto;
+}
+
+h1{
+    margin: 20px;
+}
+
+h6{
+    text-align: center;
+}
+
+div,h3{
+    margin-top:20px ;
+    color: blueviolet;
+}
+div>u{
+    color: olive;
+    text-decoration: none;
+}
+
+h2>ol>li{
+    margin: 10px;
+    color: navy;
+}
+
+li>u{
+    color: green;
+}
+
+h3{
+    margin-left: 50px;
+}
+
+h3>a>button{
+    font-size: larger;
+    color: blueviolet;
+    background: lightcoral;
+}

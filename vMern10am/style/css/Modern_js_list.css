@@ -1,0 +1,42 @@
+*{
+    margin: 0 auto;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 20px;
+}
+ol{
+    margin: 20px 0 0 100px;
+}
+h2>ol>li>a>button{
+    width: 1000px;
+    font-size: 26px;
+    color: darkmagenta;
+    text-align: justify;
+    background-color: blanchedalmond;
+    border: none;
+}
+
+ol>li{
+    margin:2px ;
+}
+
+h2>ol>li>a>button:hover{
+    background-color: lightblue;
+    color: brown;
+}
+
+
+
+h6{
+    text-align: center;
+}
+
+pre>span{
+    color: darkmagenta;
+}
+
+pre>u{
+    color: red;
+}
