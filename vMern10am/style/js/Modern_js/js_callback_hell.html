@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js callback</title>
+    <link rel="stylesheet" href="../../css/js_callback.css">
+</head>
+
+<body>
+    <header>
+        <h6>22/10/2024</h6>
+        <hr>
+        <h1>#Callback </h1>
+        <a href="../Modern_js/modern_js_list.html"><button
+                style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go
+                to Modern Js List</button></a>
+        <hr>
+    </header>
+    <section>
+        <h2>=> Callback :</h2>
+        <ul type="square">
+            <li>Callback hell is a phenomenon where a Callback is called inside another Callback.</li>
+            
+            <li>It is the nesting of multiple Callbacks inside a function.</li>
+
+            <li>If you look at the design of the code, it seems just like a pyramid.</li>
+
+            <li>Thus the Callback hell is also referred to as the 'Pyramid of Doom'</li>
+        
+        </ul>
+
+        <u># Why is callback hell bad?</u>
+
+        <ul type="square">
+            <li>Callback hell is a term used to describe a situation in JavaScript where multiple asynchronous operations
+            are nested within each other as callbacks.</li>
+
+            <li>This can result in code that is difficult to read, understand,
+            and maintain.</li> 
+            
+            <li><a href="js_promise.html"><button>=> solution is promise<sup>[click me]</sup></button></a></li>
+        </ul>
+    </section>
+    <footer>
+        <h2>Example :</h2>
+        <pre>
+            function test(){
+                    setTimeout(()=>{
+                        console.log("Hello World1")
+                        setTimeout(()=>{
+                            console.log("Hello World2")
+                            setTimeout(()=>{
+                                console.log("Hello World3")
+                            },1000)
+                        },1000)        
+                    },1000)
+                }
+
+                test()
+        </pre>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+*{
+    margin: 0 auto;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+h6{
+    text-align: center;
+}
+
+header,section,footer{
+    margin: 25px;
+}
+
+section>ul,u{
+    margin: 20px;
+    font-size: larger;
+}
+
+u{
+    color: red;
+}
+
+h2{
+    color: green;
+}
+
+ul>li{
+    margin: 5px;
+    color: navy;
+    font-size: larger;
+}
+
+a{
+    text-decoration: none;
+}
+
+pre{
+    margin: 10px;
+    font-size: 20px;
+    color: blueviolet;
+}
+
+button{
+    font-size: 20px;
+    color: green;
+    background-color: coral;
+    border: none;
+    border-radius: 10%;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/js_higher-order_and_callback_functions.css">
+    <title>js Higher-order and Callback</title>
+</head>
+<body>
+    <h6>16/10/2024</h6>
+    <hr>
+    <h1>
+        #JS Higher-order and Callback functions           
+        <a href="../Modern_js/modern_js_list.html"><button style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to Modern Js List</button></a>
+        
+        <hr>
+        <div>
+            <ol>
+                <li>
+                    <u>Higher order function :</u><span> a fuction is called higher order 
+                        function which takes a function
+                        a arguments</span>
+                </li>
+                <li>
+                    <u>Callback function :</u>
+                         a fuction is called callback 
+                        function which is passed as argument
+                        in another function
+                </li>
+            </ol>
+        </div>
+
+    </h1>
+    <hr>
+    <h3>
+        <pre> <u>Example :</u>
+            
+            <u>=> Here find() findIndex() map() and filter() function are higher Order function and check function is a callback function</u>
+
+                var a = [14,12,13,17,18,15,15,65,20,1,4,3,4,5,20,58,5,54,56]
+                function check(item){
+                    return item%5==0
+                }
+            
+                function myFind(arr,fun){
+                    for(let item of arr){
+                        if(fun(item))
+                        return item
+                    }
+                    return undefined
+                }
+                function myFindIndex(arr,fun){
+                    for(let index in arr){
+                        if(fun(arr[index]))
+                        return index
+                    }
+                    return -1
+                }
+                function myMap(arr,fun){
+                    let output = []
+                    for(let item of arr){
+                        output.push(fun(item))
+                    }
+                    return output
+                }
+                function myFilter(arr,fun){
+                    let output = []
+                    for(let item of arr){
+                        if(fun(item))
+                        output.push(item)
+                    }
+                    return output
+                }
+                console.log(a.find(check))
+                console.log(myFind(a,check))
+                console.log(a.findIndex(check))
+                console.log(myFindIndex(a,check))
+                console.log(a.map(check))
+                console.log(myMap(a,check))
+                console.log(a.filter(check))
+                console.log(myFilter(a,check))
+
+        </pre>
+        
+    </h3>
+
+</body>
+</html>

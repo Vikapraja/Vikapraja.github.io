@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/js_event_loop.css">
+    <title>js Event Loop</title>
+</head>
+<body>
+    <h6>16/10/2024</h6>
+    <hr>
+    <h1>
+        #JS Event Loop           
+        <a href="../Modern_js/modern_js_list.html"><button style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to Modern Js List</button></a>
+    </h1>
+
+    <div class="theory">
+        <span>The Event loop is fspanndamental concept in js taht enables non-blocking  asynchronospans
+            progarmming.  
+        </span>
+        <span> It allow JavaScript to perform task like handling user intraction, making network request
+            (API calling) and processing timers while still maintaining a single thread environment. Here 
+            a detailed explaination of how it works?        
+        </span>
+        <ol>
+            <li>
+                <u>Single-thread nature :</u>
+                Js runs in a single thread, which means it can only execute one piece of code at a time
+                This design helps to avoid issues like condition that can occur in Multitasking(threa Id)
+                environment. 
+            </li>
+            <li>
+                <u>Callback :</u>
+                The callback a data structure that keeps track of function calls in your program. When 
+                a function is invocked, its added to stack and when it completes, it removed. The 
+                Call-stack fallow a Last-In-First-Out (LIFO) Structure.   
+            </li>
+            <li>
+                <u>Web-API :</u>
+                Js environment such as browser provide web-API's (like setTimeOut,fetch and DOM Events) 
+                that can handle tasks asynchronously. When you call an asynchronous function. The
+                Task is offloaded to the web-API, Which executes it and put its callback inti a queue
+                when its ready .
+            </li>
+            <li>
+                <u>Callback Queue :</u>
+                Once an asynchronous operations (Like a timer or a network request) is complete
+                the corresponding, callback function is pushed into the callback queue (or task queue)
+                This queue holds all the callbacks that are waiting to be executed after current
+                all back is cleared.  
+            </li>
+
+            <li>
+                <u>Event Loop :</u>
+                The Event Loop continuously check the call-stack and callback queue. Here How It works?
+                <ol type="I">
+                    <li>If call-stack is empty in event loop will take the first task from callback queue.</li>
+                    <li>It will push that task into the all stack and execute it .</li>
+                    <li>This process repeats the events the event loop keeps checking the stack and queue untill
+                        there are no more task in the queue. </li>
+                </ol>
+            </li>
+
+            <li>
+                <u>Microtasks And Macrotask :</u>
+                JavaScript distinguished between two types of task :
+                <ol type="A">
+                    <li>
+                        <span>MAcrotask :</span>
+                        The tasks that include things like setTimeOut, setInterval and I/O
+                        operations. They are processed in the order the arrive in the callback queue. 
+                    </li>
+                    <li>
+                        <span>Microtasks :</span>
+                        There are typically related to promisses (like .then(), .catch() or async/await)
+                        Microtasks have higher priority than Macrotasks and will be processed 
+                        immediately after the currently executing script and before the next Macrotask is processed.
+                    </li>
+                </ol> 
+            </li>
+        </ol>
+    </div>
+    <h3>
+        <u>Example  :</u> Go to vMern10am>projects>js_restCountry.html  <a href="../../../projects/js_rest_country.html"><button>Click to see</button></a>
+    </h3>
+</body>
+</html>

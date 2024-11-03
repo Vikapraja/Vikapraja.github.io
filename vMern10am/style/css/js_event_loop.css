@@ -1,0 +1,55 @@
+*{
+    margin: o auto;
+}
+
+h1{
+    margin: 20px;
+}
+
+h6{
+    text-align: center;
+}
+
+div,h3{
+    margin-top:20px ;
+    color: blueviolet;
+    font-size: 30px;
+    margin: 20px;
+}
+div>u{
+    color: red;
+    text-decoration: none;
+}
+
+div>ol>li{
+    margin: 10px;
+    color: navy;
+    margin: 20px;
+}
+
+div>ol>li>ol>li{
+    margin: 10px;
+    color:  darkmagenta;
+}
+
+li>u,div>ol>li>ol>li>span{
+    color: green;
+}
+
+h3{
+    margin-left: 50px;
+}
+
+h3>a>button{
+    font-size: larger;
+    color: blueviolet;
+    background: lightcoral;
+}
+
+pre{
+    color: brown;
+}
+
+pre>u{
+    color: green;
+}

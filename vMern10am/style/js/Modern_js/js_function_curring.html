@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/js_function_curring.css">
+    <title>js Function Curring</title>
+</head>
+<body>
+    <h6>16/10/2024</h6>
+    <hr>
+    <h1>
+        #JS Function Curring           
+        <a href="../Modern_js/modern_js_list.html"><button style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go to Modern Js List</button></a>
+        
+        <div><u>#Function Curring : </u> 
+            =>it is a technique of evaluating function
+                    with mutliple argumnets into sequance of
+                    function with single argument
+                <br>
+
+            =>i.e when a function,instead of taking all 
+                    argumemnts at one time,it takes the first 
+                    argument and return a new function which 
+                    takes the second argument and return a new
+                    function which takes the third one and so on
+        </div>
+
+    </h1>
+    <hr>
+    <h3>
+        <pre> <u>Example :</u>
+                function sum(num1){
+                        return function(num2){
+                            return function(num3){
+                                return function(num4){
+                                    return function(num5){
+                                        return num1+num2+num3+num4+num5
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    let sum = (num1)=>(num2)=>(num3)=>(num4)=>(num5)=>num1+num2+num3+num4+num5
+                    console.log(sum(100)(200)(300)(400)(500))
+        </pre>
+        
+    </h3>
+
+</body>
+</html>

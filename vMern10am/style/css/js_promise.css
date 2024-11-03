@@ -1,0 +1,62 @@
+*{
+    margin: 0 auto;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+h6{
+    text-align: center;
+}
+
+header,section,footer{
+    margin: 25px;
+}
+
+section>ul,u{
+    margin: 20px;
+    font-size: larger;
+}
+
+ol>li{
+    margin: 10px;
+    color: chocolate;
+    font-size: larger;
+}
+
+div{
+    margin: 20px;
+}
+
+u,span{
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+}
+
+u{
+    color: red;
+}
+
+span{
+    color: blueviolet;
+    font-size: 20px;
+}
+
+h2{
+    color: green;
+}
+
+ul>li{
+    margin: 5px;
+    color: navy;
+    font-size: larger;
+}
+
+pre{
+    margin: 10px;
+    font-size: 20px;
+    color: blueviolet;
+}

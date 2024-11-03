@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js promise</title>
+    <link rel="stylesheet" href="../../css/js_promise.css">
+</head>
+
+<body>
+    <header>
+        <h6>22/10/2024</h6>
+        <hr>
+        <h1>#Promise </h1>
+        <a href="../Modern_js/modern_js_list.html"><button
+                style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go
+                to Modern Js List</button></a>
+        <hr>
+    </header>
+    <section>
+        <h2>=> Promise :</h2>
+        <ul type="square">
+            <li>A js object which link producing code with consuming code.</li>
+            
+            <li>Promises are used to handle asynchronous operations in JS.</li>
+
+            <li>They are easy to manage when dealing with multiple</li>
+
+            <li>Asynchronous operations where callback can create call back hell leading to unmanagable code.</li>
+        
+        </ul>
+
+        <div>
+                <u>producing Code :</u>                
+                <span> A code that can tak some time to execute</span>
+
+                <br>
+
+                <u>consuming Code :</u>
+                <span>A code that must wait for the result.</span>
+        </div>
+
+        <hr>
+
+        <div>
+                <h2>Promise State : </h2>
+
+                <ol>
+                    <li>Promise Produce</li>
+                    <li>Pending</li>
+                    <li>Resolve/Reject</li>
+                </ol>
+
+        </div>
+        <hr>
+
+    </section>
+    <footer>
+        <h2>Produce Code :</h2>
+        <pre>
+            var p1 = new Promise((res, rej) => {
+                setTimeout(() => {
+                    res("Promise1 is Resolved")
+                    rej("Promise1 is Rejected")
+                }, 2000)
+            })
+            var p2 = new Promise((res, rej) => {
+                setTimeout(() => {
+                    res("Promise2 is Resolved")
+                    rej("Promise2 is Rejected")
+                }, 4000)
+            })
+            var p3 = new Promise((res, rej) => {
+                setTimeout(() => {
+                    // res("Promise3 is Resolved")
+                    rej("Promise3 is Rejected")
+                }, 6000)
+            })
+            <hr>
+            <h2>Consuming code :</h2>
+                p1
+                    .then((data) => {
+                        console.log(data)
+                        p2
+                            .then((data) => {
+                                console.log(data)
+                                p3
+                                    .then((data) => {
+                                        console.log(data)
+                                    })
+                                    .catch((error) => {
+                                        console.log(error)
+                                    })
+                            })
+                            .catch((error) => {
+                                console.log(error)
+                            })
+                    })
+                    .catch((error) => {
+                        console.log(error)
+                    })
+        </pre>
+    </footer>
+
+</body>
+
+</html>

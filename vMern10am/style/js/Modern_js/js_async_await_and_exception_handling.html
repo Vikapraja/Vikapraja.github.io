@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js async_await_and_exception_handling</title>
+    <link rel="stylesheet" href="../../css/js_async_await_and_exception_handling.css">
+</head>
+
+<body>
+    <header>
+        <h6>22/10/2024</h6>
+        <hr>
+        <h1>#JS Async/Await_and Exception Handling </h1>
+        <a href="../Modern_js/modern_js_list.html"><button
+                style="color: white; background-color: brown; margin-left: 1000px; font-size: large; border-radius: 30%;">EXIT/Go
+                to Modern Js List</button></a>
+        <hr>
+    </header>
+    <footer>
+        <h2>Example :</h2>
+        <pre>
+            async function getPromise() {
+                    try {
+                        console.log(await p1)
+                        console.log(await p2)
+                        console.log(await p3)
+                    } catch (error) {
+                        console.log(error)
+                    }
+                }
+                getPromise()
+        </pre>
+        <hr>
+
+        <h2>Some Methods :</h2>
+
+        <div>
+            <ol>
+                <li>
+                    
+
+                    <span>The <u>global fetch() </u> method starts the process of fetching a resource from the network,
+                        returning a promise that is fulfilled once the response is available.</span>
+
+                </li>
+
+                <hr>
+
+                <li>
+                    
+
+                    <span>A <u>fetch()</u> promise only rejects when a network error is encountered (which is usually when
+                        there's a permissions issue or similar). A fetch() promise does not reject on HTTP errors (404,
+                        etc.). 
+                    </span>
+                </li>
+
+                <hr>
+
+                <li>
+                    <span>Instead, a <u> then()</u> handler must check the Response.ok and/or Response.status properties.</span>
+
+                </li>
+            </ol>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

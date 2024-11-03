@@ -1,0 +1,36 @@
+*{
+    margin: 0 auto;
+}
+
+body{
+    width: 100vw;
+    height: 100wh;
+}
+
+header,footer,div{
+    margin: 50px;
+    font-size: larger;
+}
+
+h6{
+    text-align: center;
+}
+
+h2{
+    color: green;
+}
+
+pre{
+    color: darkred;
+    font-size: larger;
+}
+u{
+    color: red;
+    font-size: larger;
+}
+
+ol>li{
+    color: blueviolet;
+    font-size: larger;
+    margin: 10px;
+}
