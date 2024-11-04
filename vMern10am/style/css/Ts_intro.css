@@ -1,0 +1,45 @@
+*{
+    margin: 0 auto;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+header,section,footer{
+    margin: 20px;
+}
+header>a>button{
+    margin-left: 1100px;
+    font-size: larger;
+    color: chartreuse;
+    background-color: brown;
+    border: none;
+    border-radius: 25%;
+}
+h6,h1{
+    text-align: center;
+}
+h2{
+    margin: 5px;
+    padding: 10px;
+    color: green;
+    font-size: 3opx;
+}
+ul>li::marker{
+    color: red;
+}
+ul>li,ol>li{
+    margin: 5px 15px;
+    font-size: 25px;
+    color: blueviolet;
+    font-style: italic bold;
+}
+div{
+    margin: 2%;
+}
+ol>li>u{
+    color: chocolate;
+}
+ul>li>u{
+    color: darkred;
+}
