@@ -6,8 +6,9 @@ body{
     height: 100vh;
 }
 header,section,footer{
-    margin: 20px;
+    margin: 2%;
 }
+
 header>a>button{
     margin-left: 1100px;
     font-size: larger;
@@ -25,7 +26,7 @@ h2{
     color: green;
     font-size: 3opx;
 }
-ul>li::marker{
+ul>li,ol>li::marker{
     color: red;
 }
 ul>li,ol>li{
@@ -36,17 +37,19 @@ ul>li,ol>li{
 }
 div{
     margin: 2%;
+    margin: 5px 15px;
+    font-size: 25px;
+
 }
-ol>li>u{
-    color: chocolate;
+div>h2{
+    color: red;
+    
 }
-ul>li>u{
-    color: darkred;
+ol>li>span,ul>li>span{
+    color: darkgoldenrod;
 }
+
 div>u{
-    color: deeppink;
+    color: darkred;
     font-size: 30px;
-}
-table{
-    font-size: larger;
 }
