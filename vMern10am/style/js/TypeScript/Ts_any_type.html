@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ts any dataType</title>
+    <link rel="stylesheet" href="../../css/Ts_any_type.css">
+</head>
+<body>
+    <header>
+        <h6>05/11/2024</h6>
+        <hr>
+        <h1>TS Any dataType </h1>
+        <a href="TS_home.html"><button>TypeScript Home</button></a>
+        <hr>
+    </header>
+
+    <section>
+        <div>
+            <h2>#Ts Any dataType :</h2>
+                => Means a variable can store different datatype by any-datatype.
+        </div>
+        <hr>
+    </section>
+
+    <footer>
+        <pre>
+            <div>
+            <u>Example :</u>
+
+                        var a: any = 10
+                        console.log(a)
+                        a = "Ducat"
+                        console.log(a)
+                        a = true
+                        console.log(a)
+                        a = [10, 20, 30, 40, 50, 60]
+                        console.log(a)
+
+=============================[Simple interest]======================================================
+                       
+                        var p:number = 135000
+                        var t:number = 5
+                        var r:number = 12.36
+                        var si:number = p*r*t/100
+                        var total:number = p+si
+                        var emi = total/(t*12)
+                        console.log(`
+                                Principal Amount = ${p}
+                                Rate             = ${r}
+                                Time             = ${t}
+                                Simple Interest  = ${si.toFixed(2)}
+                                Total Amount     = ${total.toFixed(2)}
+                                EMI Amount       = ${emi.toFixed(2)}
+                            `)
+                            
+            </div>
+        </pre>
+    </footer>
+</body>
+</html>
