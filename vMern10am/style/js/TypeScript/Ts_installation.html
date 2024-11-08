@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ts Installation</title>
     <link rel="stylesheet" href="../../css/Ts_installation.css">
 </head>
+
 <body>
     <header>
         <h6>05/11/2024</h6>
@@ -21,12 +23,12 @@
             <li>NodeJs sould be installed.</li>
             <li>Node provide 'npm' also.It means <span>node package manager</span>.
                 <br>=> it is a CLI tool. which helps us to install,unstall and update JavaScript's external
-                module and packages. 
+                module and packages.
             </li>
         </ol>
 
         <hr>
-        
+
         <div>
             <h2>Installation process :</h2>
             <ol>
@@ -35,8 +37,8 @@
                     <br>
                     <ul>
                         <li>npm => <span>node package manager</span></li>
-                        <li>-g  => <span>making installation globaly</span> </li>
-                        <li>i   => <span>Install</span></li>
+                        <li>-g => <span>making installation globaly</span> </li>
+                        <li>i => <span>Install</span></li>
                     </ul>
                 </li>
             </ol>
@@ -47,12 +49,15 @@
         <div>
             <u>#Execution of TS code :</u>
             <ol>
-                <li>Create TypeScript file with <span>.ts</span> extention and Write Ts Code (mostly common in JS Code).</li>
-                <li>To run Ts file go to cmd at file path and type <span>tsc file_name.ts</span> hit enter. it command also convert ts file to js file.
-                    <br>=>Or <span> node file_name.ts</span> hit enter.</li>
-                
+                <li>Create TypeScript file with <span>.ts</span> extention and Write Ts Code (mostly common in JS Code).
+                </li>
+                <li>To run Ts file go to cmd at file path and type <span>tsc file_name.ts</span> hit enter. it command
+                    also convert ts file to js file.
+                    <br>=>Or <span> node file_name.ts</span> hit enter.
+                </li>
+
             </ol>
-            <u>Note:</u>Ts can not run with HTML.  
+            <u>Note:</u>Ts can not run with HTML.
         </div>
 
         <hr>
@@ -60,9 +65,22 @@
         <div>
             <h2>#command to change ts to js :</h2>
             <ul>
-                <li>Create js file, name with same of ts file at same path.</li>
-                <li>And compile ts file on cmd <span>ts file_name.ts</span> + enter</li>
-                <li>You see you ts code also in js file.</li>
+                <li>Create ts file .</li>
+                <li>And compile ts file on cmd <span>tsc file_name.ts</span> + enter.
+                    <br>=>Note : tsc may give error first time.
+                    <br><span>Solution :</span> Go to Power shell and run it as admin and run follwing command :
+                    <ol>
+                        <li>To allow runnig script in Windows <span>Set-ExecutionPolicy RemoteSigned</span> hit enter
+                            and
+                            then <span>y</span> hit enter.</li>
+                        <li>To block runnig script in Windows on shell cmd <span>Set -ExecutionPolicy Restricted</span>
+                            +
+                            enter </li>
+                    </ol>
+                </li>
+                <li>Then after tsc of ts file You see ts code also in js file.
+                    <br><span> Note: [note: ts error may be not in it's compiled file (js file) ] </span>
+                </li>
                 <li>Watch mode done (ts to js ) automatically as you write ts code on ts file.</li>
             </ul>
         </div>
@@ -72,11 +90,14 @@
         <h2># Watch mode :</h2>
         <ul>
             <li>Run ts file on cmd with -w like <span>tsc file_name.ts -w</span> </li>
-            <li><u>Error :</u> If you run wtch mode first time you could find error like <span>runnig script is disable on this system.</span> </li>
+            <li><u>Error :</u> If you run wtch mode first time you could find error like <span>runnig script is disable
+                    on this system.</span> </li>
             <li><span>Solution :</span> Go to Power shell and run it as admin and run follwing command :
                 <ol>
-                    <li>To allow runnig script in Windows <span>Set-ExecutionPolicy RemoteSigned</span> hit enter and then <span>y</span> hit enter.</li>
-                    <li>To block runnig script in Windows on shell cmd <span>Set -ExecutionPolicy Restricted</span> + enter </li> 
+                    <li>To allow runnig script in Windows <span>Set-ExecutionPolicy RemoteSigned</span> hit enter and
+                        then <span>y</span> hit enter.</li>
+                    <li>To block runnig script in Windows on shell cmd <span>Set -ExecutionPolicy Restricted</span> +
+                        enter </li>
                 </ol>
             </li>
         </ul>
@@ -88,8 +109,16 @@
             <h2>Exaples :</h2>
             Go to <u>vMern10am>style>js>TypeScipt>TS_files</u>
 
-         <br><h2>#To check output of Ts , run ts compiled-js file with node or with html on browser.</h2>
+            <br>
+            <h2>#To check output of Ts , run ts compiled-js file with node or with html on browser.</h2>
+        </div>
+
+        <div>
+            <hr>
+            <h1>Ts file's compiled file (js file )'s output in browser>inspect>console.</h1>
+            <h2>[note: ts error may be not in it's compiled file (js file) ]</h2>
         </div>
     </footer>
 </body>
+
 </html>
