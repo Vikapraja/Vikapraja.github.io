@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ts OOPs and Abstraction & Encapsulation</title>
+    <link rel="stylesheet" href="../../css/Ts_OOPs_abstraction.css">
+</head>
+
+<body>
+    <header>
+        <h6>07/11/2024</h6>
+        <hr>
+        <h1>TS OOPs and Abstraction & Encapsulation</h1>
+            <a href="TS_home.html"><button>TypeScript Home</button></a>
+            <hr>
+    </header>
+
+    <section>
+        <div>
+            <h2>#Ts OOPs and Abstraction & Encapsulation:</h2>
+            <ol>
+                <li>OOPs(Object oriented Programming) .</li>
+                <li>Objct and class.</li>
+
+                <li>Abstract Classes =>
+                    <ol>
+                        <li>Abstract classes are a fundamental concept in TypeScript, they enable us to define classes that
+                    represent a base from which other classes may be derived. <br>=> They serve as a blueprint for other
+                    classes without being instantiated themselves.</li>
+                    </ol>
+                    
+                </li>
+                <li>Access Modifiers : Means object's access type.
+                    <ol type="i">
+                        <li>public =>object accessable everywhere</li>
+                        <li>private =>Objects limited accessable</li>
+                        <li>protected =>object Not accessable</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <hr>
+    </section>
+
+    <footer>
+        <pre><div>
+            <h2>Example :</h2>
+<u>Class and Object: </u>
+
+            class Test{
+                    private a:number
+                    private b:number
+                    private sum:number
+
+                    setData(a:number,b:number){
+                            this.a = a
+                            this.b = b
+                            this.sum = a+b
+                    }
+
+                    display(){
+                            console.log(`${this.a} + ${this.b} = ${this.sum}`)
+                    }
+            }
+
+            var obj = new Test()
+            obj.setData(10,20)
+            obj.display()
+
+            console.log(obj.a)
+            console.log(obj.b)
+            console.log(obj.sum)
+
+<hr>
+<u>Abstract Class :</u>
+
+                abstract class TaxCalculation{
+                        protected name:string
+                        protected price:number
+                        protected taxType:string
+                        protected tax:number
+                        protected total:number
+                        display(){
+                                console.log(`
+                                                Product Name   :       ${this.name}
+                                                Tax Type       :       ${this.taxType}
+                                                Price          :       ${this.price}
+                                                Tax            :       ${this.tax}
+                                                Total          :       ${this.total}
+                                        `)
+                        }
+                    
+                }
+                class Product1 extends TaxCalculation{
+                        calulcate(name:string,price:number){
+                                this.name = name
+                                this.taxType = "VAT"
+                                this.price = price
+                                this.tax = this.price*30/100
+                                this.total = this.price+this.tax
+                        }
+                }
+                
+                class Product2 extends TaxCalculation{
+                        calulcate(name:string,price:number){
+                                this.name = name
+                                this.taxType = "GST"
+                                this.price = price
+                                this.tax = this.price*18/100
+                                this.total = this.price+this.tax
+                        }
+                }
+                var petrol = new Product1()
+                var laptop = new Product2()
+
+                petrol.calulcate("Petrol",50000)
+                laptop.calulcate("Laptop",50000)
+
+                petrol.display()
+                laptop.display()
+
+         </div>
+        </pre>
+    </footer>
+</body>
+
+</html>

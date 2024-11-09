@@ -1,0 +1,49 @@
+*{
+    margin: 0 auto;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+header,section,footer{
+    margin: 2%;
+}
+
+header>a>button{
+    margin-left: 1100px;
+    font-size: larger;
+    color: chartreuse;
+    background-color: brown;
+    border: none;
+    border-radius: 25%;
+}
+h6,h1{
+    text-align: center;
+}
+div{
+    margin: 2%;
+    margin: 5px 15px;
+    font-size: 25px;
+}
+div>ol>li{
+    color: darkmagenta;
+    text-decoration: none;
+    font-size: larger;
+    margin: 1%;
+    padding: 1%;
+}
+div>h2{
+    color: red;
+    
+}
+pre{
+    color: green;
+    font-size: 25px;
+
+}
+pre>div>u{
+    margin: 2%;
+    margin: 5px 15px;
+    color: brown;
+    font-size:  25px;
+}

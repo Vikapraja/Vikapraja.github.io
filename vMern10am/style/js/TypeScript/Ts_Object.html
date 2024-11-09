@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ts Object</title>
+    <link rel="stylesheet" href="../../css/Ts_object.css">
+</head>
+<body>
+    <header>
+        <h6>07/11/2024</h6>
+        <hr>
+        <h1>TS Object</h1>
+        <a href="TS_home.html"><button>TypeScript Home</button></a>
+        <hr>
+    </header>
+
+    <section>
+        <div>
+            <h2>#Ts Object :</h2>
+        </div>
+        <hr>
+    </section>
+
+    <footer>
+        <pre>
+            <div>
+            <h2>Example :</h2>
+<u>Simple Object :</u>
+                    var emp = {
+                            id: 1001,
+                            name: "Nitin Chauhan",
+                            dsg: "Trainer",
+                            salary: "135000",
+                            city: "Faridabad",
+                            state: "Haryana"
+                    }
+                    console.log(emp)
+
+<hr>
+<u>Object Type Alias :</u>
+                    var emp:{
+                            id:number,
+                            name:string,
+                            dsg:string,
+                            salary:number,
+                            city:string,
+                            state:string
+                    } = {
+                            id:1001,
+                            name:"Nitin Chauhan",
+                            dsg:"Trainer",
+                            salary:"135000",
+                            city:"Faridabad",
+                            state:"Haryana"
+                    }
+
+                    console.log(emp)
+
+
+<hr>
+<u>Object-Type :</u>
+                type EmployeeType = {
+                        id: number,
+                        name: string,
+                        dsg: string,
+                        salary: number,
+                        city: string,
+                        state: string
+                }
+
+                var emp: EmployeeType = {
+                        id: 1001,
+                        name: "Nitin Chauhan",
+                        dsg: "Trainer",
+                        salary: "135000",
+                        city: "Faridabad",
+                        state: "Haryana"
+                }
+
+                console.log(emp)
+
+<hr>
+<u></u>
+
+            </div>
+        </pre>
+    </footer>
+</body>
+</html>

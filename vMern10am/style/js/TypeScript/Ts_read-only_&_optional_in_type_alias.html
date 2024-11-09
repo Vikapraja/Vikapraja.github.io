@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ts Readonly and optional properties in Obj-Type alias</title>
+    <link rel="stylesheet" href="../../css/Ts_read-only_&_optional_in_type_alias.css">
+</head>
+
+<body>
+    <header>
+        <h6>07/11/2024</h6>
+        <hr>
+        <h1>TS Readonly and optional properties in Obj-Type alias</h1>
+        <a href="TS_home.html"><button>TypeScript Home</button></a>
+        <hr>
+    </header>
+
+    <section>
+        <div>
+            <h2>#Ts Readonly and optional properties in Obj-Type alias :</h2>
+            <ol>
+                <li>Use of 'readonly' and ? in type alias .</li>
+                <li>It is either for Interface.</li>
+            </ol>
+        </div>
+        <hr>
+    </section>
+
+    <footer>
+        <pre><div>
+            <h2>Example :</h2>
+<u>Obj-Type Alias :</u>
+                type EmployeeType = {
+                        readonly id: number,
+                        name: string,
+                        dsg: string,
+                        salary: number,
+                        city?: string,
+                        state?: string,
+                }
+                var ob1:EmployeeType =  {
+                        id:1001,
+                        name:"Nitin Chauhan",
+                        dsg:"Trainer",
+                        salary:135000
+                }
+                var ob2:EmployeeType =  {
+                        id:1002,
+                        name:"Deepak Singh",
+                        dsg:"Trainer",
+                        salary:85000,
+                        city:"Ghaziabad",
+                        state:"UP"
+                }
+
+                console.log(obj1)
+                console.log(obj2)
+
+<hr>
+<u>ReadOnly and optional property in interface</u>
+
+                interface EmployeeType{
+                        readonly id: number,
+                        name: string,
+                        dsg: string,
+                        salary: number,
+                        city?: string,
+                        state?: string,
+                }
+                var ob1:EmployeeType =  {
+                        id:1001,
+                        name:"Nitin Chauhan",
+                        dsg:"Trainer",
+                        salary:135000
+                }
+                var ob2:EmployeeType =  {
+                        id:1002,
+                        name:"Deepak Singh",
+                        dsg:"Trainer",
+                        salary:85000,
+                        city:"Ghaziabad",
+                        state:"UP"
+                }
+                
+                console.log(obj1)
+                console.log(obj2)
+            </div>
+        </pre>
+    </footer>
+</body>
+
+</html>

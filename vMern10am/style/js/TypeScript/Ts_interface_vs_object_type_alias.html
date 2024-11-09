@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ts Interface vs Obj-Type alias</title>
+    <link rel="stylesheet" href="../../css/Ts_interface_vs_object_type_alias.css">
+</head>
+
+<body>
+    <header>
+        <h6>07/11/2024</h6>
+        <hr>
+        <h1>TS Interface vs Obj-Type alias</h1>
+        <a href="TS_home.html"><button>TypeScript Home</button></a>
+        <hr>
+    </header>
+
+    <section>
+        <div>
+            <h2>#Ts Interface vs Obj-Type alias :</h2>
+            <ol>
+                <li>In case of type alias we have to define alias single time, but in case of interface we can define it
+                    mulitple times with same name</li>
+                <li>We can use a obj-type alias with another obj-type alias.</li>
+                <li>We can inherti a interface to another interface like inheritace.</li>
+
+            </ol>
+        </div>
+        <hr>
+    </section>
+
+    <footer>
+        <pre><div>
+            <h2>Example :</h2>
+<u>Obj-Type Alias :</u>
+                type test1 = {
+                        a: number,
+                        b: number
+                }
+            
+                var obj1: test1 = {
+                        a: 10,
+                        b: 20
+                }
+                console.log(obj1)
+<hr>
+<u>Interfaces :</u>
+                interface test2 {
+                        a: number,
+                        b: number
+                }
+                interface test2 {
+                        c: number,
+                        d: number
+                }
+                var obj: test2 = {
+                    a: 10,
+                    b: 20,
+                    c: 30,
+                    d: 40
+                }
+                console.log(obj)
+                
+<hr>
+<u>Union of Obj-alias Type :</u>
+                type A = {
+                        a: number,
+                        b: number
+                }
+                type B = A & {
+                    c: number,
+                    d: number
+                }
+                var obj:B = {
+                    a:10,
+                    b:20,
+                    c:30,
+                    d:40,
+                }
+                
+<hr>
+<u>Inherit Interfaces to other interface by 'extends' keyword like inheritace :</u>
+            
+                    interface A{
+                            a: number,
+                            b: number
+                    }
+                    interface B extends A {
+                            c: number,
+                            d: number
+                    }
+                    var obj:B = {
+                            a:10,
+                            b:20,
+                            c:30,
+                            d:40,
+                    }
+
+                    console.log(obj)
+                
+            </div>
+        </pre>
+    </footer>
+</body>
+
+</html>

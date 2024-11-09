@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ts Imterface</title>
+    <link rel="stylesheet" href="../../css/Ts_interface.css">
+</head>
+
+<body>
+    <header>
+        <h6>07/11/2024</h6>
+        <hr>
+        <h1>TS Imterface</h1>
+        <a href="TS_home.html"><button>TypeScript Home</button></a>
+        <hr>
+    </header>
+
+    <section>
+        <div>
+            <h2>#Ts Imterface :</h2>
+            <ol>
+                <li>use of 'interface' keyword.</li>
+                <li>An interface is a syntactical contract that an entity(object) should conform to.</li>
+                <li>In other words, an interface defines the syntax that any entity must adhere to.</li>
+                <li>Interfaces define properties, methods, and events, which are the members of the interface.
+                    Interfaces contain only the declaration of the members. It is the responsibility of the deriving object to
+                    define the members. It often helps in providing a standard structure that the deriving object would follow.
+                </li>
+
+            </ol>
+        </div>
+        <hr>
+    </section>
+
+    <footer>
+        <pre><div>
+            <h2>Example :</h2>
+
+                interface EmployeeType{
+                            id:number,
+                            name:string,
+                            dsg:string,
+                            salary:number,
+                            city:string,
+                            state:string
+                    }
+    
+                    var emp: EmployeeType = {
+                            id: 1001,
+                            name: "Nitin Chauhan",
+                            dsg: "Trainer",
+                            salary: "135000",
+                            city: "Faridabad",
+                            state: "Haryana"
+                    }
+                    console.log(emp)
+    
+            </div>
+        </pre>
+    </footer>
+</body>
+
+</html>
