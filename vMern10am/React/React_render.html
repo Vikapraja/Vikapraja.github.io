@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Render items(Object)</title>
+    <link rel="stylesheet" href="../style/css/React_render.css">
+</head>
+<body>
+    <header>
+        <h6>12/11/2024</h6>
+            <hr>
+            <h1>Rendering Items In React</h1>
+            <a href="../React/React_home.html"><button>Go To React Home</button></a>
+            <hr>
+    </header>
+        
+    <section>
+        <h2>Why need reandering (react) ?</h2>
+        <ul>
+            <li>To sending object from <span>app>src>index.js</span> to <span>app>public>index.html</span></li>
+            <li>React rendering function from <span>src>index.js</span> return/sends single item(element) only to <span>public>index.html</span>.</li>
+            <li>In term of return/sending two or more item(element) from render, React gives Errors.</li>
+            <li>We can do multiple item/object/element in a single item/element/object then render.</li>
+            <li>So...this is need of react render </li>
+        </ul>
+
+        <hr>
+
+        <h2>Render Types : [ In app>src>index.js ]</h2>
+        <div class="type">
+            <ol>
+                <li>By Use of Array [.,.,.]</li>
+                <li>By Use of div</li>
+                <li>By use of 'React.Fragment' tag < React.Fragment>....< /React.Fragment></li>
+                <li>By empty anguler bracket < >....< /> [React Fragment syntactic Suger Format]</li>
+            </ol>
+        </div>
+
+        <ol>
+            <li>
+                <u>By Use of Array</u> : By Array we can make single item/object/element of multiple Object/item/elemets. 
+                <br>=>Then render will not give error. [ But it is booring] 
+                <br>
+                <span>Like :</span>
+                <pre>
+        root.render(
+                    [
+                        < h1>Hello World!!!< /h1> ,
+                        < h2>This is first react program< /h2>
+                    ]
+                )
+                </pre>
+
+            </li>
+
+            <li>
+                <u>By Use of div</u> : By div we can make single item/object/element of multiple Object/item/elemets. 
+                <br>=>Then render will not give error. <br>=><u> But div may make disturb project. </u>
+                <br>
+                <span>Like :</span>
+                <pre>
+        root.render(
+                    < div>
+
+                        < h1>Hello World!!!< /h1>
+
+                        < h2>This is first react program< /h2>
+
+                    < /div>
+                )
+                </pre>
+                
+            </li>
+
+            <li>
+                <u>By Use of < React.Fragment>....< /React.Fragment></u> : By 'React.Fragment' tag we can make single item/object/element of multiple Object/item/elemets. 
+                <br>=>Then render also will not give error . [ it not make any disturbens]
+                <br>
+                <span>Like :</span> 
+                <pre>
+        root.render(
+                    < React.Fragment>
+
+                        < h1>Hello World!!!< /h1>
+
+                        < h2>This is first react program< /h2>
+                    
+                    < /React.Fragment>
+                )
+                </pre>
+            </li>
+
+            <li>
+                <u>By Use of React-Fragment-Syntactic-suger-Format (Empty anguler bracket) < >....< /></u> : By 'React.Fragment' tag we can make single item/object/element of multiple Object/item/elemets. 
+                <br>=>Then render also will not give error . (It is best way to rensering multiple items)
+                <br>
+                <span>Like :</span> 
+                <pre>
+        root.render(
+                    < >
+
+                        < h1>Hello World!!!< /h1>
+
+                        < h2>This is first react program< /h2>
+                    
+                    < />
+                )
+                </pre>
+            </li>
+        </ol>
+
+        <hr>        
+    </section>
+</body>
+</html>

@@ -96,13 +96,62 @@
 
             <ol>
                 <li>After installing react and creating app make empty to public and src folder. (delete everything from public and src)</li>
-                <li>This is nessesery to create firstly <u>index.html</u> in public folder and <u>index.js</u> in src folder.(it are entry/lander pages)</li>
+                <li>This is nessesery to create firstly <u>index.html</u> in public folder and <u>index.js</u> in src folder.(it are entry/lander pages) these files Name should not be change .</li>
+                <li>In <span>public>index.html</span> we will take a boiler-plate and write in dody div with <span>id="root"</span> only and save it.
+                    
+                <u>Note :</u> this file should be single and unique in the project so it's cause that make project 
+                <span>SPA (Single Page Application)</span>
+                    <br>
+
+                    <u>Like this :</u>
+<pre>
+< !DOCTYPE html>
+< html lang="en">
+< head>
+    < meta charset="UTF-8">
+    < meta name="viewport" content="width=device-width, initial-scale=1.0">
+    < title>React vfirst< /title>
+< /head>
+< body>
+    < div class="root">< /div>
+< /body>
+< /html>
+</pre>
+                </li>
+
+                <li>In <span>src>index.js</span> import react and ReactDOM then create root object.
+                    <br>
+                    <u>Like this :</u>
+<pre>
+    import React from "react"   //optinal to import of react
+
+    import ReactDOM from "react-dom/client"
+
+    const root = ReactDOM.createRoot(document.getElementById("root"))  //root DOM
+
+    root.render(                     //rendering object
+       < h1> Hello World!!! < /h1>   //it is object
+    )
+</pre>                
+                </li>
+
+                <li>Now <span>render</span> the object .
+                    <br>
+                    <u>Note :</u>
+                    <ul>
+                        <li>Here we can see Automatically react send object from <span>src>index.js</span> to 
+                        <span>public>index.html</span> it is done by rendering [The properties of React ] .
+                        </li>
+
+                        <li>render function return single item(object) only . so to learn about rendering multiple item in single element(item). How ?
+                            <a href="./react_render.html" title="click me"><button>Go to Rendering item(Object) By react</button></a>
+                        </li>
+                    </ul>
+                </li>
+
             </ol>
         </section>
 
-        <footer>
-        
-        </footer>
    </div>
 </body>
 </html>

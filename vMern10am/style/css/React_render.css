@@ -27,20 +27,20 @@ header>a>button{
     font-size: larger;
     border-radius: 10%;
 }
-section>ol>li,section>ol>li>ul>li{
+section>ol>li,section>ol>li>ul>li,section>ul>li{
     margin: 1%;
     font-size: 30px;
     text-align: justify;
     color:blueviolet;
 }
-section>ol>li>span,section>ol>li>ul>li>span{
+section>ol>li>span,section>ol>li>ul>li>span,section>ul>li>span{
     color: red;
 }
 section>ol>li>u,section>ol>li>ul>li>u{
     color: darkred;
     font-size: 35px;
 }
-section>ol>li::marker{
+section>ol>li::marker,section>ul>li::marker{
     color: green;
     font-style: italic bold;
     font-size: 35px;
@@ -72,13 +72,4 @@ ol>li>pre{
     align-items: center;
     background-color: lightgreen;
     color: blue;
-}
-
-ul>li>a>button{
-    font-size: larger;
-    color: goldenrod;
-    background-color: aquamarine;
-    text-align: center;
-    align-items: center;
-    margin: 2%;
 }
