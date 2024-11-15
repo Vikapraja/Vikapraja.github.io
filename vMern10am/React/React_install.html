@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Installation & Project Setup</title>
+    <link rel="stylesheet" href="../style/css/React_install.css">
+</head>
+<body>
+   <div class="out">
+        <header>
+            <h6>12/11/2024</h6>
+            <hr>
+            <h1>React Installation & Project Setup</h1>
+            <a href="../React/React_home.html"><button>Go To React Home</button></a>
+            <hr>
+        </header>
+        <section>
+            <h2>Requirement To install React : </h2>
+            <ol type="i">
+                <li>Installed nodeJS</li>
+                <li>Installed npm (Node Packege Manager)</li>
+                <li>TypeScript</li>
+            </ol>
+            <hr>
+            <h2>React Installation :</h2>
+            <ol>
+                <li>Go to path where you want start project and open CMD with this path.</li>
+                <li>In CMD Run this command > <span>npm i -g create-react-app</span> +  enter 
+                    <ul>
+                        <li><u>npm</u> : node package manager</li>
+                        <li><u>i</u> : Install</li>
+                        <li><u>-g</u> : For Globly installation</li>
+                        <li><u>create-react-app</u> : React module/ Package name</li>
+
+                    </ul>
+                    <br><span>Note :</span>it is react server installation
+                </li>
+
+                <li>After React installation In CMD(To Create app of Project) > <span>npx create-react-app 'project/app-name'</span> + enter 
+                    <ul>
+                        <li><u>npx :</u> node package execution</li>
+                        <li><u>crete-react-app :</u> To create project's app</li>
+                        <li><u>'app-name' :</u>React Project/app name
+                            <br><span>Note:</span>App-name should be without <u>space+hyphon</u> and only allow small letters. 
+                        </li>
+                    </ul>
+                    
+                </li>    
+                <li><span>Happy hacking!</span> : sign of right installation</li>
+
+                <li>After Creating app Go to app Folder with cmd (To Start Project) ><span>npm start</span> + Enter <br> <u>NOTE-U can see react Symbol</u> </li>
+
+            </ol>
+
+            <hr>
+
+            <h2>After Creating Projecct/app Auto Created Folders & files :</h2>
+            <div class="type">
+                <ol>
+                    <li>node_modules (folder)</li>
+                    <li>public (folder)</li>
+                    <li>src (folder)</li>
+                    <li>package (json-file)</li>
+                    <li>package-lock (json-file)</li>
+                    <li>.gitignore (txt-file)</li>
+                    <li>README (markdown_file.md)</li>
+                </ol>
+            </div>
+            <ol>
+                <li><span>node_modules </span>(folder) :
+                    <ul>
+                        <li>It is contain all nessesery data for react project.</li>
+                        <li>All dependencies are on it , it should never be delete nor project will not work.</li>
+                        <li>It has <u>bable</u> compiler that convert react code to plane JavaScript code. <br>=> <u>(browser not understand react code)</u></li>
+                    </ul>
+                </li>
+                <li><span>public </span>(folder) : it is folder where we code .5% </li>
+                <li><span>src </span>(folder) : It is folder where we doing coding 99%</li>
+                <li><span>package </span>(json_file) : 
+                    <ul>
+                        <li>It contains all information about project & module in json format like :<u>project-name, version, dependencies etc</u></li>
+                        <li>and also contains project related commands like <span>start, build, test etc </span>.</li>
+                    </ul>
+                </li>
+                <li><span>package-lock </span>(json_file) : It is React dependencies file . 
+                <br><u>Note :</u>React is dependencies of project and package-lock is dependencies of React.</li>
+                <li><span>.gitignore </span>(txt_file) : It suggest that which file should be upload on git and which should not.
+                <br>=>Without it git never work on this project.</li>
+                <li><span>README </span>(markdown_file.md) : it is for git hub.</li>
+            </ol>
+
+            <hr>
+
+            <h2>Creating Project :</h2>
+
+            <ol>
+                <li>After installing react and creating app make empty to public and src folder. (delete everything from public and src)</li>
+                <li>This is nessesery to create firstly <u>index.html</u> in public folder and <u>index.js</u> in src folder.(it are entry/lander pages)</li>
+            </ol>
+        </section>
+
+        <footer>
+        
+        </footer>
+   </div>
+</body>
+</html>
