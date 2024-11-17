@@ -29,6 +29,16 @@
             </li>
 
         </ol>
+
+        <hr>
+
+        <h2>Rule for component :</h2>
+        <ol>
+            <li>Component file should be in 'App>src'</li>
+            <li>Component's name should be start with capital letter.</li>
+            <li>Component is also js or jsx file.</li>
+            <li>Component shoul be export at created time and should be import at use time.</li>
+        </ol>
     
         <hr>
 
@@ -44,10 +54,141 @@
         <ol>
             <li>
                 <u>Class Components</u> :
+                <ul>
+                    <li>After creating component file (js/jsx) 'react' should be import.</li>
+                    <li>Class component are based on class as OOPs.</li>
+                    <li>class should be inherit to 'component'.</li>
+                    <li>In class <span>render()</span> is nessesery and in render() , <span>return()</span> is nessesery. </li>
+                    <li>In return() object/item/element should be defined. </li>
+                    <li>And class should be <span>export default</span> at created time. To <span>import</span> from where we want to use this class.</li>
+                </ul>
+                <span>Example :</span>
+<pre>
+    <u>App/src/ClassComponent/Sample.jsx</u>
+
+    import React, { component } from "react"
+
+    class Sample extends component{
+                    render(
+                     return(
+                                <>
+                                    < h1> Class Component Example < /h1>
+                                    < h2> This is Sample class component < /h2>
+                                < />
+                            )
+                        )
+                }
+        
+    export default Sample
+    <hr>
+    <u>Or :</u>
+
+    import React, { component } from "react"
+
+    export default class Sample extends component{
+                    render(
+                     return(
+                                <>
+                                    < h1> Class Component Example < /h1>
+                                    < h2> This is Sample class component < /h2>
+                                < />
+                            )
+                        )
+                }
+</pre>
+
+<hr> <span>Importing class component : (In other js/jsx file/page)</span>
+<pre>
+    import Sample form "./ClassComponent/Sample"
+
+    < Sample/>       // where you want use component 
+</pre>
+
             </li>
 
             <li>
-                <u>Functional Components</u> :   
+                <u>Functional Components :</u>  
+                <ul>
+                    <li>After creating Component (js/jsx file) 'react'should be import. </li>
+                    <li>Functinal Component are based on function.</li>
+                    <li>In Function <span>render()</span> is nessesery and in render() , <span>return()</span> is nessesery. </li>
+                    <li>Function should be <span>export default</span> at created time. To <span>import</span> where we want to use Functional Component.</li>
+                </ul>
+                
+                <span>Example :</span>
+                <ol>
+                    <li><u>By use of reguler function </u>
+<pre>
+        <u> (App/src/FunctionalComponent/SampleF) </u>
+                        
+        function SampleF(){
+            return(
+                    <>
+                        < h1> Functinal component Example < /h1>
+                        < h2> This is SampleF Functinal Component < /h2>
+                    < />
+                )
+            }
+        
+        export default SampleF
+                        
+        <u>Or</u>
+                        
+        export default function SampleF(){
+            return(
+                    <>
+                        < h1> Functinal component Example < /h1>
+                        < h2> This is SampleF Functinal Component < /h2>
+                    < />
+                )
+            }
+</pre>
+<hr> <span>Importing Functional component : (In other js/jsx file/page)</span>
+<pre>
+    import Sample form "./FunctionalComponent/Sample"
+
+    < SampleF/>       // where you want use component 
+</pre>
+                    </li>
+                    
+                    <li><u>By use of Anonymous Function :</u>
+<pre>
+    <u> (App/src/FunctionalComponent/SampleF) </u>
+                        
+    const SampleF = function (){
+        return(
+                <>
+                    < h1> Functinal component Example < /h1>
+                    < h2> This is SampleF Functinal Component < /h2>
+                < />
+            )
+        }
+    
+    export default SampleF
+
+</pre>
+                    </li>
+
+                    <li><u>By use of Fat-arrow function :</u>
+<pre>
+    <u> (App/src/FunctionalComponent/SampleF) </u>
+                        
+    const SampleF = ()=>{
+        return(
+                <>
+                    < h1> Functinal component Example < /h1>
+                    < h2> This is SampleF Functinal Component < /h2>
+                < />
+            )
+        }
+    
+    export default SampleF
+
+</pre>
+
+                    </li>
+                </ol>
+
             </li>
         </ol>
     </section

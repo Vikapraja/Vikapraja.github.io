@@ -33,7 +33,7 @@ section>ol>li,section>ol>li>ul>li,section>ul>li{
     text-align: justify;
     color:blueviolet;
 }
-section>ol>li>span,section>ol>li>ul>li>span,section>ul>li>span{
+section>ol>li>span,section>ol>li>ul>li>span,section>ul>li>span,pre>u{
     color: red;
 }
 section>ol>li>u,section>ol>li>ul>li>u{
@@ -72,4 +72,16 @@ ol>li>pre{
     align-items: center;
     background-color: lightgreen;
     color: blue;
+}
+
+section>ol>li>ol>li{
+    margin: 2%;
+    padding: 2%;
+}
+
+section>ol>li>ol>li>u{
+    margin: 5%;
+    padding: 25%;
+    color: rgba(208, 67, 16, 0.959);
+    text-decoration: none;
 }
