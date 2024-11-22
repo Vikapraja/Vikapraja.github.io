@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+header,section{
+    margin: 2%;
+    padding: 1%;
+    /* background-color: lightgoldenrodyellow; */
+}
+.out{
+    margin: 0 auto;
+    border: 1px solid black;
+}
+header>h6,h1{
+    text-align: center;
+    margin: 5px;
+
+}
+header>a>button{
+    width: 25vh;
+    margin-left: 85%;
+    color: white;
+    background-color: brown;
+    font-size: larger;
+    border-radius: 10%;
+}
+section>ol>li,section>ol>li>ul>li,section>ul>li{
+    margin: 1%;
+    font-size: 30px;
+    text-align: justify;
+    color:blueviolet;
+}
+section>ol>li>span,section>ol>li>ul>li>span,section>ul>li>span,pre>u{
+    color: red;
+}
+section>ol>li>u,section>ol>li>ul>li>u{
+    color: darkred;
+    font-size: 35px;
+}
+section>ol>li::marker,section>ul>li::marker{
+    color: green;
+    font-style: italic bold;
+    font-size: 35px;
+
+}
+section>h2{
+    text-align: justify;
+    color: darkgreen;
+    font-size: 40px;
+    margin: 3%;
+    padding: 1%;
+    background-color: lightpink;
+}
+
+.type{
+    font-size: 25px;
+    text-align: justify;
+    color: blue;
+    border: 1px solid red;
+    align-items: center;
+    margin: 0 20% 0 20%;
+    padding: 1%;
+}
+ol>li>pre{
+    font-size: 25px;
+    /* margin: 0 20% 0 20%; */
+    text-align: justify;
+    align-items: center;
+    background-color: lightgreen;
+    color: blue;
+}
+
+ol>li>pre>span{
+    color: green;
+}

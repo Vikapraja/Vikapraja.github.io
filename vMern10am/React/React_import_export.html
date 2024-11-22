@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React import and export</title>
+    <link rel="stylesheet" href="../style/css/React_import_export.css">
+</head>
+<body>
+    <header>
+        <h6>13/11/2024</h6>
+        <hr>
+        <h1>React Import and Export</h1>
+        <a href="../React/React_home.html"><button>Go To React Home</button></a>
+        <hr>
+    </header>
+
+    <section>
+        <ol>
+            <li>Export, Import are used for reuseable of component one to another file in react.</li>
+            <li>We can export and import multiple components.</li>
+            <li>Without Export, import We can'nt send data(component) to another page for reuse.</li>
+            <li><span>Class component</span> and <span>Functinal Component</span> both uses export import : </li>
+            <li>
+                Type of Export :
+                <ol>
+                    <li><u>default export </u>: its name can be change at import time.</li>
+                    <li><u>name export </u>: its name can not be change at import time.</li>
+                </ol>
+            </li>
+        </ol>
+
+        <h2>Class Component Export , Import Example</h2>
+<ol>
+    <li> 
+        <u>Export Example of class component</u>
+<pre>
+    <u>in App>src>ClassComponent>ExportImportExample.jsx  (exporter file)</u>
+    import React, { component } from "react"
+
+    var name = "Vivek"
+    var arr = [10,20,30,40,50,60,70,80,90,100]
+    var emp = {
+        id: 1001,
+        name: "Viveka",
+        dsg: "Empolyee",
+        salary: 135000,
+        city: "Noida",
+        state: "Uttar Pradesh"
+    }
+
+    functin display(){
+        return(
+            < h3> This is display functin < /h3>
+        )
+    }
+
+    class ExportImportExample extends component {
+        render(){
+            return(
+                <>
+                    < h1> class component export import example < /h1>
+                    < h2> This is ExportImport class component < /h2>
+                < />
+            )
+        }
+    }
+
+    export default ExportImportExample   <span>//default export</span>
+    export { name,arr,emp,display }       <span>//name export</span>
+
+    <h2>OR Export :</h2>
+
+    export var name = "Vivek"        <span>//name export</span>
+    export var arr = [10,20,30,40,50,60,70,80,90,100]      <span>//name export</span>
+    export var emp = {                                      <span>//name export</span>
+        id: 1001,
+        name: "Viveka",
+        dsg: "Empolyee",
+        salary: 135000,
+        city: "Noida",
+        state: "Uttar Pradesh"
+    }
+
+    export functin display(){                               <span>//name export</span>
+        return(
+            < h3> This is display functin < /h3>
+        )
+    }
+
+    export default class ExportImportExample extends component {        <span>//default export</span>
+        render(){
+            return(
+                <>
+                    < h1> class component export import example < /h1>
+                    < h2> This is ExportImport class component < /h2>
+                < />
+            )
+        }
+    }
+
+</pre>
+    </li>
+
+    <li>
+        <u>Import Example of class component</u>
+<pre>
+    <u>in App>src>index.js   (Importer file)</u>
+    import React from "react"
+    import ReactDom from "react-dom/client"
+
+    import ExportImportExample, { name,arr,emp,display } from "./ClassComponent/ExportImportExample"
+
+    const root = ReactDom.creatRoot(document.getElementById("root"))
+
+    root.render(
+        <>
+            < ExportImportExample/>
+            < h3> Name :{name} < /h3>            
+            < h3> Array :{arr.join(" ")} < /h3>  
+
+            < h3> Empolyee Id :{emp.id} < /h3> 
+            < h3> Empolyee Name :{emp.name} < /h3> 
+            < h3> Empolyee Designation :{emp.dsg} < /h3> 
+            < h3> Empolyee Salary :{emp.salary} < /h3>
+            < h3> Empolyee City :{emp.city} < /h3> 
+            < h3> Empolyee State :{emp.state} < /h3>
+
+            {display()}           
+        < />
+    )
+
+    <h2>OR Import As</h2>
+    
+    <u>in App>src>index.js   (Importer file)</u>
+    import React from "react"
+    import ReactDom from "react-dom/client"
+
+    import * as Data from "./ClassComponent/ExportImportExample"
+
+    const root = ReactDom.creatRoot(document.getElementById("root"))
+
+    root.render(
+        <>
+            < Data.default>
+            < h3> Name :{Data.name} < /h3>            
+            < h3> Array :{Data.arr.join(" ")} < /h3>  
+
+            < h3> Empolyee Id :{Data.emp.id} < /h3> 
+            < h3> Empolyee Name :{Data.emp.name} < /h3> 
+            < h3> Empolyee Designation :{Data.emp.dsg} < /h3> 
+            < h3> Empolyee Salary :{Data.emp.salary} < /h3>
+            < h3> Empolyee City :{Data.emp.city} < /h3> 
+            < h3> Empolyee State :{Data.emp.state} < /h3>
+
+            {Data.display()}           
+        < />
+    )
+
+</pre>
+    </li>
+</ol>
+
+    <h2>Export import Example of Functinal Component</h2>
+
+    <ol>
+        <li>it also import as ClassComponent import and export also.</li>
+        <li>files path only could be differen </li>
+    </ol>
+    </section>
+
+</body>
+</html>
