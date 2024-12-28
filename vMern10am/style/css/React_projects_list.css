@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+header,section,footer{
+    margin: 2%;
+    padding: 1%;
+}
+.out{
+    margin: 0 auto;
+    border: 1px solid black;
+}
+header>h6,h1{
+    text-align: center;
+    margin: 5px;
+
+}
+header>a>button{
+    width: 25vh;
+    margin-left: 85%;
+    color: white;
+    background-color: brown;
+    font-size: larger;
+    border-radius: 10%;
+}
+section>ol>li{
+    font-size: larger;
+}
+section>ol>li>a>button{
+    width: 95%;
+    height: 7%;
+    font-size: larger;
+    text-align: justify;
+    background-color: lightgoldenrodyellow;
+}
+
+section>ol>li>a>button:hover{
+    background-color: lightblue;
+    color: brown;
+}
+section>ol>li::marker{
+    color: green;
+    font-size: 30px;
+    font-style: italic bold;
+}
