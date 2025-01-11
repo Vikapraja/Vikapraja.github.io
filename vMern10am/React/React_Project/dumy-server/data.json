@@ -1,0 +1,32 @@
+{
+  "maincategory": [
+    {
+      "id": "63e1",
+      "name": "Male",
+      "pic": "maincategory/banner1.jpg",
+      "active": false
+    },
+    {
+      "id": "3859",
+      "name": "Female",
+      "pic": "maincategory/banner5.jpg",
+      "active": true
+    },
+    {
+      "id": "3ae3",
+      "name": "Vivekanand",
+      "pic": "maincategory/electronics.jpg",
+      "active": true
+    }
+  ],
+  "subcategory": [],
+  "brand": [],
+  "product": [],
+  "testimonial": [],
+  "user": [],
+  "cart": [],
+  "wishlist": [],
+  "checkout": [],
+  "newsletter": [],
+  "contactus": []
+}

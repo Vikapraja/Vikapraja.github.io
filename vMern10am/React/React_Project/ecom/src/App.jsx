@@ -12,6 +12,12 @@ import TestimonialPage from './pages/TestimonialPage'
 import ErrorPage from './pages/ErrorPage'
 import ContactUsPage from './pages/ContactUsPage'
 
+import AdminHome from './pages/admin/AdminHome'
+
+import AdminMaincategory from './pages/admin/maincategory/AdminMaincategory'
+import AdminCreateMaincategory from './pages/admin/maincategory/AdminCreateMaincategory'
+import AdminUpdateMaincategory from './pages/admin/maincategory/AdminUpdateMaincategory'
+
 export default function App() {
     return (
         <BrowserRouter>
@@ -23,6 +29,13 @@ export default function App() {
                     <Route path='/shop' element={<ShopPage/>}/>
                     <Route path='/testimonial' element={<TestimonialPage/>}/>
                     <Route path='/contactus' element={<ContactUsPage/>}/>
+                    
+                    <Route path='/admin' element={<AdminHome/>}/>
+
+                    <Route path='/admin/maincategory' element={<AdminMaincategory/>}/>
+                    <Route path='/admin/maincategory/create' element={<AdminCreateMaincategory/>}/>
+                    <Route path='/admin/maincategory/update/:id' element={<AdminUpdateMaincategory/>}/>
+
                     <Route path='/*' element={<ErrorPage/>}/>
                 </Routes>
             <Footer/>
