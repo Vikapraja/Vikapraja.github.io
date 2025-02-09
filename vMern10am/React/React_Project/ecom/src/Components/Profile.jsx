@@ -1,52 +1,70 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Profile({ title }) {
+    let [data, setData] = useState({})
+
+    useEffect(() => {
+        (async () => {
+            let response = await fetch(`${process.env.REACT_APP_BACKEND_SERVER}/user/${localStorage.getItem("userid")}`, {
+                method: "GET",
+                headers: {
+                    "content-type": "application/json"
+                }
+            })
+            response = await response.json()
+            setData(response)
+        })()
+    }, [])
     return (
         <>
-            <h5 className='bg-primary text-light text-center p-2'>{title} Profile</h5>
+            <h5 className='bg-primary text-light text-center p-2'>{title==="Checkout"?"Billing Address":`${title} Profile`}</h5>
             <div className='row'>
-                <div className="col-md-6 mb-3">
-                    <img src="/img/noimage.jpg" height={430} width={"100%"} alt="" />
-                </div>
-                <div className="col-md-6 mb-3">
+                {
+                    title !== "Checkout" && <div className="col-md-6 mb-3">
+                        {data.pic ?
+                            <img src={`${process.env.REACT_APP_BACKEND_SERVER}/${data.pic}`} height={380} width={"100%"} alt="" /> :
+                            <img src="/img/noimage.jpg" height={380} width={"100%"} alt="" />}
+                    </div>
+                }
+                <div className={`${title==="Checkout"?'col-12':'col-md-6'} mb-3`}>
                     <table className='table table-bordered'>
                         <tbody>
                             <tr>
                                 <th>Name</th>
-                                <td>Nitin Chauhan</td>
+                                <td>{data.name}</td>
                             </tr>
                             <tr>
                                 <th>User Name</th>
-                                <td>nitin</td>
+                                <td>{data.username}</td>
                             </tr>
                             <tr>
                                 <th>Email Address</th>
-                                <td>vishankchauhan@gmail.com</td>
+                                <td>{data.email}</td>
                             </tr>
                             <tr>
                                 <th>Phone</th>
-                                <td>+91-9873848046</td>
+                                <td>{data.phone}</td>
                             </tr>
                             {
                                 title !== "Admin" ?
                                     <>
                                         <tr>
                                             <th>Address</th>
-                                            <td></td>
+                                            <td>{data.address}</td>
                                         </tr>
 
                                         <tr>
                                             <th>Pin</th>
-                                            <td></td>
+                                            <td>{data.pin}</td>
                                         </tr>
                                         <tr>
                                             <th>City</th>
-                                            <td></td>
+                                            <td>{data.city}</td>
                                         </tr>
                                         <tr>
                                             <th>State</th>
-                                            <td></td>
+                                            <td>{data.state}</td>
                                         </tr>
                                     </> : null
                             }

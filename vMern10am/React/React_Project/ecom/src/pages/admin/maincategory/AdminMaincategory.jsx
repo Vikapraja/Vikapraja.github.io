@@ -3,34 +3,31 @@ import HeroSection from '../../../Components/HeroSection'
 import AdminSidebar from '../../../Components/AdminSidebar'
 import { Link } from 'react-router-dom'
 
+import { useDispatch, useSelector } from 'react-redux';
+
 import $ from 'jquery';                                         // Import jQuery
 import 'datatables.net-dt/css/dataTables.dataTables.min.css';   // Import DataTables styles
 import 'datatables.net';
 
+import { deleteMaincategory, getMaincategory } from "../../../Redux/ActionCreartors/MaincategoryActionCreators"
 export default function AdminMaincategory() {
-    let [MaincategoryStateData, setMaincategoryStateData] = useState([])
+    let MaincategoryStateData = useSelector(state => state.MaincategoryStateData)
+    let dispatch = useDispatch()
 
-    async function deleteRecord(id) {
+    function deleteRecord(id) {
         if (window.confirm("Are You Sure to Delete that Item : ")) {
-            let response = await fetch(`${process.env.REACT_APP_BACKEND_SERVER}/maincategory/${id}`, {
-                method: "DELETE",
-                headers: {
-                    "content-type": "application/json"
-                }
-            })
-            response = await response.json()
+            dispatch(deleteMaincategory({ id: id }))
             getAPIData()
         }
     }
-    async function getAPIData() {
-        let response = await fetch(`${process.env.REACT_APP_BACKEND_SERVER}/maincategory`, {
-            method: "GET",
-            headers: {
-                "content-type": "application/json"
-            }
-        })
-        response = await response.json()
-        setMaincategoryStateData(response)
+    // function deleteRecord(_id) {
+    //     if (window.confirm("Are You Sure to Delete that Item : ")) {
+    //         dispatch(deleteMaincategory({ _id: _id }))
+    //         getAPIData()
+    //     }
+    // }
+    function getAPIData() {
+        dispatch(getMaincategory())
         let time = setTimeout(() => {
             $('#DataTable').DataTable()
         }, 500)
@@ -39,7 +36,7 @@ export default function AdminMaincategory() {
     useEffect(() => {
         let time = getAPIData()
         return () => clearTimeout(time)
-    }, [])
+    }, [MaincategoryStateData.length])
     return (
         <>
             <HeroSection title="Admin - Maincategory" />
@@ -65,8 +62,10 @@ export default function AdminMaincategory() {
                                 <tbody>
                                     {
                                         MaincategoryStateData.map((item) => {
+                                            // return <tr key={item._id}>
                                             return <tr key={item.id}>
                                                 <td>{item.id}</td>
+                                                {/* <td>{item._id}</td> */}
                                                 <td>{item.name}</td>
                                                 <td>
                                                     <Link to={`${process.env.REACT_APP_BACKEND_SERVER}/${item.pic}`} target='_blank' rel='noreferrer'>
@@ -75,7 +74,9 @@ export default function AdminMaincategory() {
                                                 </td>
                                                 <td className={`${item.active ? 'text-success' : 'text-danger'}`}>{item.active ? "Yes" : "No"}</td>
                                                 <td><Link to={`/admin/maincategory/update/${item.id}`} className='btn btn-primary'><i className='fa fa-edit fs-4'></i></Link></td>
-                                                <td><button className='btn btn-danger' onClick={() => deleteRecord(item.id)}><i className='fa fa-trash fs-4'></i></button></td>
+                                                <td>{localStorage.getItem("role")==="Super Admin"?<button className='btn btn-danger' onClick={() => deleteRecord(item.id)}><i className='fa fa-trash fs-4'></i></button>:null}</td>
+                                                {/* <td><Link to={`/admin/maincategory/update/${item._id}`} className='btn btn-primary'><i className='fa fa-edit fs-4'></i></Link></td>
+                                                <td><button className='btn btn-danger' onClick={() => deleteRecord(item._id)}><i className='fa fa-trash fs-4'></i></button></td> */}
                                             </tr>
                                         })
                                     }

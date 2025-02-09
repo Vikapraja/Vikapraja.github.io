@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -10,7 +11,11 @@ import 'swiper/css/pagination';
 import { EffectCards, EffectCoverflow, Pagination } from 'swiper/modules';
 import { useNavigate } from 'react-router-dom';
 
+import { getTestimonial } from "../Redux/ActionCreartors/TestimonialActionCreators"
 export default function Testimonials() {
+    let TestimonialStateData = useSelector(state => state.TestimonialStateData)
+    let dispatch = useDispatch()
+
     let [slidesPerView, setSlidesPerView] = useState(window.innerWidth < 1000 ? 1 : 3)
     let [slideType, setSlideType] = useState(window.innerWidth < 1000 ? 'cards' : 'coverflow')
     let navigate = useNavigate()
@@ -28,7 +33,7 @@ export default function Testimonials() {
         },
         loop: true,
         pagination: true,
-        modules: [EffectCoverflow, Pagination,EffectCards],
+        modules: [EffectCoverflow, Pagination, EffectCards],
         className: "mySwiper"
     }
     function handelWindoResize() {
@@ -37,6 +42,12 @@ export default function Testimonials() {
         navigate(0)
     }
     window.addEventListener("resize", handelWindoResize);
+
+    useEffect(() => {
+        (() => {
+            dispatch(getTestimonial())
+        })()
+    }, [TestimonialStateData.length])
     return (
         <>
             <div className="container-fluid testimonial py-5 mb-5">
@@ -47,98 +58,30 @@ export default function Testimonials() {
                     </div>
 
                     <Swiper {...options}>
-                        <SwiperSlide>
-                            <div className="testimonial-item border p-4">
-                                <div className="d-flex align-items-center">
-                                    <div className="">
-                                        <img src="img/testimonial-1.jpg" alt="" />
-                                    </div>
-                                    <div className="ms-4">
-                                        <h4 className="text-secondary">Client Name</h4>
-                                        <p className="m-0 pb-3">Profession</p>
-                                        <div className="d-flex pe-5">
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
+                        {TestimonialStateData && TestimonialStateData.filter(x => x.active).map(item => {
+                            return <SwiperSlide key={item.id}>
+                                <div className="testimonial-item border p-4">
+                                    <div className="d-flex align-items-center">
+                                        <div className="">
+                                            <img src={`${process.env.REACT_APP_BACKEND_SERVER}/${item.pic}`} height={100} alt="" />
+                                        </div>
+                                        <div className="ms-4">
+                                            <h4 className="text-secondary">{item.name}</h4>
+                                            <div className="d-flex pe-5">
+                                                <i className="fas fa-star me-1 text-primary"></i>
+                                                <i className="fas fa-star me-1 text-primary"></i>
+                                                <i className="fas fa-star me-1 text-primary"></i>
+                                                <i className="fas fa-star me-1 text-primary"></i>
+                                                <i className="fas fa-star me-1 text-primary"></i>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="border-top mt-4 pt-3">
-                                    <p className="mb-0">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum aliquam dolor eget urna. Nam volutpat libero sit amet leo cursus, ac viverra eros morbi quis quam mi.</p>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="testimonial-item border p-4">
-                                <div className=" d-flex align-items-center">
-                                    <div className="">
-                                        <img src="img/testimonial-2.jpg" alt="" />
-                                    </div>
-                                    <div className="ms-4">
-                                        <h4 className="text-secondary">Client Name</h4>
-                                        <p className="m-0 pb-3">Profession</p>
-                                        <div className="d-flex pe-5">
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                        </div>
+                                    <div className="border-top mt-4 pt-3">
+                                        <p className="ps-2 pe-4 testimonial-message">{item.message}</p>
                                     </div>
                                 </div>
-                                <div className="border-top mt-4 pt-3">
-                                    <p className="mb-0">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum aliquam dolor eget urna. Nam volutpat libero sit amet leo cursus, ac viverra eros morbi quis quam mi.</p>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="testimonial-item border p-4">
-                                <div className=" d-flex align-items-center">
-                                    <div className="">
-                                        <img src="img/testimonial-3.jpg" alt="" />
-                                    </div>
-                                    <div className="ms-4">
-                                        <h4 className="text-secondary">Client Name</h4>
-                                        <p className="m-0 pb-3">Profession</p>
-                                        <div className="d-flex pe-5">
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="border-top mt-4 pt-3">
-                                    <p className="mb-0">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum aliquam dolor eget urna. Nam volutpat libero sit amet leo cursus, ac viverra eros morbi quis quam mi.</p>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="testimonial-item border p-4">
-                                <div className=" d-flex align-items-center">
-                                    <div className="">
-                                        <img src="img/testimonial-4.jpg" alt="" />
-                                    </div>
-                                    <div className="ms-4">
-                                        <h4 className="text-secondary">Client Name</h4>
-                                        <p className="m-0 pb-3">Profession</p>
-                                        <div className="d-flex pe-5">
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                            <i className="fas fa-star me-1 text-primary"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="border-top mt-4 pt-3">
-                                    <p className="mb-0">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum aliquam dolor eget urna. Nam volutpat libero sit amet leo cursus, ac viverra eros morbi quis quam mi.</p>
-                                </div>
-                            </div>
-                        </SwiperSlide>
+                            </SwiperSlide>
+                        })}
                     </Swiper>
                 </div>
             </div >

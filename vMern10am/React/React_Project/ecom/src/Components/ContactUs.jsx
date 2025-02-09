@@ -1,6 +1,61 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
+import formValidator from '../FormValidators/formValidator'
+
+import { createContactUs } from "../Redux/ActionCreartors/ContactUsActionCreators"
 export default function ContactUs() {
+    let [data, setData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: ""
+    })
+    let [errorMessage, setErrorMessage] = useState({
+        name: "Name Field Is Mendatory",
+        email: "Email Address Field Is Mendatory",
+        phone: "Phone Number Field Is Mendatory",
+        subject: "Subject Field Is Mendatory",
+        message: "Message Field Is Mendatory"
+    })
+    let [show, setShow] = useState()
+    let [message, setMessage] = useState("")
+
+    let dispatch = useDispatch()
+
+    function getInputData(e) {
+        let { name, value } = e.target
+        setErrorMessage((old) => {
+            return {
+                ...old,
+                [name]: formValidator(e)
+            }
+        })
+        setData((old) => {
+            return {
+                ...old,
+                [name]: value
+            }
+        })
+    }
+    function postData(e) {
+        e.preventDefault()
+        let error = Object.values(errorMessage).find(x => x !== "")
+        if (error)
+            setShow(true)
+        else {
+            dispatch(createContactUs({ ...data, active: true, date: new Date }))
+            setMessage("Thanks to Share Your Query With Us. Our Team Will Contact You Soon")
+            setData({
+                name: "",
+                email: "",
+                phone: "",
+                subject: "",
+                message: ""
+            })
+        }
+    }
     return (
         <>
             <div className="container-fluid py-5 mb-5">
@@ -8,40 +63,50 @@ export default function ContactUs() {
                     <div className="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style={{ maxWidth: "600px" }}>
                         <h5 className="text-primary">Get In Touch</h5>
                         <h1 className="mb-3">Contact for any query</h1>
-                        <p className="mb-2">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
                     </div>
                     <div className="contact-detail position-relative p-5">
                         <div className="row g-5 mb-5 justify-content-center">
-                            <div className="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                            <div className="col-md-6 wow fadeIn" data-wow-delay=".3s">
                                 <div className="d-flex bg-light p-3 rounded">
                                     <div className="flex-shrink-0 btn-square bg-secondary rounded-circle" style={{ width: "64px", height: "64px" }}>
-                                        <i className="fas fa-map-marker-alt text-white"></i>
+                                        <i className="fs-3 fas fa-map-marker-alt text-white"></i>
                                     </div>
                                     <div className="ms-3">
-                                        <h4 className="text-primary">Address</h4>
-                                        <a href="https://goo.gl/maps/Zd4BCynmTb98ivUJ6" target="_blank" className="h5">23 rank Str, NY</a>
+                                        <h5 className="text-primary">Address</h5>
+                                        <a href="https://www.google.com/maps/place/DUCAT/@28.5797958,77.3120864,706m/data=!3m2!1e3!4b1!4m6!3m5!1s0x390ce5106f125cfb:0xc516eda25aa8482c!8m2!3d28.5797958!4d77.3146667!16s%2Fg%2F1tcvmnf2?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="">A-43, Sector 16, Noida, India</a>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                            <div className="col-md-6 wow fadeIn" data-wow-delay=".5s">
                                 <div className="d-flex bg-light p-3 rounded">
                                     <div className="flex-shrink-0 btn-square bg-secondary rounded-circle" style={{ width: "64px", height: "64px" }}>
-                                        <i className="fa fa-phone text-white"></i>
+                                        <i className="fs-3 fa fa-phone text-white"></i>
                                     </div>
                                     <div className="ms-3">
-                                        <h4 className="text-primary">Call Us</h4>
-                                        <a className="h5" href="tel:+0123456789" target="_blank">+012 3456 7890</a>
+                                        <h5 className="text-primary">Call Us</h5>
+                                        <a className="" href="tel:+919873848046" target="_blank">+91-9873848046</a>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".7s">
+                            <div className="col-md-6 wow fadeIn" data-wow-delay=".5s">
                                 <div className="d-flex bg-light p-3 rounded">
                                     <div className="flex-shrink-0 btn-square bg-secondary rounded-circle" style={{ width: "64px", height: "64px" }}>
-                                        <i className="fa fa-envelope text-white"></i>
+                                        <i className="fs-3 fa fa-whatsapp text-white"></i>
                                     </div>
                                     <div className="ms-3">
-                                        <h4 className="text-primary">Email Us</h4>
-                                        <a className="h5" href="mailto:info@example.com" target="_blank">info@example.com</a>
+                                        <h5 className="text-primary">Chat With Us</h5>
+                                        <a className="" href="https://wa.me/+919873848046" target="_blank">+91-9873848046</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 wow fadeIn" data-wow-delay=".7s">
+                                <div className="d-flex bg-light p-3 rounded">
+                                    <div className="flex-shrink-0 btn-square bg-secondary rounded-circle" style={{ width: "64px", height: "64px" }}>
+                                        <i className="fs-3 fa fa-envelope text-white"></i>
+                                    </div>
+                                    <div className="ms-3">
+                                        <h5 className="text-primary">Email Us</h5>
+                                        <a className="" href="mailto:vishankchauhan@gmail,.com" target="_blank">vishankchauhan@gmail,.com</a>
                                     </div>
                                 </div>
                             </div>
@@ -49,26 +114,33 @@ export default function ContactUs() {
                         <div className="row g-5">
                             <div className="col-lg-6 wow fadeIn" data-wow-delay=".3s">
                                 <div className="p-5 h-100 rounded contact-map">
-                                    <iframe className="rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.4710403339755!2d-73.82241512404069!3d40.685622471397615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c26749046ee14f%3A0xea672968476d962c!2s123rd%20St%2C%20Queens%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1686493221834!5m2!1sen!2sbd" style={{ border: "0" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=A-43%20Sector%2016%20Noida&t=k&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
                                 </div>
                             </div>
                             <div className="col-lg-6 wow fadeIn" data-wow-delay=".5s">
                                 <div className="p-5 rounded contact-form">
-                                    <div className="mb-4">
-                                        <input type="text" className="form-control border-0 py-3" placeholder="Your Name" />
-                                    </div>
-                                    <div className="mb-4">
-                                        <input type="email" className="form-control border-0 py-3" placeholder="Your Email" />
-                                    </div>
-                                    <div className="mb-4">
-                                        <input type="text" className="form-control border-0 py-3" placeholder="Project" />
-                                    </div>
-                                    <div className="mb-4">
-                                        <textarea className="w-100 form-control border-0 py-3" rows="6" cols="10" placeholder="Message"></textarea>
-                                    </div>
-                                    <div className="text-start">
-                                        <button className="btn bg-primary text-white py-3 px-5" type="button">Send Message</button>
-                                    </div>
+                                    {message && <p className='text-dark text-center'>{message}</p>}
+                                    <form onSubmit={postData}>
+                                        <div className="mb-4">
+                                            <input type="text" name='name' onChange={getInputData} value={data.name} className={`form-control border-3 ${show && errorMessage.name ? 'border-danger' : 'border-success'} py-2`} placeholder={show && errorMessage.name ? "Name Field is Mendatory" : "Your Name"} />
+                                        </div>
+                                        <div className="mb-4">
+                                            <input type="email" name='email'
+                                                e onChange={getInputData} value={data.email} className={`form-control border-3 ${show && errorMessage.email ? 'border-danger' : 'border-success'} py-2`} placeholder={show && errorMessage.email ? "Email Address Field is Mendatory" : "Your Email Address"} />
+                                        </div>
+                                        <div className="mb-4">
+                                            <input type="text" name='phone' onChange={getInputData} value={data.phone} className={`form-control border-3 ${show && errorMessage.phone ? 'border-danger' : 'border-success'} py-2`} placeholder={show && errorMessage.phone ? "Phone Number Field is Mendatory" : "Your Phone Number"} />
+                                        </div>
+                                        <div className="mb-4">
+                                            <input type="text" name='subject' onChange={getInputData} value={data.subject} className={`form-control border-3 ${show && errorMessage.subject ? 'border-danger' : 'border-success'} py-2`} placeholder={show && errorMessage.subject ? "Subject Field is Mendatory" : "Subject"} />
+                                        </div>
+                                        <div className="mb-4">
+                                            <textarea name='message' className={`w-100 form-control border-3 ${show && errorMessage.message ? 'border-danger' : 'border-success'} py-2`} rows="4" onChange={getInputData} value={data.message} cols="10" placeholder={show && errorMessage.message ? "Message Field is Mendatory" : "Your Message"}></textarea>
+                                        </div>
+                                        <div className="text-start">
+                                            <button className="w-100 btn bg-primary text-white py-2 px-5" type="submit">Send Message</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

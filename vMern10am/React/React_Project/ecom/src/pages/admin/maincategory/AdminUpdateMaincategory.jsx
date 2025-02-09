@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+
 import HeroSection from '../../../Components/HeroSection'
 import AdminSidebar from '../../../Components/AdminSidebar'
-import { Link, useNavigate, useParams } from 'react-router-dom'
 
 import formValidator from '../../../FormValidators/formValidator'
 import imageValidator from '../../../FormValidators/imageValidator'
+
+import { getMaincategory, updateMaincategory } from "../../../Redux/ActionCreartors/MaincategoryActionCreators"
 export default function AdminUpdateMaincategory() {
+    // let { _id } = useParams()  //in case of real backend
     let { id } = useParams()
-    let [MaincategoryStateData, setMaincategoryStateData] = useState([])
     let [data, setData] = useState({
         name: "",
         pic: "",
@@ -20,8 +24,12 @@ export default function AdminUpdateMaincategory() {
     let [show, setShow] = useState(false)
     let navigate = useNavigate()
 
+    let MaincategoryStateData = useSelector(state => state.MaincategoryStateData)
+    let dispatch = useDispatch()
+
     function getInputData(e) {
         let name = e.target.name
+        // let value = e.target.files ? e.target.files[0] : e.target.value  //in case of real backend
         let value = e.target.files ? "maincategory/" + e.target.files[0].name : e.target.value
 
         if (name !== "active") {
@@ -39,13 +47,14 @@ export default function AdminUpdateMaincategory() {
             }
         })
     }
-    async function postSubmit(e) {
+    function postSubmit(e) {
         e.preventDefault()
         let errorItem = Object.values(error).find(x => x !== "")
         if (errorItem)
             setShow(true)
         else {
-            let item = MaincategoryStateData.find(x =>x.id!==id && x.name.toLocaleLowerCase() === data.name.toLocaleLowerCase())
+            // let item = MaincategoryStateData.find(x => x._id !== _id && x.name.toLocaleLowerCase() === data.name.toLocaleLowerCase())  // in case of real backend
+            let item = MaincategoryStateData.find(x => x.id !== id && x.name.toLocaleLowerCase() === data.name.toLocaleLowerCase())
             if (item) {
                 setShow(true)
                 setError((old) => {
@@ -56,37 +65,31 @@ export default function AdminUpdateMaincategory() {
                 })
             }
             else {
-                let response = await fetch(`${process.env.REACT_APP_BACKEND_SERVER}/maincategory/${id}`, {
-                    method: "PUT",
-                    headers: {
-                        "content-type": "application/json"
-                    },
-                    body: JSON.stringify({ ...data })
-                })
-                response = await response.json()
-                if (response)
-                    navigate("/admin/maincategory")
-                else
-                    alert("Something Went Wrong")
+                dispatch(updateMaincategory({ ...data }))
+
+                // //in case of real backend and form has a file field
+                // let formData = new FormData()
+                // formData.append("_id",data._id)  //use id in case of RDBMS and use _id in case of mongodb
+                // formData.append("name",data.name)
+                // formData.append("pic",data.pic)
+                // formData.append("active",data.active)
+                // dispatch(createMaincategory(formData))
+                navigate("/admin/maincategory")
             }
         }
     }
 
     useEffect(() => {
-        (async () => {
-            let response = await fetch(`${process.env.REACT_APP_BACKEND_SERVER}/maincategory`, {
-                method: "GET",
-                headers: {
-                    "content-type": "application/json"
-                }
-            })
-            response = await response.json()
-            setMaincategoryStateData(response)
-            let item = response.find(x=>x.id===id)
-            if(item)
-            setData({...item})
+        (() => {
+            dispatch(getMaincategory())
+            if (MaincategoryStateData.length) {
+                let item = MaincategoryStateData.find(x => x.id === id)
+                // let item = MaincategoryStateData.find(x => x._id === _id) in case of real backend
+                if (item)
+                    setData({ ...item })
+            }
         })()
-    }, [])
+    }, [MaincategoryStateData.length])
     return (
         <>
             <HeroSection title="Admin - Maincategory" />
@@ -113,7 +116,7 @@ export default function AdminUpdateMaincategory() {
 
                                 <div className="col-md-6 mb-3">
                                     <label>Active</label>
-                                    <select name="active" value={data.active?"1":"0"} onChange={getInputData} className='form-select border-3 border-primary'>
+                                    <select name="active" value={data.active ? "1" : "0"} onChange={getInputData} className='form-select border-3 border-primary'>
                                         <option value="1">Yes</option>
                                         <option value="0">No</option>
                                     </select>

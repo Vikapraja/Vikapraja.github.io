@@ -1,7 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 
+import { getNewsletter, createNewsletter } from "../Redux/ActionCreartors/NewsletterActionCreators"
 export default function Footer() {
+    let [email, setEmail] = useState("")
+    let [message, setMessage] = useState("")
+
+    let NewsletterStateData = useSelector(state => state.NewsletterStateData)
+    let dispatch = useDispatch()
+
+    function postData(e) {
+        e.preventDefault()
+        if (email.length === 0)
+            setMessage("Please Enter a Valid Email Address")
+        else {
+            let item = NewsletterStateData.find(x => x.email === email)
+            if (item) {
+                setMessage("Your Email Address is Already Registered")
+            }
+            else {
+                dispatch(createNewsletter({ email: email, active: true }))
+                setMessage("Thanks to Subscribe Our Newsletter Service")
+                setEmail("")
+            }
+        }
+    }
+    useEffect(() => {
+        (() => {
+            dispatch(getNewsletter())
+        })()
+    }, [NewsletterStateData.length])
     return (
         <>
             <div className="container-fluid footer bg-dark wow fadeIn px-4" data-wow-delay=".3s">
@@ -49,12 +78,12 @@ export default function Footer() {
                     </div>
                     <div className="col-lg-3 col-md-12">
                         <h3 className="h3 text-secondary mb-4">Newsletter</h3>
-                        <h6 className='text-light'>Subscribe Our Newsletter Service to Get Latest Update About Our New Products and Great Deals</h6>
-                        <form action="">
+                        <h6 className='text-light'>{message ? message : "Subscribe Our Newsletter Service to Get Latest Update About Our New Products and Great Deals"}</h6>
+                        <form onSubmit={postData}>
                             <div className="mb-3">
-                                <input type="email" name="email" placeholder='Email Address' className='form-control' />
+                                <input type="email" name="email" onChange={(e) => setEmail(e.target.value)} value={email} placeholder='Email Address' className='form-control' />
                             </div>
-                            <button className='btn btn-secondary w-100 text-light'>Submit</button>
+                            <button className='btn btn-secondary w-100' type='submit'>Subscribe</button>
                         </form>
                     </div>
                 </div>

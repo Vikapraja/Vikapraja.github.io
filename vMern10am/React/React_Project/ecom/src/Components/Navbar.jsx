@@ -1,7 +1,12 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 export default function Navbar() {
+    let navigate = useNavigate()
+    function logout() {
+        localStorage.clear()
+        navigate("/login")
+    }
     return (
         <>
             <div className="container-fluid bg-dark py-2 d-md-flex">
@@ -39,16 +44,6 @@ export default function Navbar() {
                                 <NavLink to="/features" className="nav-item nav-link">Features</NavLink>
                                 <NavLink to="/testimonial" className="nav-item nav-link">Testimonials</NavLink>
                                 <NavLink to="/contactus" className="nav-item nav-link">Contact Us</NavLink>
-                                <NavLink to="/admin" className="nav-item nav-link">Admin</NavLink>
-                                <div className="nav-item dropdown">
-                                    <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                    <div className="dropdown-menu rounded">
-                                        <a href="blog.html" className="dropdown-item">Our Blog</a>
-                                        <a href="team.html" className="dropdown-item">Our Team</a>
-                                        <a href="testimonial.html" className="dropdown-item">Testimonial</a>
-                                        <a href="404.html" className="dropdown-item">404 Page</a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div className="d-none d-xl-flex flex-shirink-0">
@@ -63,6 +58,29 @@ export default function Navbar() {
                             <div className="d-flex flex-column">
                                 <span className="text-white-50">Have any questions?</span>
                                 <span className="text-secondary">Call: <Link to="tel:+919873848046" className='text-light' target='_blank' rel='noreferrer'>+91-9873848046</Link></span>
+                            </div>
+                        </div>
+                        <div className="collapse navbar-collapse bg-transparent" id="navbarCollapse">
+                            <div className="navbar-nav ms-auto mx-xl-auto p-0">
+                                {
+                                    localStorage.getItem("login") ?
+                                        <div className="nav-item dropdown">
+                                            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">{localStorage.getItem("name")}</a>
+                                            <div className="dropdown-menu rounded">
+                                                {
+                                                    localStorage.getItem("role") === "Buyer" ?
+                                                        <>
+                                                            <Link to="/profile" className="dropdown-item">Profile</Link>
+                                                            <Link to="/cart" className="dropdown-item">Cart</Link>
+                                                            <Link to="/checkout" className="dropdown-item">Checkout</Link>
+                                                        </> :
+                                                        <Link to="/admin" className="dropdown-item">Profile</Link>
+                                                }
+                                                <button className="dropdown-item" onClick={logout}>Logout</button>
+                                            </div>
+                                        </div> :
+                                        <NavLink to="/login" className="nav-item nav-link">Login</NavLink>
+                                }
                             </div>
                         </div>
                     </nav>
